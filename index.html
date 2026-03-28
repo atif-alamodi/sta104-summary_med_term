@@ -1,1 +1,972 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ملخص STA104 الشامل النهائي</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+<style>
+html,body,#root{background:#0f1729!important;color:#e2e8f0!important;margin:0;font-family:'Segoe UI',Tahoma,sans-serif}
+*{box-sizing:border-box}
+::-webkit-scrollbar{height:4px;width:4px}
+::-webkit-scrollbar-thumb{background:#334155;border-radius:4px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
 
+const tabs = [
+  { id: "t1", icon: "📌", label: "النزعة المركزية" },
+  { id: "t2", icon: "📐", label: "التشتت + Z" },
+  { id: "t3", icon: "📊", label: "الرسوم البيانية" },
+  { id: "t4", icon: "📈", label: "الارتباط والانحدار" },
+  { id: "t5", icon: "🐍", label: "أكواد بايثون" },
+  { id: "t6", icon: "🧮", label: "دوال Excel" },
+  { id: "t7", icon: "🔀", label: "دوال IF الشرطية" },
+  { id: "quiz", icon: "✅", label: "اختبر نفسك (45 سؤال)" },
+];
+
+const F = ({ c, children }) => (
+  <div
+    dir="ltr"
+    className={`my-3 p-3 rounded-lg border text-center font-bold text-base ${
+      c === "purple"
+        ? "bg-purple-500/10 border-purple-500/30 text-purple-300"
+        : "bg-blue-500/10 border-blue-500/30 text-blue-300"
+    }`}
+  >
+    {children}
+  </div>
+);
+const C = ({ title, children, color = "blue" }) => {
+  const colors = {
+    blue: "border-r-blue-400 bg-blue-500/5",
+    green: "border-r-emerald-400 bg-emerald-500/5",
+    orange: "border-r-orange-400 bg-orange-500/5",
+    gold: "border-r-yellow-400 bg-yellow-500/5",
+  };
+  return (
+    <div className={`border-r-4 ${colors[color]} rounded-r-lg p-3 my-3`}>
+      {title && (
+        <div
+          className={`font-bold mb-1 ${
+            color === "green"
+              ? "text-emerald-400"
+              : color === "orange"
+              ? "text-orange-400"
+              : color === "gold"
+              ? "text-yellow-400"
+              : "text-blue-400"
+          }`}
+        >
+          {title}
+        </div>
+      )}
+      <div className="text-slate-300 text-sm leading-relaxed">{children}</div>
+    </div>
+  );
+};
+const Code = ({ title, children, explain }) => (
+  <div className="my-3 rounded-lg border border-slate-700 overflow-hidden bg-[#0d1117]">
+    <div className="flex justify-between px-3 py-1.5 bg-slate-800/50 border-b border-slate-700">
+      <span className="text-blue-400 text-xs font-bold">{title}</span>
+      <span className="text-emerald-400 text-xs">Python</span>
+    </div>
+    <pre
+      dir="ltr"
+      className="p-3 text-xs leading-relaxed text-slate-300 overflow-x-auto"
+    >
+      {children}
+    </pre>
+    {explain && (
+      <div className="px-3 py-2 border-t border-slate-700 text-xs text-slate-400 bg-blue-500/5">
+        {explain}
+      </div>
+    )}
+  </div>
+);
+const T = ({ headers, rows }) => (
+  <div className="my-3 overflow-x-auto">
+    <table className="w-full text-xs border-collapse">
+      <thead>
+        <tr>
+          {headers.map((h, i) => (
+            <th
+              key={i}
+              className="bg-blue-500/15 text-blue-400 font-bold p-2 border border-slate-700"
+            >
+              {h}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr key={i}>
+            {r.map((c, j) => (
+              <td
+                key={j}
+                className="p-2 border border-slate-700 text-center text-slate-300"
+              >
+                {c}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+const Warn = ({ title, children }) => (
+  <div className="my-3 border-r-4 border-r-orange-400 bg-orange-500/5 rounded-r-lg p-3">
+    <div className="font-bold text-orange-400 mb-1">⚠️ {title}</div>
+    <div className="text-slate-300 text-sm">{children}</div>
+  </div>
+);
+const Tip = ({ children }) => (
+  <div className="my-3 border border-dashed border-yellow-500/40 bg-yellow-500/5 rounded-lg p-3 text-sm text-slate-300">
+    💡 {children}
+  </div>
+);
+const Step = ({ n, title, detail }) => (
+  <div className="flex gap-3 mb-2 pb-2 border-b border-slate-700/30 last:border-0">
+    <div className="w-6 h-6 rounded-full bg-blue-500 text-slate-900 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+      {n}
+    </div>
+    <div>
+      <div className="text-slate-200 text-sm font-medium">{title}</div>
+      {detail && <div className="text-slate-400 text-xs mt-0.5">{detail}</div>}
+    </div>
+  </div>
+);
+const H3 = ({ children }) => (
+  <h3 className="text-purple-400 font-bold text-base mt-5 mb-2">{children}</h3>
+);
+const EF = ({ children }) => (
+  <code
+    dir="ltr"
+    className="bg-emerald-500/15 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-bold"
+  >
+    {children}
+  </code>
+);
+
+// ═══════════════════════════════════════
+//              QUIZ DATA (45 سؤال)
+// ═══════════════════════════════════════
+const quizData = [
+  { q: "كم عدد وظائف علم الإحصاء الأساسية؟", o: ["3", "5", "7", "10"], c: 2, e: "7 وظائف: جمع، تنظيم، تلخيص، عرض، تحليل، تفسير، نشر" },
+  { q: "هل كل المعلومات بيانات؟", o: ["نعم", "لا، ليست كل المعلومات بيانات", "فقط الأرقام", "أحياناً"], c: 1, e: "البيانات = معلومات مرتبة مدعمة بالأرقام يمكن تحليلها. ليست كل المعلومات بيانات" },
+  { q: "العينة العشوائية البسيطة لا تقل عن:", o: ["10", "20", "30", "50"], c: 2, e: "يجب ألا يقل عدد أفراد العينة البسيطة عن 30 فرد" },
+  { q: "حجم العينة يجب أن يكون من المجتمع:", o: ["1-2%", "2-10%", "50%", "100%"], c: 1, e: "العينة = 2% إلى 10% من حجم المجتمع" },
+  { q: "الجنس (ذكر/أنثى) متغير:", o: ["كمي", "نوعي", "عشوائي", "متصل"], c: 1, e: "الجنس متغير نوعي Qualitative لأنه تصنيف وليس رقم" },
+  { q: "درجة الحرارة متغير:", o: ["نوعي", "لا عشوائي", "عشوائي", "وصفي"], c: 2, e: "الحرارة متغير عشوائي Random لأنه لا يمكن التحكم به" },
+  { q: "المتوسط الحسابي لـ: 10,20,30,40,50 يساوي:", o: ["25", "30", "35", "150"], c: 1, e: "x̄ = 150/5 = 30" },
+  { q: "مجموع الانحرافات عن المتوسط يساوي:", o: ["1", "المتوسط", "صفر", "n"], c: 2, e: "من أهم خصائص المتوسط: Σ(xi - x̄) = 0 دائماً" },
+  { q: "الوسيط لـ: 3,5,7,9,11 يساوي:", o: ["5", "7", "9", "35"], c: 1, e: "n=5 فردي، الموقع=(5+1)/2=3، القيمة الثالثة=7" },
+  { q: "الوسيط لـ: 15,44,52,68,72,102 يساوي:", o: ["52", "60", "68", "44"], c: 1, e: "n=6 زوجي، القيمتان الوسطى: 52 و68، الوسيط=(52+68)/2=60" },
+  { q: "أي مقياس لا يتأثر بالقيم الشاذة؟", o: ["المتوسط", "الوسيط", "المدى", "التباين"], c: 1, e: "الوسيط يعتمد على الموقع وليس القيم فلا يتأثر بالمتطرفة" },
+  { q: "المنوال هو المقياس الوحيد الصالح لـ:", o: ["الكمية", "الوصفية", "المبوبة", "المتصلة"], c: 1, e: "المنوال = الوحيد الذي يمكن حسابه للبيانات الوصفية (نوعية)" },
+  { q: "الفئة المنوالية في الجدول التكراري هي:", o: ["الأولى", "ذات أعلى تكرار", "ذات أقل تكرار", "الوسطى"], c: 1, e: "الفئة المنوالية = الفئة ذات أعلى تكرار" },
+  { q: "متى نفضل الوسيط على المتوسط؟", o: ["دائماً", "عند وجود قيم متطرفة", "للوصفية", "أبداً"], c: 1, e: "الوسيط أفضل عند وجود قيم متطرفة لأنه لا يتأثر بها" },
+  { q: "المدى لـ: 15,22,18,30,12 يساوي:", o: ["12", "15", "18", "30"], c: 2, e: "المدى = Max - Min = 30 - 12 = 18" },
+  { q: "تباين العينة يُقسم على:", o: ["n", "n+1", "n-1", "2n"], c: 2, e: "s² = Σ(xi-x̄)²/(n-1) للعينة" },
+  { q: "إذا التباين=25 فالانحراف المعياري:", o: ["12.5", "625", "5", "50"], c: 2, e: "s = √25 = 5" },
+  { q: "وحدة التباين:", o: ["نفس البيانات", "مربعة", "ليس لها", "نسبة"], c: 1, e: "وحدة التباين مربعة (سنة² أو متر²) وهذا عيبه" },
+  { q: "Z-score تُحسب بالصيغة:", o: ["(X+x̄)/s", "(X-x̄)/s", "X×s", "x̄/s"], c: 1, e: "Z = (X - x̄) / s" },
+  { q: "إذا Z=0 فالقيمة:", o: ["أكبر من المتوسط", "أصغر", "تساوي المتوسط", "شاذة"], c: 2, e: "Z=0 يعني X = x̄ أي القيمة تساوي المتوسط تماماً" },
+  { q: "إذا |Z|>2 فالقيمة:", o: ["طبيعية", "=المتوسط", "متطرفة محتملة", "صفر"], c: 2, e: "|Z|>2 = متطرفة محتملة، |Z|>3 = شاذة بقوة" },
+  { q: "ddof=1 في numpy يعني:", o: ["تباين المجتمع", "تباين العينة", "المتوسط", "المنوال"], c: 1, e: "ddof=1 → يقسم على n-1 (تباين العينة)" },
+  { q: "الفرق بين Histogram و Bar Chart:", o: ["لا فرق", "Histogram متلاصق وBar منفصل", "العكس", "الحجم"], c: 1, e: "المدرج التكراري متلاصق (كمية متصلة)، الشريطي منفصل (نوعية)" },
+  { q: "التكرار النسبي يُحسب:", o: ["تكرار×مجموع", "(تكرار÷مجموع)×100%", "مجموع÷تكرار", "تكرار-مجموع"], c: 1, e: "التكرار النسبي = (تكرار الفئة ÷ مجموع التكرارات) × 100%" },
+  { q: "plt.scatter تُستخدم لرسم:", o: ["Histogram", "Bar Chart", "مخطط تشتت", "خط بياني"], c: 2, e: "scatter ترسم نقاط (مخطط التشتت)" },
+  { q: "plt.barh ترسم:", o: ["شريطي رأسي", "شريطي أفقي", "مدرج تكراري", "تشتت"], c: 1, e: "barh = bar horizontal = شريطي أفقي" },
+  { q: "معامل الارتباط r=0.92 يعني:", o: ["لا ارتباط", "ضعيف", "متوسط", "إيجابي قوي جداً"], c: 3, e: "0.92 > 0.8 = قوي جداً، موجب = طردي" },
+  { q: "r=-0.85 يدل على:", o: ["لا ارتباط", "إيجابي قوي", "سلبي قوي جداً", "ضعيف"], c: 2, e: "|0.85| > 0.8 = قوي جداً، سالب = عكسي" },
+  { q: "R² = 0.81 يعني:", o: ["ارتباط 81%", "81% من التغير مفسَّر بالنموذج", "خطأ 81%", "81 قيمة"], c: 1, e: "R² = معامل التحديد = نسبة التباين الذي يفسره النموذج" },
+  { q: "في Y=a+bX، b يمثل:", o: ["نقطة التقاطع", "ميل الخط", "معامل r", "المتوسط"], c: 1, e: "b = الميل = مقدار التغير في Y لكل وحدة زيادة في X" },
+  { q: "Y=59.5+3.75X عند X=7:", o: ["86.25", "85.75", "82", "63.25"], c: 1, e: "Y = 59.5 + 3.75×7 = 59.5 + 26.25 = 85.75" },
+  { q: "الارتباط القوي يعني:", o: ["سببية مؤكدة", "علاقة خطية فقط", "تساوي", "لا شيء"], c: 1, e: "الارتباط لا يعني السببية! يعني وجود علاقة خطية فقط" },
+  { q: "لا تتنبأ:", o: ["بقيم قريبة", "خارج نطاق البيانات الأصلية", "بالمتوسط", "بالوسيط"], c: 1, e: "التنبؤ خارج نطاق البيانات غير موثوق" },
+  { q: "model.intercept_ يُعطي:", o: ["الميل", "الثابت a", "معامل r", "التباين"], c: 1, e: "intercept_ = نقطة التقاطع = الثابت a" },
+  { q: "=IF(A1>=60,\"ناجح\",\"راسب\") إذا A1=45:", o: ["ناجح", "راسب", "خطأ", "0"], c: 1, e: "45<60 = الشرط خاطئ → راسب" },
+  { q: "في IF المتداخلة نبدأ بالشرط:", o: ["الأصغر", "الأكبر", "أي ترتيب", "عشوائي"], c: 1, e: "نبدأ من الأكبر للأصغر لتجنب نتائج خاطئة" },
+  { q: "AND تعني:", o: ["أو", "و (كل الشروط معاً)", "ليس", "أكبر"], c: 1, e: "AND = كل الشروط يجب أن تتحقق معاً" },
+  { q: "OR تعني:", o: ["كل الشروط", "شرط واحد يكفي", "ليس", "يساوي"], c: 1, e: "OR = يكفي تحقق شرط واحد فقط" },
+  { q: "COUNTIF تُستخدم لـ:", o: ["الجمع", "العد الشرطي", "المتوسط", "التنبؤ"], c: 1, e: "COUNTIF = عد الخلايا التي تحقق شرطاً" },
+  { q: "SUMIF تختلف عن COUNTIF بأنها:", o: ["تعد", "تجمع القيم", "تحسب المتوسط", "ترسم"], c: 1, e: "SUMIF تجمع القيم، COUNTIF تعدها فقط" },
+  { q: "STDEV.S تحسب:", o: ["انحراف المجتمع", "انحراف العينة", "التباين", "المتوسط"], c: 1, e: "S=Sample، STDEV.S = انحراف معياري للعينة (÷n-1)" },
+  { q: "FORECAST تُستخدم لـ:", o: ["التباين", "التنبؤ بقيمة Y", "المنوال", "الرسم"], c: 1, e: "FORECAST تتنبأ بقيمة Y من معادلة الانحدار" },
+  { q: "scipy.stats.linregress تُعطي:", o: ["المتوسط فقط", "الميل والثابت وr دفعة واحدة", "الرسم", "التباين"], c: 1, e: "تعطي slope, intercept, r_value, p_value, std_err" },
+  { q: "في الوسيط المبوب، الفئة الوسيطية هي:", o: ["الأولى", "التي تكرارها المتجمع ≥ n/2", "الأخيرة", "أكبر تكرار"], c: 1, e: "الفئة الوسيطية = أول فئة تكرارها المتجمع الصاعد ≥ n/2" },
+  { q: "النص في IF يجب وضعه بين:", o: ["أقواس", "علامات تنصيص \"\"", "نجمات", "لا شيء"], c: 1, e: "❌ IF(A1>50,ناجح) ✅ IF(A1>50,\"ناجح\")" },
+];
+
+const STA104 = function STA104() {
+  const [tab, setTab] = useState("t1");
+  const [answers, setAnswers] = useState({});
+  const score = Object.values(answers).filter((a) => a.correct).length;
+
+  const handleAnswer = (qi, oi) => {
+    if (answers[qi] !== undefined) return;
+    setAnswers((p) => ({
+      ...p,
+      [qi]: { selected: oi, correct: oi === quizData[qi].c },
+    }));
+  };
+  const resetQuiz = () => setAnswers({});
+
+  return (
+    <div className="min-h-screen text-slate-200" dir="rtl" style={{background:'#0f1729',color:'#e2e8f0'}}>
+      <style>{`html,body,#root{background:#0f1729!important;color:#e2e8f0!important;}`}</style>
+      {/* Header */}
+      <div className="bg-gradient-to-l from-[#1e3a5f] via-[#0f1729] to-[#1a1040] p-5 text-center border-b-2 border-slate-700">
+        <h1 className="text-2xl font-black bg-gradient-to-l from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          📊 ملخص STA104 الشامل النهائي
+        </h1>
+        <p className="text-slate-400 text-sm mt-1">
+          156 صفحة → 8 أقسام | 45 سؤال | كل صيغة + كل مثال + كل كود
+        </p>
+      </div>
+
+      {/* Tabs */}
+      <div className="flex overflow-x-auto bg-[#1a2440] border-b-2 border-slate-700 sticky top-0 z-50">
+        {tabs.map((t) => (
+          <button
+            key={t.id}
+            onClick={() => setTab(t.id)}
+            className={`flex-none px-3 py-2 text-xs font-bold whitespace-nowrap border-b-3 transition-all ${
+              tab === t.id
+                ? "text-blue-400 border-b-2 border-blue-400 bg-blue-500/10"
+                : "text-slate-500 border-b-2 border-transparent hover:text-slate-300"
+            }`}
+          >
+            {t.icon} {t.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="max-w-3xl mx-auto p-4">
+        {/* ═══════════════ المحاضرة 1 ═══════════════ */}
+        {tab === "t1" && (
+          <div className="space-y-1">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700">
+              <h2 className="text-lg font-black text-blue-400 mb-3">
+                📌 الموضوع 1: مقدمة في الإحصاء + النزعة المركزية
+              </h2>
+
+              <C title="تعريف الإحصاء">
+                علم جمع وتنظيم وتلخيص وعرض وتحليل البيانات والوصول إلى قرارات
+                سليمة. هو فرع من فروع الرياضيات ويُعتبر الأساس في كل العلوم.
+              </C>
+
+              <H3>📋 وظائف الإحصاء السبع</H3>
+              <C color="gold">
+                1. جمع البيانات → 2. تنظيم وترتيب → 3. تلخيص → 4. عرض → 5.
+                تحليل → 6. تفسير النتائج → 7. نشر النتائج
+                <br />
+                <br />
+                <strong>لماذا ضروري لكل العلوم؟</strong> كل علم فيه بيانات ويحتاج
+                الإحصاء لمعالجتها وتحليلها وتفسيرها.
+              </C>
+
+              <H3>📊 البيانات Data</H3>
+              <C>
+                <strong>التعريف:</strong> معلومات مرتبة ومنظمة ومدعمة بالأرقام
+                يمكن تحليلها وتفسيرها.
+                <br />
+                <strong className="text-orange-400">
+                  ⚠️ ليست كل المعلومات بيانات!
+                </strong>
+                <br />
+                <br />
+                <strong>المصادر:</strong> مراقبة الظواهر | إجراء التجارب | الأبحاث
+                والمقابلات
+                <br />
+                <strong>الفوائد:</strong> تحليل ومعالجة | تفسير النتائج | الكشف عن
+                الصلاحية | تقييم الأبحاث
+              </C>
+
+              <H3>🏘️ المجتمع والعينة</H3>
+              <T
+                headers={["", "المجتمع Population", "العينة Sample"]}
+                rows={[
+                  ["الرمز", "N (غالباً غير معروف)", "n (معروف)"],
+                  ["المتوسط", "μ (تقديري ← مجال الثقة)", "x̄ (حسابي ← يُحسب)"],
+                  ["الحجم", "كل الأفراد", "2-10% من المجتمع"],
+                ]}
+              />
+              <Tip>
+                المجتمع الإحصائي = عدد معروف من الأفراد تميزه صفات زمانية ومكانية
+                ويُستخدم في الأبحاث
+              </Tip>
+
+              <H3>📋 أنواع العينات الأربع</H3>
+              <T
+                headers={["النوع", "التعريف", "مثال"]}
+                rows={[
+                  [
+                    "البسيطة",
+                    "عشوائية، ≥ 30 فرد",
+                    "اختيار 30 طالب عشوائياً",
+                  ],
+                  [
+                    "الطبقية",
+                    "من كل طبقة حسب حجمها",
+                    "أثرياء، وسط، فقراء",
+                  ],
+                  [
+                    "المنتظمة",
+                    "فترات منتظمة",
+                    "عينة كل ساعة من المصنع",
+                  ],
+                  [
+                    "العنقودية",
+                    "تنظيم هرمي",
+                    "محافظة ← مدينة ← منطقة",
+                  ],
+                ]}
+              />
+
+              <H3>📊 أنواع المتغيرات</H3>
+              <T
+                headers={["التصنيف", "النوع", "أمثلة"]}
+                rows={[
+                  ["حسب القياس", "كمية Quantitative", "الطول، الوزن، العمر، الدرجات"],
+                  ["حسب القياس", "نوعية Qualitative", "اللون، الجنس، المهنة، درجة الذكاء"],
+                  ["حسب التحكم", "عشوائية Random", "الحرارة، الرطوبة، الرياح"],
+                  ["حسب التحكم", "لاعشوائية Controlled", "كمية السماد، جرعات الدواء"],
+                ]}
+              />
+
+              <H3>1️⃣ المتوسط الحسابي Mean</H3>
+              <F>x̄ = Σxi / n</F>
+              <C title="✏️ مثال 1: بيانات غير مبوبة" color="green">
+                أجور 5 موظفين: 250, 280, 320, 450, 370
+                <br />
+                <Step n={1} title="جمع القيم: 250+280+320+450+370 = 1670" />
+                <Step
+                  n={2}
+                  title="القسمة: 1670 ÷ 5 = 334 دولار"
+                  detail="n = 5"
+                />
+              </C>
+              <F c="purple">
+                المتوسط المبوب: x̄ = Σ(fi × xi) / Σfi
+                <br />
+                <span className="text-xs text-slate-400">
+                  fi=التكرار، xi=مركز الفئة=(الحد الأدنى+الأعلى)÷2
+                </span>
+              </F>
+              <Warn title="مميزات ومحددات المتوسط">
+                <strong className="text-emerald-400">المميزات:</strong> سهل الحساب
+                | يأخذ كل القيم | محصور بين أكبر وأصغر قيمة | مجموع الانحرافات عنه
+                = صفر
+                <br />
+                <strong className="text-red-400">المحددات:</strong> يتأثر بالقيم
+                الشاذة | يصعب في الجداول المفتوحة | لا يُحسب للوصفية
+              </Warn>
+
+              <H3>2️⃣ الوسيط Median</H3>
+              <C>
+                القيمة الوسطى بعد <strong>ترتيب البيانات تصاعدياً</strong>. يفصل
+                النصف الأعلى عن الأدنى.
+              </C>
+              <C title="✏️ مثال فردي: 15, 44, 52, 68, 102" color="green">
+                <Step n={1} title="مرتبة تصاعدياً" />
+                <Step n={2} title="رتبة الوسيط = (5+1)/2 = 3" />
+                <Step n={3} title="الوسيط = القيمة الثالثة = 52" />
+              </C>
+              <C title="✏️ مثال زوجي: 15, 44, 52, 68, 72, 102" color="green">
+                <Step n={1} title="رتبة الوسيط = (6+1)/2 = 3.5" />
+                <Step n={2} title="الوسيط = (52+68)/2 = 60" />
+              </C>
+              <F c="purple">
+                الوسيط المبوب = A + [(n/2 - f₁) / f] × L
+                <br />
+                <span className="text-xs text-slate-400">
+                  A=الحد الأدنى الحقيقي للفئة الوسيطية | f₁=التكرار المتجمع
+                  للسابقة | f=تكرار الفئة الوسيطية | L=طول الفئة
+                </span>
+              </F>
+              <Tip>
+                مميزات الوسيط: لا يتأثر بالقيم المتطرفة | يمكن إيجاده للوصفية
+                المرتبة
+                <br />
+                محدداته: لا يأخذ كل القيم | لا يسهل التعامل معه رياضياً
+              </Tip>
+
+              <H3>3️⃣ المنوال Mode</H3>
+              <C>
+                القيمة <strong>الأكثر تكراراً</strong>. يكثر استخدامه للبيانات
+                الوصفية لمعرفة النمط الشائع.
+                <br />
+                <br />
+                وحيد المنوال (قيمة واحدة أكثر تكراراً) | متعدد المنوال (أكثر من
+                قيمة) | عديم المنوال (كل القيم متساوية)
+                <br />
+                <br />
+                <strong>في البيانات المبوبة:</strong> الفئة المنوالية = الفئة ذات
+                أعلى تكرار (القيم تذوب داخل الفئات)
+              </C>
+
+              <H3>⭐ متى نستخدم كل مقياس؟</H3>
+              <T
+                headers={["المقياس", "متى نستخدمه"]}
+                rows={[
+                  ["المتوسط", "بيانات متجانسة خالية من القيم المتطرفة"],
+                  [
+                    "الوسيط",
+                    "بيانات فيها قيم متطرفة أو توزيع ملتوي",
+                  ],
+                  [
+                    "المنوال",
+                    "بيانات وصفية أو نريد القيمة الأكثر شيوعاً",
+                  ],
+                ]}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* ═══════════════ المحاضرة 2 ═══════════════ */}
+        {tab === "t2" && (
+          <div className="space-y-1">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700">
+              <h2 className="text-lg font-black text-purple-400 mb-3">
+                📐 الموضوع 2: مقاييس التشتت + القيمة المعيارية Z
+              </h2>
+
+              <C title="لماذا لا يكفي المتوسط وحده؟">
+                أ: 70,70,70,70,70 → متوسط=70 (متجانسة)
+                <br />
+                ب: 50,60,70,80,90 → متوسط=70 (مشتتة!)
+                <br />
+                <strong>نفس المتوسط لكن طبيعة مختلفة تماماً!</strong>
+              </C>
+
+              <H3>1️⃣ المدى Range</H3>
+              <F>R = Max - Min</F>
+              <C title="✏️ مثال: 85,92,78,96,88,74,90,82" color="green">
+                <Step n={1} title="Max=96, Min=74" />
+                <Step
+                  n={2}
+                  title="R = 96-74 = 22 درجة"
+                  detail="سهل لكن يتأثر بالشاذة ولا يأخذ كل القيم"
+                />
+              </C>
+
+              <H3>2️⃣ التباين Variance</H3>
+              <F>s² = Σ(xi - x̄)² / (n-1)</F>
+              <C title="✏️ مثال كامل: أعمار 6 موظفين: 25,30,28,35,32,26" color="green">
+                <Step n={1} title="المتوسط: x̄ = 176÷6 = 29.33" />
+                <Step
+                  n={2}
+                  title="الانحرافات: -4.33, 0.67, -1.33, 5.67, 2.67, -3.33"
+                />
+                <Step
+                  n={3}
+                  title="تربيع: 18.75, 0.45, 1.77, 32.15, 7.13, 11.09"
+                />
+                <Step n={4} title="المجموع: Σ = 71.34" />
+                <Step
+                  n={5}
+                  title="التباين: s² = 71.34÷5 = 14.27 سنة²"
+                  detail="⚠️ الوحدة مربعة! هذا عيب التباين"
+                />
+              </C>
+
+              <H3>3️⃣ الانحراف المعياري Standard Deviation</H3>
+              <F>s = √s² = √[Σ(xi-x̄)²/(n-1)]</F>
+              <C title="✏️ تكملة المثال" color="green">
+                <Step
+                  n={1}
+                  title="s = √14.27 = 3.78 سنة"
+                  detail="التفسير: الأعمار تنحرف عن المتوسط بـ 3.78 سنة في المتوسط. الوحدة = وحدة البيانات الأصلية"
+                />
+              </C>
+              <Warn title="قواعد ذهبية">
+                تباين كبير ← تشتت كبير ← غير متجانسة | تباين صغير ← متجانسة
+                <br />
+                للمقارنة: <strong>الأقل انحرافاً = الأكثر تجانساً</strong>
+              </Warn>
+
+              <H3>4️⃣ القيمة المعيارية Z-Score ⭐</H3>
+              <F>Z = (X - x̄) / s</F>
+              <T
+                headers={["قيمة Z", "التفسير"]}
+                rows={[
+                  ["Z = 0", "القيمة = المتوسط تماماً"],
+                  ["Z > 0", "أكبر من المتوسط"],
+                  ["Z < 0", "أصغر من المتوسط"],
+                  ["|Z| > 2", "⚠️ متطرفة محتملة"],
+                  ["|Z| > 3", "🚨 شاذة بقوة"],
+                ]}
+              />
+              <C title="✏️ مثال: مقارنة أداء في مادتين" color="green">
+                محاسبة: درجة 86, متوسط 77, انحراف 11 → Z=(86-77)/11=
+                <strong>0.82</strong>
+                <br />
+                اقتصاد: درجة 96, متوسط 84, انحراف 17 → Z=(96-84)/17=
+                <strong>0.71</strong>
+                <br />
+                <strong className="text-yellow-400">
+                  النتيجة: أداء المحاسبة أفضل نسبياً (0.82{">"}0.71) رغم أن درجة
+                  الاقتصاد أعلى!
+                </strong>
+              </C>
+              <C title="✏️ مثال: اكتشاف القيم الشاذة" color="green">
+                أوزان: 65,70,68,72,67,<strong className="text-red-400">95</strong>
+                ,69,71,66,73
+                <br />
+                المتوسط=71.6, الانحراف=8.62
+                <br />Z للوزن 95 = (95-71.6)/8.62 ={" "}
+                <strong className="text-red-400">2.71 → متطرفة! (|Z|{">"}2)</strong>
+              </C>
+            </div>
+          </div>
+        )}
+
+        {/* ═══════════════ المحاضرة 3 ═══════════════ */}
+        {tab === "t3" && (
+          <div className="space-y-1">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700">
+              <h2 className="text-lg font-black text-emerald-400 mb-3">
+                📊 الموضوع 3: التصوير البياني
+              </h2>
+
+              <H3>📊 المدرج التكراري Histogram</H3>
+              <C>
+                بيانات <strong>كمية متصلة</strong> | أعمدة{" "}
+                <strong className="text-red-400">متلاصقة بدون فراغات</strong> |
+                المحور الأفقي=الفئات، الرأسي=التكرار | يوضح شكل التوزيع
+              </C>
+              <C title="✏️ خطوات بناء المدرج (50 طالب)" color="green">
+                <Step n={1} title="المدى = Max-Min = 23-17 = 6" />
+                <Step
+                  n={2}
+                  title="عدد الفئات = 4 → طول الفئة = 6÷4 ≈ 2"
+                />
+                <Step
+                  n={3}
+                  title="الجدول التكراري: 17-18: 14 | 19-20: 24 | 21-22: 11 | 23-24: 1"
+                />
+                <Step
+                  n={4}
+                  title="التكرار النسبي = (تكرار÷مجموع)×100%"
+                  detail="مثال: 14÷50×100% = 28%"
+                />
+              </C>
+
+              <H3>📊 المخطط الشريطي Bar Chart</H3>
+              <C>
+                بيانات <strong>نوعية/تصنيفية</strong> | أعمدة{" "}
+                <strong className="text-emerald-400">
+                  منفصلة بينها فراغات
+                </strong>{" "}
+                | أنواع: رأسي، أفقي، مجمّع، مكدّس | الترتيب غير مهم
+              </C>
+
+              <H3>📊 مخطط التشتت Scatter Plot</H3>
+              <C>
+                العلاقة بين <strong>متغيرين كميين</strong> | نقاط على المستوى
+                الإحداثي
+                <br />
+                يُظهر: اتجاه العلاقة + قوتها + القيم الشاذة
+              </C>
+
+              <H3>📋 المقارنة الشاملة</H3>
+              <T
+                headers={["المخطط", "البيانات", "الأعمدة", "الاستخدام"]}
+                rows={[
+                  ["المدرج التكراري", "كمية مستمرة", "متلاصقة", "شكل التوزيع"],
+                  ["الشريطي", "نوعية/فئوية", "منفصلة", "المقارنة بين فئات"],
+                  ["التشتت", "كمية (متغيرين)", "نقاط", "العلاقة بين متغيرات"],
+                ]}
+              />
+              <Warn title="نصائح مهمة">
+                لا تفترض السببية من الارتباط! (مثال: المثلجات والغرق ← السبب المشترك: الحرارة)
+                <br />
+                اختر النوع المناسب: نوعية←شريطي | توزيع←مدرج | علاقات←تشتت
+              </Warn>
+            </div>
+          </div>
+        )}
+
+        {/* ═══════════════ المحاضرة 4 ═══════════════ */}
+        {tab === "t4" && (
+          <div className="space-y-1">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700">
+              <h2 className="text-lg font-black text-orange-400 mb-3">
+                📈 الموضوع 4: الارتباط + الانحدار + التنبؤ
+              </h2>
+
+              <H3>🔗 أنواع الارتباط</H3>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-emerald-500/5 border border-emerald-500/20 rounded-lg p-3 text-center">
+                  <div className="text-emerald-400 font-bold text-sm">إيجابي ↗️</div>
+                  <div className="text-xs text-slate-400">X↑ → Y↑ (الحرارة↔المياه)</div>
+                </div>
+                <div className="bg-red-500/5 border border-red-500/20 rounded-lg p-3 text-center">
+                  <div className="text-red-400 font-bold text-sm">سلبي ↘️</div>
+                  <div className="text-xs text-slate-400">X↑ → Y↓ (السعر↔الطلب)</div>
+                </div>
+              </div>
+
+              <H3>📐 معامل ارتباط بيرسون r</H3>
+              <F>r = Σ[(xi-x̄)(yi-ȳ)] / √[Σ(xi-x̄)² × Σ(yi-ȳ)²]</F>
+              <T
+                headers={["|r|", "القوة"]}
+                rows={[
+                  ["0.0-0.2", "ضعيف جداً"],
+                  ["0.2-0.4", "ضعيف"],
+                  ["0.4-0.6", "متوسط"],
+                  ["0.6-0.8", "قوي"],
+                  ["0.8-1.0", "⭐ قوي جداً"],
+                ]}
+              />
+
+              <C title="✏️ مثال محلول كامل: ساعات الدراسة والدرجات" color="green">
+                <T
+                  headers={["الطالب", "X ساعات", "Y درجات"]}
+                  rows={[["1","2","65"],["2","4","75"],["3","6","85"],["4","8","90"],["5","10","95"]]}
+                />
+                <Step n={1} title="المتوسطات: x̄=6, ȳ=82" />
+                <Step n={2} title="Σ(xi-x̄)(yi-ȳ) = 68+14+0+16+52 = 150" />
+                <Step n={3} title="Σ(xi-x̄)² = 16+4+0+4+16 = 40" />
+                <Step n={4} title="Σ(yi-ȳ)² = 289+49+9+64+169 = 580" />
+                <Step n={5} title="r = 150/√(40×580) = 150/152.315 = 0.985" />
+                <Step
+                  n={6}
+                  title="التفسير: ارتباط إيجابي قوي جداً (>0.8)"
+                />
+              </C>
+
+              <H3>📊 معامل التحديد R²</H3>
+              <F>R² = r² (نسبة التباين المفسَّر)</F>
+              <Tip>
+                r=0.985 → R²=0.970 → 97% من التغير في الدرجات يُفسره ساعات الدراسة.
+                كلما اقترب R² من 1 كان النموذج أفضل.
+              </Tip>
+
+              <H3>📈 معادلة الانحدار الخطي</H3>
+              <F>
+                Y = a + bX
+                <br />
+                <span className="text-xs text-slate-400">
+                  b = Σ(xi-x̄)(yi-ȳ)/Σ(xi-x̄)² &nbsp;|&nbsp; a = ȳ - b×x̄
+                </span>
+              </F>
+              <C title="✏️ تكملة المثال" color="green">
+                <Step n={1} title="b = 150/40 = 3.75 (لكل ساعة تزيد الدرجة 3.75)" />
+                <Step n={2} title="a = 82 - 3.75×6 = 59.5" />
+                <Step n={3} title="المعادلة: Y = 59.5 + 3.75X" />
+              </C>
+
+              <H3>🔮 التنبؤ</H3>
+              <C title="✏️ درجة طالب يدرس 7 ساعات" color="green">
+                Y = 59.5 + 3.75×7 = 59.5 + 26.25 ={" "}
+                <strong className="text-yellow-400">85.75</strong>
+              </C>
+              <Warn title="حدود التنبؤ">
+                لا تتنبأ خارج نطاق البيانات الأصلية! | راجع النموذج دورياً |
+                استخدم متغيرات ذات علاقة قوية
+              </Warn>
+            </div>
+          </div>
+        )}
+
+        {/* ═══════════════ أكواد بايثون ═══════════════ */}
+        {tab === "t5" && (
+          <div className="space-y-1">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700">
+              <h2 className="text-lg font-black text-yellow-400 mb-3">
+                🐍 جميع أكواد بايثون مع الشرح
+              </h2>
+
+              <Code title="استيراد المكتبات (دائماً أولاً)" explain="numpy: حسابات رياضية | pandas: جداول بيانات | matplotlib: رسوم | seaborn: رسوم أجمل | scipy: إحصاء متقدم | sklearn: تعلم آلي">
+{`import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy import stats
+from sklearn.linear_model import LinearRegression`}
+              </Code>
+
+              <Code title="1. النزعة المركزية" explain="np.mean()=المتوسط | np.median()=الوسيط | stats.mode()=المنوال">
+{`data = [250, 280, 320, 450, 370]
+print(f"المتوسط: {np.mean(data)}")      # 334.0
+print(f"الوسيط: {np.median(data)}")      # 320.0
+mode = stats.mode(data)
+print(f"المنوال: {mode.mode}")`}
+              </Code>
+
+              <Code title="2. التشتت" explain="⚠️ ddof=1 مهم جداً! بدونه يقسم على n (مجتمع). مع ddof=1 يقسم على n-1 (عينة)">
+{`ages = [25, 30, 28, 35, 32, 26]
+range_val = max(ages) - min(ages)        # المدى = 10
+variance = np.var(ages, ddof=1)          # التباين = 14.27
+std_dev = np.std(ages, ddof=1)           # الانحراف = 3.78`}
+              </Code>
+
+              <Code title="3. Z-Score واكتشاف القيم الشاذة" explain="Z=(X-mean)/std | إذا |Z|>2 = متطرفة محتملة | إذا |Z|>3 = شاذة بقوة">
+{`weights = [65,70,68,72,67,95,69,71,66,73]
+m, s = np.mean(weights), np.std(weights, ddof=1)
+z_scores = [(x - m) / s for x in weights]
+for w, z in zip(weights, z_scores):
+    status = "⚠️ شاذة" if abs(z) > 2 else "طبيعية"
+    print(f"الوزن {w}: Z={z:.2f} → {status}")
+# الوزن 95: Z=2.71 → ⚠️ شاذة`}
+              </Code>
+
+              <Code title="4. المدرج التكراري Histogram" explain="plt.hist: أعمدة متلاصقة | bins=عدد الفئات | edgecolor=لون الحدود">
+{`ages = [18,19,17,20,21,18,19,22,17,20]
+plt.figure(figsize=(10, 6))
+plt.hist(ages, bins=4, edgecolor='black',
+         alpha=0.7, color='skyblue')
+plt.xlabel('العمر'); plt.ylabel('التكرار')
+plt.title('توزيع الأعمار')
+plt.grid(True, alpha=0.3); plt.show()`}
+              </Code>
+
+              <Code title="5. المخطط الشريطي (رأسي + أفقي)" explain="plt.bar=رأسي | plt.barh=أفقي (مفيد لأسماء طويلة)">
+{`cats = ['الرياض', 'جدة', 'الدمام']
+vals = [150, 120, 90]
+plt.bar(cats, vals, color='coral')     # رأسي
+# plt.barh(cats, vals, color='coral')  # أفقي`}
+              </Code>
+
+              <Code title="6. مخطط التشتت + خط الاتجاه + R²" explain="stats.linregress: تعطي slope,intercept,r_value,p_value,std_err دفعة واحدة | r_value**2 = R²">
+{`X = [2,4,6,8,10]; Y = [65,75,85,90,95]
+slope, intercept, r_value, p, se = stats.linregress(X, Y)
+print(f"المعادلة: y = {intercept:.1f} + {slope:.2f}x")
+print(f"r = {r_value:.3f}, R² = {r_value**2:.3f}")
+# رسم
+plt.scatter(X, Y, color='blue', s=100)
+line = slope * np.array(X) + intercept
+plt.plot(X, line, 'r--', linewidth=2)
+plt.show()`}
+              </Code>
+
+              <Code title="7. الانحدار + التنبؤ (sklearn)" explain="reshape(-1,1): مطلوب من sklearn | model.fit: تدريب | intercept_=a | coef_[0]=b | predict: تنبؤ">
+{`X = df['ساعات'].values.reshape(-1, 1)
+y = df['درجات'].values
+model = LinearRegression()
+model.fit(X, y)
+a = model.intercept_    # الثابت (59.5)
+b = model.coef_[0]      # الميل (3.75)
+# التنبؤ بدرجة طالب يدرس 7 ساعات
+pred = model.predict([[7]])[0]  # 85.75`}
+              </Code>
+
+              <Code title="8. معامل الارتباط (pandas)" explain=".corr() تحسب معامل بيرسون بين عمودين في DataFrame">
+{`data = {'ساعات': [2,4,6,8,10], 'درجات': [65,75,85,90,95]}
+df = pd.DataFrame(data)
+r = df['ساعات'].corr(df['درجات'])
+print(f"معامل الارتباط: {r:.3f}")  # 0.985`}
+              </Code>
+            </div>
+          </div>
+        )}
+
+        {/* ═══════════════ دوال Excel ═══════════════ */}
+        {tab === "t6" && (
+          <div className="space-y-1">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700">
+              <h2 className="text-lg font-black text-emerald-400 mb-3">
+                🧮 جميع دوال Excel المطلوبة
+              </h2>
+
+              <H3>📊 النزعة المركزية</H3>
+              <T
+                headers={["الدالة", "الوظيفة", "مثال"]}
+                rows={[
+                  ["AVERAGE", "المتوسط", "=AVERAGE(A1:A10)"],
+                  ["AVERAGEIF", "متوسط بشرط", "=AVERAGEIF(B:B,\"A\",C:C)"],
+                  ["AVERAGEIFS", "متوسط بعدة شروط", "=AVERAGEIFS(C:C,B:B,\"B\",C:C,\">=90\")"],
+                  ["MEDIAN", "الوسيط", "=MEDIAN(A1:A10)"],
+                  ["MODE.SNGL", "المنوال الوحيد", "=MODE.SNGL(A1:A10)"],
+                  ["MODE.MULT", "المنوال المتعدد", "=MODE.MULT(A1:A10)"],
+                ]}
+              />
+              <H3>📐 التشتت</H3>
+              <T
+                headers={["الدالة", "الوظيفة"]}
+                rows={[
+                  ["MAX()-MIN()", "المدى"],
+                  ["VAR.S", "تباين العينة (÷n-1)"],
+                  ["VAR.P", "تباين المجتمع (÷n)"],
+                  ["STDEV.S", "انحراف العينة (÷n-1)"],
+                  ["STDEV.P", "انحراف المجتمع (÷n)"],
+                  ["(A1-B1)/C1", "القيمة المعيارية Z"],
+                ]}
+              />
+              <Warn title="S = Sample (عينة ÷n-1) ← الأكثر استخداماً | P = Population (مجتمع ÷n)" />
+
+              <H3>📈 الارتباط والانحدار</H3>
+              <T
+                headers={["الدالة", "الوظيفة"]}
+                rows={[
+                  ["CORREL", "معامل ارتباط بيرسون r"],
+                  ["SLOPE", "ميل خط الانحدار b"],
+                  ["INTERCEPT", "نقطة التقاطع a"],
+                  ["FORECAST", "التنبؤ بقيمة Y"],
+                ]}
+              />
+              <H3>🔢 العد والجمع الشرطي</H3>
+              <T
+                headers={["الدالة", "الوظيفة", "مثال"]}
+                rows={[
+                  ["COUNTIF", "عد بشرط", "=COUNTIF(B:B,\">=60\")"],
+                  ["SUMIF", "جمع بشرط", "=SUMIF(A:A,\"الشرقي\",B:B)"],
+                ]}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* ═══════════════ دوال IF ═══════════════ */}
+        {tab === "t7" && (
+          <div className="space-y-1">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700">
+              <h2 className="text-lg font-black text-orange-400 mb-3">
+                🔀 الموضوع 6: تحليل البيانات بـ IF والدوال الشرطية
+              </h2>
+
+              <H3>🔀 IF الأساسية</H3>
+              <F>=IF(الشرط, القيمة_إذا_صح, القيمة_إذا_خطأ)</F>
+              <C title='✏️ مثال: =IF(A2>=60,"ناجح","راسب")' color="green">
+                A2=75 → 75≥60 صحيح → <strong>ناجح</strong>
+                <br />
+                A2=45 → 45≥60 خطأ → <strong>راسب</strong>
+              </C>
+
+              <H3>🔀 IF المتداخلة (أكثر من خيارين)</H3>
+              <F>=IF(A2≥90,"A", IF(A2≥80,"B", IF(A2≥70,"C", IF(A2≥60,"D","F"))))</F>
+              <Warn title="قاعدة حاسمة: الترتيب من الأكبر للأصغر!">
+                ❌ IF(A2≥60,"D", IF(A2≥90,"A",...)) ← كل الدرجات العالية ستحصل على D!
+                <br />
+                ✅ IF(A2≥90,"A", IF(A2≥60,"D",...)) ← نبدأ من الأكبر
+              </Warn>
+
+              <H3>🔀 حساب العمولة (IF متداخلة)</H3>
+              <C title="أقل من 5000=5% | 5000-10000=7% | أكثر=10%" color="green">
+                <EF>=IF(B2&lt;5000, B2*0.05, IF(B2&lt;10000, B2*0.07, B2*0.1))</EF>
+                <br /><br />
+                4500→225ر | 7800→546ر | 12000→1200ر
+              </C>
+
+              <H3>🔗 IF + AND (كل الشروط معاً)</H3>
+              <F>=IF(AND(شرط1, شرط2), صح, خطأ)</F>
+              <C title='✏️ قبول: معدل≥3 و إنجليزي≥500' color="green">
+                <EF>=IF(AND(B2≥3, C2≥500), "مقبول", "غير مقبول")</EF>
+                <br /><br />
+                معدل 3.5 + إنجليزي 550 → مقبول ✅ | معدل 2.8 + إنجليزي 600 → غير مقبول ❌
+              </C>
+
+              <H3>🔗 IF + OR (شرط واحد يكفي)</H3>
+              <F>=IF(OR(شرط1, شرط2), صح, خطأ)</F>
+              <C title='✏️ خصم 15% إذا عميل مميز أو مشتريات≥5000' color="green">
+                <EF>=IF(OR(C2="نعم", B2≥5000), B2*0.15, 0)</EF>
+              </C>
+
+              <H3>🔗 دمج AND و OR معاً</H3>
+              <C title='✏️ منحة: (معدل≥3.5 و دخل<3000) أو (معدل≥3.8)' color="green">
+                <EF>=IF(OR(AND(B2≥3.5, C2&lt;3000), B2≥3.8), "يستحق", "لا")</EF>
+              </C>
+
+              <H3>📋 عوامل المقارنة</H3>
+              <T
+                headers={["العامل", "المعنى"]}
+                rows={[["=","يساوي"],[">","أكبر من"],["<","أصغر من"],[">=","أكبر أو يساوي"],["<=","أصغر أو يساوي"],["<>","لا يساوي"]]}
+              />
+
+              <Warn title="أخطاء شائعة تجنبها!">
+                ❌ نسيان علامات التنصيص: IF(A1&gt;50,ناجح) → ✅ IF(A1&gt;50,"ناجح")
+                <br />
+                ❌ ترتيب خاطئ في IF المتداخلة (ابدأ من الأكبر!)
+                <br />
+                ❌ نسيان إغلاق الأقواس (كل قوس ( يجب أن يُغلق ))
+                <br />❌ نسيان الفاصلة بين أجزاء الدالة
+              </Warn>
+            </div>
+          </div>
+        )}
+
+        {/* ═══════════════ الاختبار ═══════════════ */}
+        {tab === "quiz" && (
+          <div className="space-y-3">
+            <div className="bg-[#1a2440] rounded-xl p-4 border border-slate-700 text-center">
+              <div className="text-3xl font-black bg-gradient-to-l from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                {score} / {quizData.length}
+              </div>
+              <button
+                onClick={resetQuiz}
+                className="mt-2 px-4 py-1.5 bg-red-500/15 text-red-400 border border-red-500/30 rounded-lg text-sm font-bold"
+              >
+                🔄 إعادة
+              </button>
+            </div>
+
+            {quizData.map((q, qi) => (
+              <div
+                key={qi}
+                className="bg-[#1a2440] rounded-xl p-3 border border-slate-700"
+              >
+                <div className="text-blue-400 font-bold text-sm mb-2">
+                  س{qi + 1}: {q.q}
+                </div>
+                <div className="space-y-1.5">
+                  {q.o.map((o, oi) => {
+                    const a = answers[qi];
+                    let cls =
+                      "p-2 border rounded-lg text-sm cursor-pointer transition-all ";
+                    if (a) {
+                      if (oi === q.c)
+                        cls +=
+                          "border-emerald-500 bg-emerald-500/10 text-emerald-400";
+                      else if (oi === a.selected && !a.correct)
+                        cls += "border-red-500 bg-red-500/10 text-red-400";
+                      else cls += "border-slate-700 text-slate-500";
+                    } else {
+                      cls +=
+                        "border-slate-700 text-slate-300 hover:border-blue-500 hover:bg-blue-500/5";
+                    }
+                    return (
+                      <div
+                        key={oi}
+                        className={cls}
+                        onClick={() => handleAnswer(qi, oi)}
+                      >
+                        {o}
+                      </div>
+                    );
+                  })}
+                </div>
+                {answers[qi] && (
+                  <div
+                    className={`mt-2 p-2 rounded-lg text-xs ${
+                      answers[qi].correct
+                        ? "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400"
+                        : "bg-red-500/10 border border-red-500/20 text-red-300"
+                    }`}
+                  >
+                    {answers[qi].correct ? "✅" : "❌"} {q.e}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
+ReactDOM.render(<STA104 />, document.getElementById('root'));
+</script>
+</body>
+</html>
