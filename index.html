@@ -162,30 +162,166 @@ sections.t1=`<div class="card">
 <tr><td>لاعشوائية Controlled</td><td>كمية السماد، جرعات الدواء</td></tr>
 </table></div>
 
-<h3>1️⃣ المتوسط الحسابي Mean</h3>
-<div class="fm">x̄ = Σxi / n<small>مجموع القيم ÷ عددها</small></div>
+<h3>📖 تعريف مقاييس النزعة المركزية (كما في المنهج)</h3>
+<div class="cb"><div class="lb bl">التعريف</div>مقاييس النزعة المركزية (أو مقاييس الموقع أو المتوسطات) هي <b>مقاييس عددية تحدد موقع التوزيع للبيانات</b>. يمكن تعريفها بأنها <b>القيمة النموذجية الممثلة لمجموعة من البيانات</b>، والتي تميل إلى الوقوع في المركز، لذلك تسمى بمقاييس النزعة المركزية.<br><br>
+<b>لماذا مهمة؟</b> مهمة في حالة المقارنة بين التوزيعات المختلفة للبيانات. مثلاً: عند دراسة إنفاق عينة من الأسر في الريف وأخرى في الحضر، يمكننا المقارنة بينهما من خلال هذه المقاييس.<br><br>
+<b>مثال توضيحي:</b> لو أخذنا أطوال 500 شخص في السعودية، نلاحظ أن الأطوال تتراوح حول مجال معين (150-180 سم)، المتوسط = 165 سم، و400 شخص طولهم قريب من 165 سم وعدد قليل طولهم 180 أو 150 سم.</div>
+
+<h3>1️⃣ المتوسط الحسابي Mean (الوسط الحسابي)</h3>
+<div class="cb"><div class="lb bl">التعريف كما في المنهج</div>هو قيمة تتجمع حولها مجموعة من القيم، ويعتبر من <b>أهم</b> مقاييس النزعة المركزية و<b>الأكثر استخداماً</b> في الإحصاء والحياة العملية، ويستخدم عادة في الكثير من المقارنات بين الظواهر المختلفة.<br><br>
+يُحسب للبيانات غير المبوبة <b>بجمع قيم عناصر المجموعة</b> المراد إيجاد وسطها، <b>ويُقسم المجموع على عدد العناصر</b>.</div>
+<div class="fm">x̄ = Σxi / n<small>
+<b>ترجمة القانون:</b><br>
+x̄ (إكس بار) = المتوسط الحسابي (الناتج الذي نريد حسابه)<br>
+Σ (سيجما) = مجموع (اجمع كل القيم)<br>
+xi = القيمة الفردية (كل قيمة من البيانات)<br>
+n = عدد القيم (كم قيمة عندنا)<br>
+<b>بالعربي:</b> المتوسط = مجموع كل القيم ÷ عددها</small></div>
 <div class="cb g"><div class="lb gr">✏️ مثال: أجور 5 موظفين: 250, 280, 320, 450, 370</div>
 <div class="stp"><div class="sn">1</div><div><b>جمع القيم:</b> 250+280+320+450+370 = 1670</div></div>
 <div class="stp"><div class="sn">2</div><div><b>القسمة:</b> 1670 ÷ 5 = <span class="hl" style="font-size:1.1rem">334 دولار</span></div></div>
 </div>
 <div class="fm">المتوسط المبوب: x̄ = Σ(fi × xi) / Σfi<small>fi = التكرار، xi = مركز الفئة = (الحد الأدنى + الأعلى) ÷ 2</small></div>
-<div class="warn"><div class="wt">⚠️ مميزات ومحددات المتوسط</div><span class="hl3">المميزات:</span> سهل الحساب | يأخذ كل القيم | محصور بين أكبر وأصغر قيمة | مجموع الانحرافات عنه = صفر<br><span style="color:#ef4444">المحددات:</span> يتأثر بالقيم الشاذة | يصعب في الجداول المفتوحة | لا يُحسب للوصفية</div>
+
+<div class="cb y"><div class="lb yl">خطوات حساب المتوسط المبوب:</div>
+1. أوجد <b>مركز كل فئة</b> xi = (الحد الأدنى + الحد الأعلى) ÷ 2<br>
+2. اضرب مركز كل فئة في تكرارها: fi × xi<br>
+3. اجمع كل حاصل الضرب: Σ(fi × xi)<br>
+4. اقسم على مجموع التكرارات: x̄ = Σ(fi × xi) ÷ Σfi</div>
+
+<div class="cb g"><div class="lb gr">✏️ مثال من المنهج (ص18): احسب متوسط أعمار الطلاب</div>
+<b>البيانات الأصلية:</b>
+<div class="tw"><table>
+<tr><th>فئات العمر</th><th>5-6</th><th>7-8</th><th>9-10</th><th>11-12</th></tr>
+<tr><th>عدد الطلاب</th><td>4</td><td>6</td><td>5</td><td>9</td></tr>
+</table></div>
+<b>الحل بالجدول:</b>
+<div class="tw"><table>
+<tr><th>فئات العمر</th><th>مركز الفئة xi</th><th>التكرار fi</th><th>fi × xi</th></tr>
+<tr><td>5-6</td><td>(5+6)÷2 = 5.5</td><td>4</td><td>4×5.5 = 22</td></tr>
+<tr><td>7-8</td><td>(7+8)÷2 = 7.5</td><td>6</td><td>6×7.5 = 45</td></tr>
+<tr><td>9-10</td><td>(9+10)÷2 = 9.5</td><td>5</td><td>5×9.5 = 47.5</td></tr>
+<tr><td>11-12</td><td>(11+12)÷2 = 11.5</td><td>9</td><td>9×11.5 = 103.5</td></tr>
+<tr style="background:rgba(56,189,248,.08)"><th colspan="2">المجموع</th><th>Σfi = 24</th><th>Σ(fi×xi) = 218</th></tr>
+</table></div>
+<div class="stp"><div class="sn">1</div><div><b>مركز الفئة:</b> xi = (الحد الأدنى+الأعلى)÷2 → مثلاً (5+6)÷2 = 5.5</div></div>
+<div class="stp"><div class="sn">2</div><div><b>fi×xi لكل فئة:</b> 22 + 45 + 47.5 + 103.5 = <b>218</b></div></div>
+<div class="stp"><div class="sn">3</div><div><b>المتوسط:</b> x̄ = Σ(fi×xi) ÷ Σfi = 218 ÷ 24 = <span class="hl" style="font-size:1.3rem">9.08 سنة</span></div></div>
+</div>
+
+<div class="warn"><div class="wt">⭐ مميزات المتوسط الحسابي</div>
+1. <b>سهل الحساب</b> ويخضع للعمليات الجبرية بسهولة ← أكثر المقاييس استخداماً<br>
+2. <b>يأخذ في الاعتبار جميع القيم</b> محل الدراسة<br>
+3. يكون <b>محصوراً دائماً بين أكبر وأصغر قيمة</b> في العيّنة<br>
+4. <b>مجموع انحرافات القيم عنه = صفر</b> دائماً ← Σ(xi-x̄) = 0<br><br>
+<span style="color:#ef4444"><b>❌ محددات المتوسط الحسابي:</b></span><br>
+1. <b>يتأثر بالقيم الشاذة (المتطرفة)</b> ← الكبيرة جداً أو الصغيرة جداً تسحبه نحوها<br>
+2. <b>يصعب حسابه</b> في حالة الجداول التكرارية المفتوحة (يتطلب معرفة مركز كل فئة)<br>
+3. <b>لا يمكن حسابه</b> في حالة البيانات الوصفية (مثل الجنس، اللون)</div>
 
 <h3>2️⃣ الوسيط Median</h3>
-<div class="cb">القيمة الوسطى بعد <b>ترتيب البيانات تصاعدياً</b>. يفصل النصف الأعلى عن الأدنى.</div>
-<div class="cb g"><div class="lb gr">✏️ مثال فردي: 15, 44, 52, 68, 102</div>
-<div class="stp"><div class="sn">1</div><div>رتبة الوسيط = (5+1)/2 = 3</div></div>
-<div class="stp"><div class="sn">2</div><div>الوسيط = القيمة الثالثة = <span class="hl">52</span></div></div>
+<div class="cb"><div class="lb bl">التعريف</div>الوسيط هو المقياس الذي يقسم البيانات المرتبة إلى <b>نصفين متساويين</b>: عدد القيم الأكبر منه = عدد القيم الأصغر منه. يختلف حسابه حسب نوع البيانات (مبوبة أو غير مبوبة).</div>
+
+<h3 style="color:#38bdf8;font-size:.9rem">📌 الوسيط للبيانات غير المبوبة (القيم الفردية)</h3>
+
+<div class="cb y"><div class="lb yl">القانون الأساسي</div>
+<b>الخطوة 1:</b> رتّب البيانات ترتيباً تصاعدياً (من الأصغر إلى الأكبر)<br>
+<b>الخطوة 2:</b> احسب رتبة الوسيط بالقانون:<br></div>
+
+<div class="fm">رتبة الوسيط = (n + 1) / 2<small>حيث n = عدد القيم (عدد البيانات)</small></div>
+
+<div class="cb y"><div class="lb yl">⭐ حالتان مهمتان جداً:</div>
+<b>الحالة 1 (n فردي):</b> رتبة الوسيط تكون عدداً صحيحاً ← الوسيط = القيمة التي تقع في ذلك الموقع مباشرة<br><br>
+<b>الحالة 2 (n زوجي):</b> رتبة الوسيط تكون كسراً (مثل 3.5) ← الوسيط = متوسط القيمتين اللتين تقعان في المنتصف<br></div>
+
+<div class="fm">إذا n فردي → الوسيط = القيمة في الموقع (n+1)/2<br>إذا n زوجي → الوسيط = (القيمة في الموقع n/2 + القيمة في الموقع n/2 + 1) ÷ 2</div>
+
+<div class="cb g"><div class="lb gr">✏️ مثال 1 من المنهج (عدد فردي n=5)</div>
+<b>البيانات الأصلية:</b> 15, 102, 68, 44, 52<br><br>
+<div class="stp"><div class="sn">1</div><div><b>الترتيب تصاعدياً:</b> 15, 44, <span class="hl" style="font-size:1.1rem;background:rgba(56,189,248,.15);padding:0 4px;border-radius:3px">52</span>, 68, 102<br><span class="sd">نرتب القيم من الأصغر إلى الأكبر</span></div></div>
+<div class="stp"><div class="sn">2</div><div><b>عدد البيانات:</b> n = 5 (عدد فردي)</div></div>
+<div class="stp"><div class="sn">3</div><div><b>حساب رتبة الوسيط:</b> (n+1)/2 = (5+1)/2 = 6/2 = <b>3</b><br><span class="sd">الرتبة 3 = عدد صحيح ← نأخذ القيمة الثالثة مباشرة</span></div></div>
+<div class="stp"><div class="sn">4</div><div><b>الوسيط = القيمة في الموقع الثالث =</b> <span class="hl" style="font-size:1.3rem">52</span><br><span class="sd">نعد من اليسار: الأولى=15، الثانية=44، الثالثة=52 ✓</span></div></div>
 </div>
-<div class="cb g"><div class="lb gr">✏️ مثال زوجي: 15, 44, 52, 68, 72, 102</div>
-<div class="stp"><div class="sn">1</div><div>رتبة الوسيط = (6+1)/2 = 3.5</div></div>
-<div class="stp"><div class="sn">2</div><div>الوسيط = (52+68)/2 = <span class="hl">60</span></div></div>
+
+<div class="cb g"><div class="lb gr">✏️ مثال 2 من المنهج (عدد زوجي n=6)</div>
+<b>البيانات الأصلية:</b> 15, 102, 68, 44, 52, 72<br><br>
+<div class="stp"><div class="sn">1</div><div><b>الترتيب تصاعدياً:</b> 15, 44, <span class="hl" style="background:rgba(56,189,248,.15);padding:0 4px;border-radius:3px">52, 68</span>, 72, 102<br><span class="sd">القيمتان الوسطيتان محددتان باللون</span></div></div>
+<div class="stp"><div class="sn">2</div><div><b>عدد البيانات:</b> n = 6 (عدد زوجي)</div></div>
+<div class="stp"><div class="sn">3</div><div><b>حساب رتبة الوسيط:</b> (n+1)/2 = (6+1)/2 = 7/2 = <b>3.5</b><br><span class="sd">الرتبة 3.5 = كسر ← الوسيط بين القيمة الثالثة والرابعة</span></div></div>
+<div class="stp"><div class="sn">4</div><div><b>القيمة الثالثة = 52، القيمة الرابعة = 68</b></div></div>
+<div class="stp"><div class="sn">5</div><div><b>الوسيط = (52 + 68) ÷ 2 = 120 ÷ 2 =</b> <span class="hl" style="font-size:1.3rem">60</span></div></div>
 </div>
-<div class="fm">الوسيط المبوب = A + [(n/2 - f₁) / f] × L<small>A=الحد الأدنى الحقيقي للفئة الوسيطية | f₁=التكرار المتجمع للسابقة | f=تكرار الفئة الوسيطية | L=طول الفئة</small></div>
-<div class="tip">مميزات: لا يتأثر بالقيم المتطرفة | يمكن إيجاده للوصفية المرتبة<br>محددات: لا يأخذ كل القيم | لا يسهل التعامل معه رياضياً</div>
+
+<div class="warn"><div class="wt">⭐ مميزات الوسيط</div>
+1. <b>لا يتأثر بالقيم المتطرفة (الشاذة)</b> ← لأنه يعتمد على الموقع وليس القيمة<br>
+2. يمكن إيجاده في حالة <b>البيانات الوصفية</b> التي يمكن ترتيبها<br>
+3. مجموع الانحرافات المطلقة عن الوسيط أقل ما يمكن مقارنة بأي قيمة حقيقية<br><br>
+<span style="color:#ef4444"><b>❌ محددات الوسيط:</b></span><br>
+1. لا يأخذ <b>جميع القيم</b> في الاعتبار عند حسابه<br>
+2. <b>لا يسهل التعامل معه</b> في التحاليل الإحصائية والرياضية</div>
+
+<h3>📐 الوسيط للبيانات المبوبة (الجداول التكرارية)</h3>
+<div class="cb y"><div class="lb yl">خطوات حساب الوسيط المبوب:</div>
+1. نكوّن <b>جدول التكرار المتجمع الصاعد</b> باستخدام الحدود الحقيقية<br>
+2. نحسب <b>رتبة الوسيط = n/2</b><br>
+3. نحدد <b>الفئة الوسيطية</b> = أول فئة تكرارها المتجمع ≥ رتبة الوسيط<br>
+4. نطبق القانون</div>
+
+<div class="fm">الوسيط = A + [(n/2 - F) / f] × L</div>
+<div class="cb"><b>شرح كل رمز بالتفصيل:</b><br>
+<b>A</b> = الحد الأدنى <u>الحقيقي</u> للفئة الوسيطية (الحد الأدنى - 0.5)<br>
+<b>n</b> = مجموع التكرارات (عدد جميع البيانات)<br>
+<b>F</b> = التكرار المتجمع الصاعد للفئة <u>السابقة</u> للفئة الوسيطية<br>
+<b>f</b> = تكرار الفئة الوسيطية نفسها<br>
+<b>L</b> = طول الفئة الوسيطية (الحد الأعلى - الحد الأدنى + 1، أو الفرق بين الحدود الحقيقية)</div>
+
+<div class="cb g"><div class="lb gr">✏️ مثال من المنهج (ص23): احسب الوسيط للأعمار التالية</div>
+<b>البيانات الأصلية:</b>
+<div class="tw"><table>
+<tr><th>فئات العمر</th><th>5-6</th><th>7-8</th><th>9-10</th><th>11-12</th></tr>
+<tr><th>عدد الطلاب</th><td>4</td><td>6</td><td>5</td><td>9</td></tr>
+</table></div>
+<b>الحل: نكوّن جدول التكرار المتجمع الصاعد:</b>
+<div class="tw"><table>
+<tr><th>فئات العمر (الحدود الحقيقية)</th><th>التكرار f</th><th>التكرار المتجمع F</th></tr>
+<tr><td>> 4.5</td><td>0</td><td>0</td></tr>
+<tr><td>> 6.5</td><td>4</td><td>4</td></tr>
+<tr style="background:rgba(251,191,36,.1)"><td style="color:#fbbf24"><b>> 8.5 ← الفئة الوسيطية</b></td><td style="color:#fbbf24"><b>6</b></td><td style="color:#fbbf24"><b>10</b></td></tr>
+<tr><td>> 10.5</td><td>5</td><td>15</td></tr>
+<tr><td>> 12.5</td><td>9</td><td>24</td></tr>
+</table></div>
+<div class="stp"><div class="sn">1</div><div><b>رتبة الوسيط:</b> n/2 = 24/2 = <b>12</b></div></div>
+<div class="stp"><div class="sn">2</div><div><b>الفئة الوسيطية:</b> الفئة 9-10 (لأن 12 محصور بين التكرار المتجمع 10 و 15)<br><span class="sd">أول فئة تكرارها المتجمع (15) ≥ رتبة الوسيط (12)</span></div></div>
+<div class="stp"><div class="sn">3</div><div><b>استخراج القيم:</b><br>
+A = 8.5 (الحد الأدنى الحقيقي للفئة الوسيطية)<br>
+F = 10 (التكرار المتجمع للفئة السابقة، أي f₁)<br>
+f = 5 (تكرار الفئة الوسيطية، أي f₂)<br>
+L = 10.5 - 8.5 = 2 (طول الفئة، أو يمكن حسابه 15 - 10 = 5 ← هذا خطأ شائع! الصحيح من الحدود الحقيقية = 3)</div></div>
+<div class="stp"><div class="sn">4</div><div><b>التطبيق:</b><br>
+الوسيط = 8.5 + [(12 - 10) / 5] × 3<br>
+= 8.5 + [2/5] × 3<br>
+= 8.5 + 0.4 × 3<br>
+= 8.5 + 1.2<br>
+= <span class="hl" style="font-size:1.3rem">9.7 سنة</span></div></div>
+</div>
 
 <h3>3️⃣ المنوال Mode</h3>
-<div class="cb">القيمة <b>الأكثر تكراراً</b>. وحيد المنوال | متعدد المنوال | عديم المنوال<br><br><b>في البيانات المبوبة:</b> الفئة المنوالية = الفئة ذات أعلى تكرار (القيم تذوب داخل الفئات)</div>
+<div class="cb"><div class="lb bl">التعريف</div>القيمة <b>الأكثر تكراراً</b> في مجموعة البيانات. يكثر استخدامه للبيانات الوصفية لمعرفة النمط الشائع.<br><br>
+<b>وحيد المنوال:</b> قيمة واحدة أكثر تكراراً (مثال: 2,5,5,5,8 → المنوال=5)<br>
+<b>متعدد المنوال:</b> أكثر من قيمة (مثال: 1,2,2,3,4,4 → المنوال=2 و 4)<br>
+<b>عديم المنوال:</b> كل القيم تكررت مرة واحدة (مثال: 1,2,3,4,5 → لا يوجد منوال)<br><br>
+<b>في البيانات المبوبة:</b> الفئة المنوالية = الفئة ذات أعلى تكرار (القيم تذوب داخل الفئات ولا يمكن تحديد قيمة واحدة)</div>
+
+<div class="warn"><div class="wt">⭐ مميزات المنوال</div>
+1. <b>سهل الحساب</b> ← فقط أوجد القيمة الأكثر تكراراً<br>
+2. <b>لا يتأثر بالقيم الشاذة</b><br>
+3. <b>الوحيد الصالح للبيانات الوصفية</b> (مثل: الجنس، اللون، المهنة)<br>
+4. يمكن إيجاده في التوزيعات التكرارية المفتوحة<br><br>
+<span style="color:#ef4444"><b>❌ محددات المنوال:</b></span><br>
+1. لا يأخذ <b>جميع قيم البيانات</b> في الاعتبار<br>
+2. قد يكون <b>أكثر من منوال</b> ← لا يمكن تحديد قيمة وحيدة<br>
+3. لا يصلح للعمليات الرياضية والتحليلات الإحصائية المتقدمة</div>
 
 <h3>⭐ متى نستخدم كل مقياس؟</h3>
 <div class="tw"><table>
@@ -200,29 +336,133 @@ sections.t1=`<div class="card">
 sections.t2=`<div class="card">
 <h2 style="color:#a78bfa">📐 الموضوع 2: مقاييس التشتت + القيمة المعيارية Z</h2>
 
+<h3>📖 تعريف مقاييس التشتت (كما في المنهج)</h3>
+<div class="cb"><div class="lb bl">التعريف</div>مقاييس التشتت هي <b>مقاييس عددية تستخدم لقياس درجة تجانس (تقارب) أو تشتت (تباعد) مفردات البيانات عن بعضها البعض</b>. تُستخدم لوصف مجموعة البيانات ومقارنة مجموعات البيانات المختلفة، حيث أن <b>مقاييس النزعة المركزية وحدها لا تكفي</b> لوصف البيانات بشكل كامل.<br><br>
+<b>التشتت يصف مدى انتشار القيم حول المتوسط.</b> بدون قياس التشتت قد تبدو مجموعتان متساويتين في المتوسط لكن تختلفان جذرياً في الاستقرار.</div>
+
+<div class="cb y"><div class="lb yl">أهمية مقاييس التشتت (4 نقاط)</div>
+1. <b>تقييم مدى تجانس البيانات</b><br>
+2. <b>مقارنة مجموعات بيانات مختلفة</b><br>
+3. <b>تحديد درجة الموثوقية</b> في التنبؤات<br>
+4. <b>اتخاذ قرارات إدارية واستثمارية</b> مدروسة<br><br>
+<b>أمثلة تطبيقية:</b> الجودة الصناعية، تقلبات الأسواق، تفاوت درجات الطلاب</div>
+
 <div class="cb"><div class="lb bl">لماذا لا يكفي المتوسط وحده؟</div>أ: 70,70,70,70,70 → متوسط=70 (متجانسة)<br>ب: 50,60,70,80,90 → متوسط=70 (مشتتة!)<br><b>نفس المتوسط لكن طبيعة مختلفة تماماً!</b></div>
 
 <h3>1️⃣ المدى Range</h3>
-<div class="fm">R = Max - Min</div>
-<div class="cb g"><div class="lb gr">✏️ مثال: 85,92,78,96,88,74,90,82</div>
-<div class="stp"><div class="sn">1</div><div>Max=96, Min=74</div></div>
-<div class="stp"><div class="sn">2</div><div>R = 96-74 = <span class="hl">22 درجة</span><div class="sd">سهل لكن يتأثر بالشاذة ولا يأخذ كل القيم</div></div></div>
+<div class="cb"><div class="lb bl">التعريف</div>أبسط مقاييس التشتت. هو الفرق بين أكبر قيمة وأصغر قيمة في مجموعة البيانات.</div>
+<div class="fm">R = Max - Min<small>المدى = أكبر قيمة - أصغر قيمة</small></div>
+<div class="cb g"><div class="lb gr">✏️ مثال من المنهج: درجات 8 طلاب: 85, 92, 78, 96, 88, 74, 90, 82</div>
+<div class="stp"><div class="sn">1</div><div><b>أكبر قيمة:</b> Max = 96</div></div>
+<div class="stp"><div class="sn">2</div><div><b>أصغر قيمة:</b> Min = 74</div></div>
+<div class="stp"><div class="sn">3</div><div><b>المدى:</b> R = 96 - 74 = <span class="hl" style="font-size:1.1rem">22 درجة</span></div></div>
+<div class="stp"><div class="sn">4</div><div><b>التفسير:</b> درجات الطلاب تتراوح على مدى 22 درجة</div></div>
 </div>
+<div class="warn"><div class="wt">⭐ مميزات المدى</div>
+1. <b>سهل الحساب والفهم</b> ← أبسط مقياس للتشتت<br>
+2. يعطي <b>فكرة سريعة</b> عن انتشار البيانات<br>
+3. مفيد في <b>مراقبة الجودة</b> والأحوال الجوية<br><br>
+<span style="color:#ef4444"><b>❌ عيوب المدى:</b></span><br>
+1. <b>يتأثر بالقيم الشاذة</b> ← قيمة واحدة متطرفة تغير المدى كلياً<br>
+2. <b>لا يأخذ في الاعتبار جميع القيم</b> ← يعتمد فقط على أكبر وأصغر قيمة<br>
+3. <b>مقياس تقريبي وليس دقيقاً</b></div>
 
 <h3>2️⃣ التباين Variance</h3>
-<div class="fm">s² = Σ(xi - x̄)² / (n - 1)<small>⚠️ للعينة نقسم على (n-1) وليس n</small></div>
-<div class="cb g"><div class="lb gr">✏️ مثال كامل: أعمار 6 موظفين: 25,30,28,35,32,26</div>
-<div class="stp"><div class="sn">1</div><div><b>المتوسط:</b> x̄ = 176÷6 = <span class="hl">29.33</span></div></div>
-<div class="stp"><div class="sn">2</div><div><b>الانحرافات:</b> -4.33, 0.67, -1.33, 5.67, 2.67, -3.33</div></div>
-<div class="stp"><div class="sn">3</div><div><b>تربيع:</b> 18.75, 0.45, 1.77, 32.15, 7.13, 11.09</div></div>
-<div class="stp"><div class="sn">4</div><div><b>المجموع:</b> Σ = 71.34</div></div>
-<div class="stp"><div class="sn">5</div><div><b>التباين:</b> s² = 71.34÷5 = <span class="hl">14.27 سنة²</span><div class="sd">⚠️ الوحدة مربعة!</div></div></div>
+<div class="cb"><div class="lb bl">التعريف</div>التباين هو <b>متوسط مربع انحرافات القيم عن وسطها الحسابي</b>. يقيس مدى تباعد البيانات عن المتوسط. التباين الكبير = بيانات متباعدة. التباين الصغير = بيانات متقاربة.</div>
+<div class="fm">s² = Σ(xi - x̄)² / (n - 1)<small>
+<b>ترجمة القانون:</b><br>
+s² (إس تربيع) = تباين العينة (الناتج)<br>
+Σ (سيجما) = مجموع<br>
+xi = كل قيمة فردية من البيانات<br>
+x̄ (إكس بار) = متوسط العينة<br>
+(xi - x̄) = انحراف كل قيمة عن المتوسط<br>
+(xi - x̄)² = مربع الانحراف (نربّعه لإزالة الإشارات السالبة)<br>
+n = حجم العينة (عدد القيم)<br>
+(n-1) = نقسم على n-1 وليس n (لأنها عينة وليست مجتمع)<br>
+<b>بالعربي:</b> التباين = مجموع مربعات انحرافات القيم عن المتوسط ÷ (عدد القيم - 1)<br>
+⚠️ <b>الوحدة:</b> وحدة القياس مربّعة (متر²، ريال²، درجة²...)</small></div>
+<div class="cb y"><div class="lb yl">خطوات حساب التباين:</div>
+1. احسب المتوسط x̄<br>
+2. احسب انحراف كل قيمة عن المتوسط: (xi - x̄)<br>
+3. ربّع كل انحراف: (xi - x̄)²<br>
+4. اجمع كل المربعات: Σ(xi - x̄)²<br>
+5. اقسم على (n-1): s² = المجموع ÷ (n-1)</div>
+<div class="cb g"><div class="lb gr">✏️ مثال كامل خطوة بخطوة: أعمار 6 موظفين: 25, 30, 28, 35, 32, 26</div>
+<div class="stp"><div class="sn">1</div><div><b>المتوسط:</b> x̄ = (25+30+28+35+32+26)÷6 = 176÷6 = <span class="hl">29.33</span></div></div>
+<div class="stp"><div class="sn">2</div><div><b>جدول الحسابات:</b></div></div>
+<div class="tw"><table>
+<tr><th>القيمة xi</th><th>الانحراف (xi-x̄)</th><th>مربع الانحراف (xi-x̄)²</th></tr>
+<tr><td>25</td><td>25-29.33 = -4.33</td><td>18.75</td></tr>
+<tr><td>30</td><td>30-29.33 = 0.67</td><td>0.45</td></tr>
+<tr><td>28</td><td>28-29.33 = -1.33</td><td>1.77</td></tr>
+<tr><td>35</td><td>35-29.33 = 5.67</td><td>32.15</td></tr>
+<tr><td>32</td><td>32-29.33 = 2.67</td><td>7.13</td></tr>
+<tr><td>26</td><td>26-29.33 = -3.33</td><td>11.09</td></tr>
+<tr><th colspan="2">المجموع</th><th>Σ = 71.34</th></tr>
+</table></div>
+<div class="stp"><div class="sn">3</div><div><b>التباين:</b> s² = 71.34 ÷ (6-1) = 71.34 ÷ 5 = <span class="hl" style="font-size:1.1rem">14.27 سنة²</span></div></div>
 </div>
+<div class="warn"><div class="wt">⭐ مميزات التباين</div>
+1. <b>أساس رياضي قوي</b> يُستخدم في تحليل التباين ANOVA والانحدار<br>
+2. مناسب <b>للتجميع والجبر</b> (خاصية الإضافية)<br>
+3. مفيد في <b>تحسين النماذج</b> التي تقلل متوسط مربع الخطأ<br><br>
+<span style="color:#ef4444"><b>❌ عيوب التباين:</b></span><br>
+1. <b>وحدته مربعة</b> ← صعب التفسير مباشرة (سنة² مثلاً ليس لها معنى واضح)<br>
+2. <b>يزيد تأثير القيم الشاذة</b> بشكل أكبر بسبب التربيع</div>
 
 <h3>3️⃣ الانحراف المعياري Standard Deviation</h3>
-<div class="fm">s = √s² = √[Σ(xi-x̄)²/(n-1)]<small>الجذر التربيعي للتباين — وحدته = وحدة البيانات الأصلية</small></div>
-<div class="cb g"><div class="lb gr">✏️ تكملة</div>s = √14.27 = <span class="hl">3.78 سنة</span><div class="sd">التفسير: الأعمار تنحرف عن المتوسط بـ 3.78 سنة في المتوسط</div></div>
-<div class="warn"><div class="wt">⚠️ قواعد ذهبية</div>تباين كبير ← تشتت كبير ← غير متجانسة | تباين صغير ← متجانسة<br>للمقارنة: <b>الأقل انحرافاً = الأكثر تجانساً</b></div>
+<div class="cb"><div class="lb bl">التعريف</div>الانحراف المعياري هو <b>الجذر التربيعي للتباين</b>، ويعتبر <b>أهم</b> مقاييس التشتت وأكثرها استخداماً. وحدته = وحدة البيانات الأصلية (وهذا يميزه عن التباين).</div>
+<div class="fm">s = √s² = √[Σ(xi-x̄)²/(n-1)]<small>الانحراف المعياري = الجذر التربيعي للتباين</small></div>
+<div class="cb g"><div class="lb gr">✏️ تكملة المثال السابق</div>
+<div class="stp"><div class="sn">1</div><div><b>التباين:</b> s² = 14.27</div></div>
+<div class="stp"><div class="sn">2</div><div><b>الانحراف المعياري:</b> s = √14.27 = <span class="hl" style="font-size:1.1rem">3.78 سنة</span></div></div>
+<div class="stp"><div class="sn">3</div><div><b>التفسير:</b> الأعمار تنحرف عن المتوسط (29.33) بمقدار 3.78 سنة في المتوسط</div></div>
+</div>
+<div class="warn"><div class="wt">⭐ مميزات الانحراف المعياري</div>
+1. <b>قابلية تفسير عالية</b> ← لأنه بنفس وحدة البيانات (سنة، ريال، درجة...)<br>
+2. <b>أساسي في المقارنة</b> بين مجموعات مختلفة<br>
+3. يُستخدم في حساب <b>القيمة المعيارية Z-Score</b><br>
+4. يوصف <b>التشتت المعتاد</b> حول المتوسط<br><br>
+<span style="color:#ef4444"><b>❌ عيوب الانحراف المعياري:</b></span><br>
+1. ما يزال <b>حساساً للقيم الشاذة</b><br>
+2. أقل ملاءمة لبعض <b>الاشتقاقات النظرية</b> التي تفضل التباين</div>
+
+<div class="warn"><div class="wt">⚠️ قواعد ذهبية للاختبار</div>
+تباين كبير ← تشتت كبير ← بيانات متباعدة ← <b>غير متجانسة</b><br>
+تباين صغير ← تشتت قليل ← بيانات متقاربة ← <b>متجانسة</b><br>
+وحدة التباين <b>مربعة</b> (سنة²) | وحدة الانحراف المعياري = <b>وحدة البيانات</b> (سنة)<br>
+للمقارنة بين مجموعتين: <b>الأقل انحرافاً معيارياً = الأكثر تجانساً واستقراراً</b></div>
+
+<h3>📊 مثال 3: مقارنة مبيعات فرعين (من المحاضرة)</h3>
+<div class="cb g"><div class="lb gr">✏️ مبيعات فرعين لشركة خلال 10 أيام - المطلوب: حساب المدى والتباين والانحراف المعياري والمقارنة</div>
+<div class="tw"><table>
+<tr><th>اليوم</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
+<tr><td><b>الفرع A</b></td><td>50</td><td>55</td><td>48</td><td>52</td><td>47</td><td>53</td><td>51</td><td>49</td><td>54</td><td>46</td></tr>
+<tr><td><b>الفرع B</b></td><td>45</td><td>60</td><td>40</td><td>65</td><td>35</td><td>70</td><td>42</td><td>58</td><td>38</td><td>62</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th></th><th>المتوسط</th><th>المدى</th><th>التباين</th><th>الانحراف المعياري</th></tr>
+<tr><td><b>الفرع A</b></td><td>50.5</td><td>55-46=9</td><td>9.17</td><td>3.03</td></tr>
+<tr><td><b>الفرع B</b></td><td>51.5</td><td>70-35=35</td><td>158.06</td><td>12.57</td></tr>
+</table></div>
+<div style="background:rgba(251,191,36,.08);border-radius:6px;padding:.6rem;margin-top:.5rem;font-size:.85rem">
+<b style="color:#fbbf24">النتيجة:</b> الفرع A أكثر تجانساً واستقراراً (انحراف 3.03 مقابل 12.57)<br>
+رغم أن المتوسطين متقاربين، إلا أن الفرع B متذبذب جداً في مبيعاته.
+</div>
+</div>
+
+<h3>📝 تمارين محلولة من المحاضرة</h3>
+<div class="cb g"><div class="lb gr">✏️ تمرين 1: أوزان 8 أطفال: 15, 18, 12, 20, 16, 14, 19, 17</div>
+<div class="stp"><div class="sn">1</div><div><b>المتوسط:</b> x̄ = (15+18+12+20+16+14+19+17)/8 = 131/8 = <b>16.375</b></div></div>
+<div class="stp"><div class="sn">2</div><div><b>المدى:</b> R = 20-12 = <b>8</b> كجم</div></div>
+<div class="stp"><div class="sn">3</div><div><b>التباين:</b> s² = <b>7.13</b> كجم²</div></div>
+<div class="stp"><div class="sn">4</div><div><b>الانحراف المعياري:</b> s = √7.13 = <b>2.67</b> كجم</div></div>
+</div>
+<div class="cb g"><div class="lb gr">✏️ تمرين 2: مقارنة فصلين - أيهما أكثر تجانساً؟</div>
+الفصل A: 85, 88, 90, 82, 87, 91, 86, 89 → المتوسط=87.25, الانحراف=<b>2.96</b><br>
+الفصل B: 70, 95, 75, 100, 65, 98, 72, 90 → المتوسط=83.13, الانحراف=<b>13.69</b><br>
+<b style="color:#fbbf24">النتيجة: الفصل A أكثر تجانساً (2.96 < 13.69)</b>
+</div>
 
 <h3>4️⃣ القيمة المعيارية Z-Score ⭐</h3>
 <div class="fm">Z = (X - x̄) / s<small>X=القيمة الأصلية | x̄=المتوسط | s=الانحراف المعياري</small></div>
@@ -244,18 +484,101 @@ sections.t3=`<div class="card">
 
 <h3>📊 المدرج التكراري Histogram</h3>
 <div class="cb">بيانات <b>كمية متصلة</b> | أعمدة <b style="color:#ef4444">متلاصقة بدون فراغات</b> | المحور الأفقي=الفئات، الرأسي=التكرار | يوضح شكل التوزيع</div>
-<div class="cb g"><div class="lb gr">✏️ خطوات بناء المدرج (50 طالب)</div>
+<div class="cb g"><div class="lb gr">✏️ مثال: أعمار 50 طالب - بناء المدرج التكراري</div>
 <div class="stp"><div class="sn">1</div><div>المدى = Max-Min = 23-17 = 6</div></div>
 <div class="stp"><div class="sn">2</div><div>عدد الفئات=4 → طول الفئة = 6÷4 ≈ 2</div></div>
-<div class="stp"><div class="sn">3</div><div>الجدول: 17-18: 14 | 19-20: 24 | 21-22: 11 | 23-24: 1</div></div>
-<div class="stp"><div class="sn">4</div><div><b>التكرار النسبي</b> = (تكرار÷مجموع)×100%<div class="sd">مثال: 14÷50×100% = 28%</div></div></div>
+<div class="stp"><div class="sn">3</div><div>الجدول التكراري:</div></div>
+<div class="tw"><table>
+<tr><th>الفئة العمرية</th><th>التكرار</th><th>التكرار النسبي</th></tr>
+<tr><td>17-18</td><td>14</td><td>28%</td></tr>
+<tr><td style="color:#fbbf24"><b>19-20</b></td><td style="color:#fbbf24"><b>24</b></td><td style="color:#fbbf24"><b>48%</b></td></tr>
+<tr><td>21-22</td><td>11</td><td>22%</td></tr>
+<tr><td>23-24</td><td>1</td><td>2%</td></tr>
+<tr><th>المجموع</th><th>50</th><th>100%</th></tr>
+</table></div>
+<div class="stp"><div class="sn">4</div><div><b>التكرار النسبي</b> = (تكرار÷مجموع)×100% → 14÷50×100% = 28%</div></div>
+</div>
+<!-- SVG: مدرج تكراري -->
+<div style="text-align:center;margin:.8rem 0">
+<svg viewBox="0 0 400 220" style="max-width:400px;width:100%" xmlns="http://www.w3.org/2000/svg">
+<text x="200" y="15" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">المدرج التكراري - أعمار الطلاب (أعمدة متلاصقة!)</text>
+<line x1="60" y1="190" x2="370" y2="190" stroke="#475569" stroke-width="1"/>
+<line x1="60" y1="30" x2="60" y2="190" stroke="#475569" stroke-width="1"/>
+<!-- bars متلاصقة -->
+<rect x="70" y="78" width="70" height="112" fill="#38bdf8" opacity="0.7"/>
+<rect x="140" y="30" width="70" height="160" fill="#38bdf8" opacity="0.85"/>
+<rect x="210" y="102" width="70" height="88" fill="#38bdf8" opacity="0.7"/>
+<rect x="280" y="183" width="70" height="7" fill="#38bdf8" opacity="0.7"/>
+<!-- labels -->
+<text x="105" y="73" text-anchor="middle" fill="#e2e8f0" font-size="10">14</text>
+<text x="175" y="25" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="bold">24</text>
+<text x="245" y="97" text-anchor="middle" fill="#e2e8f0" font-size="10">11</text>
+<text x="315" y="178" text-anchor="middle" fill="#e2e8f0" font-size="10">1</text>
+<text x="105" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">17-18</text>
+<text x="175" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">19-20</text>
+<text x="245" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">21-22</text>
+<text x="315" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">23-24</text>
+<text x="30" y="195" text-anchor="middle" fill="#94a3b8" font-size="8">0</text>
+<text x="30" y="105" text-anchor="middle" fill="#94a3b8" font-size="8">12</text>
+<text x="30" y="35" text-anchor="middle" fill="#94a3b8" font-size="8">24</text>
+<text x="15" y="110" text-anchor="middle" fill="#94a3b8" font-size="8" transform="rotate(-90,15,110)">التكرار</text>
+</svg>
 </div>
 
 <h3>📊 المخطط الشريطي Bar Chart</h3>
-<div class="cb">بيانات <b>نوعية/تصنيفية</b> | أعمدة <b class="hl3">منفصلة بينها فراغات</b> | أنواع: رأسي، أفقي، مجمّع، مكدّس | الترتيب غير مهم</div>
+<div class="cb">بيانات <b>نوعية/تصنيفية</b> | أعمدة <b class="hl3">منفصلة بينها فراغات</b> | أنواع: رأسي، أفقي (barh)، مجمّع، مكدّس | الترتيب غير مهم</div>
+<!-- SVG: مخطط شريطي -->
+<div style="text-align:center;margin:.8rem 0">
+<svg viewBox="0 0 400 220" style="max-width:400px;width:100%" xmlns="http://www.w3.org/2000/svg">
+<text x="200" y="15" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">المخطط الشريطي - مبيعات الفروع (أعمدة منفصلة!)</text>
+<line x1="60" y1="190" x2="370" y2="190" stroke="#475569" stroke-width="1"/>
+<line x1="60" y1="30" x2="60" y2="190" stroke="#475569" stroke-width="1"/>
+<!-- bars منفصلة -->
+<rect x="80" y="50" width="55" height="140" fill="#34d399" opacity="0.7" rx="3"/>
+<rect x="165" y="82" width="55" height="108" fill="#fb923c" opacity="0.7" rx="3"/>
+<rect x="250" y="110" width="55" height="80" fill="#a78bfa" opacity="0.7" rx="3"/>
+<!-- labels -->
+<text x="107" y="45" text-anchor="middle" fill="#e2e8f0" font-size="10">150</text>
+<text x="192" y="77" text-anchor="middle" fill="#e2e8f0" font-size="10">120</text>
+<text x="277" y="105" text-anchor="middle" fill="#e2e8f0" font-size="10">90</text>
+<text x="107" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">الرياض</text>
+<text x="192" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">جدة</text>
+<text x="277" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">الدمام</text>
+</svg>
+</div>
 
 <h3>📊 مخطط التشتت Scatter Plot</h3>
 <div class="cb">العلاقة بين <b>متغيرين كميين</b> | نقاط على المستوى الإحداثي | يُظهر: اتجاه العلاقة + قوتها + القيم الشاذة</div>
+<!-- SVG: مخطط التشتت -->
+<div style="text-align:center;margin:.8rem 0">
+<svg viewBox="0 0 400 240" style="max-width:400px;width:100%" xmlns="http://www.w3.org/2000/svg">
+<text x="200" y="15" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">مخطط التشتت - ساعات الدراسة والدرجات</text>
+<line x1="60" y1="210" x2="370" y2="210" stroke="#475569" stroke-width="1"/>
+<line x1="60" y1="25" x2="60" y2="210" stroke="#475569" stroke-width="1"/>
+<!-- نقاط البيانات -->
+<circle cx="100" cy="182" r="6" fill="#38bdf8" opacity="0.8"/>
+<circle cx="160" cy="152" r="6" fill="#38bdf8" opacity="0.8"/>
+<circle cx="220" cy="122" r="6" fill="#38bdf8" opacity="0.8"/>
+<circle cx="280" cy="107" r="6" fill="#38bdf8" opacity="0.8"/>
+<circle cx="340" cy="92" r="6" fill="#38bdf8" opacity="0.8"/>
+<!-- خط الاتجاه -->
+<line x1="80" y1="192" x2="355" y2="82" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,3" opacity="0.7"/>
+<!-- تسميات -->
+<text x="100" y="200" text-anchor="middle" fill="#94a3b8" font-size="8">65</text>
+<text x="160" y="168" text-anchor="middle" fill="#94a3b8" font-size="8">75</text>
+<text x="220" y="138" text-anchor="middle" fill="#94a3b8" font-size="8">85</text>
+<text x="280" y="123" text-anchor="middle" fill="#94a3b8" font-size="8">90</text>
+<text x="340" y="108" text-anchor="middle" fill="#94a3b8" font-size="8">95</text>
+<text x="100" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">2</text>
+<text x="160" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">4</text>
+<text x="220" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">6</text>
+<text x="280" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">8</text>
+<text x="340" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">10</text>
+<text x="215" y="238" text-anchor="middle" fill="#94a3b8" font-size="8">ساعات الدراسة</text>
+<text x="35" y="120" text-anchor="middle" fill="#94a3b8" font-size="8" transform="rotate(-90,35,120)">الدرجات</text>
+<text x="300" y="55" fill="#ef4444" font-size="8">خط الاتجاه (r=0.985)</text>
+</svg>
+</div>
 
 <h3>📋 المقارنة الشاملة</h3>
 <div class="tw"><table>
