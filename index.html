@@ -2,996 +2,1008 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ملخص STA104 الشامل النهائي - 156 صفحة</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELG 201 - Applied English - ملخص شامل</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{background:#0f1729;color:#e2e8f0;font-family:system-ui,-apple-system,sans-serif;line-height:1.8;min-height:100vh}
+html,body{background:#0a0f1a;color:#e2e8f0;font-family:system-ui,sans-serif;line-height:1.8}
 ::-webkit-scrollbar{height:4px;width:4px}::-webkit-scrollbar-thumb{background:#334155;border-radius:4px}
-.hdr{background:linear-gradient(135deg,#1e3a5f,#0f1729 50%,#1a1040);padding:1.5rem;text-align:center;border-bottom:2px solid #2d3a5c}
-.hdr h1{font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,#38bdf8,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hdr p{color:#94a3b8;font-size:.85rem;margin-top:.3rem}
-.tabs{display:flex;overflow-x:auto;background:#1a2440;border-bottom:2px solid #2d3a5c;position:sticky;top:0;z-index:100;-webkit-overflow-scrolling:touch}
-.tab{flex:none;padding:.6rem .8rem;font-size:.7rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:.3s}
-.tab.on{color:#38bdf8;border-bottom-color:#38bdf8;background:rgba(56,189,248,.08)}
-.tab:hover:not(.on){color:#cbd5e1;background:rgba(255,255,255,.02)}
-.wrap{max-width:860px;margin:0 auto;padding:1rem}
-.sec{display:none;animation:fi .3s ease}.sec.on{display:block}
-@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.card{background:#1a2440;border:1px solid #2d3a5c;border-radius:12px;padding:1.2rem;margin-bottom:1rem}
-h2{font-size:1.1rem;font-weight:800;margin-bottom:.8rem}
-h3{font-size:.95rem;font-weight:700;color:#a78bfa;margin:1.2rem 0 .5rem}
-.cb{border-right:4px solid #38bdf8;background:rgba(56,189,248,.05);padding:.8rem;border-radius:0 8px 8px 0;margin:.6rem 0;font-size:.88rem}
-.cb.g{border-right-color:#34d399;background:rgba(52,211,153,.05)}
-.cb.o{border-right-color:#fb923c;background:rgba(251,146,60,.05)}
-.cb.y{border-right-color:#fbbf24;background:rgba(251,191,36,.05)}
-.cb .lb{font-weight:700;margin-bottom:.3rem;font-size:.9rem}
-.cb .lb.bl{color:#38bdf8}.cb .lb.gr{color:#34d399}.cb .lb.or{color:#fb923c}.cb .lb.yl{color:#fbbf24}
-.fm{background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2);border-radius:8px;padding:.7rem;margin:.6rem 0;text-align:center;font-weight:700;font-size:1rem;direction:ltr;color:#c4b5fd}
+.hdr{background:linear-gradient(135deg,#1a3a2f,#0a0f1a 50%,#1a1a3a);padding:1.5rem;text-align:center;border-bottom:2px solid #2d4a3c}
+.hdr h1{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,#34d399,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr p{color:#94a3b8;font-size:.82rem;margin-top:.3rem}
+.tabs{display:flex;overflow-x:auto;background:#111827;border-bottom:2px solid #1f2937;position:sticky;top:0;z-index:100}
+.tab{flex:none;padding:.55rem .7rem;font-size:.68rem;font-weight:700;color:#64748b;background:none;border:none;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;transition:.3s}
+.tab.on{color:#34d399;border-bottom-color:#34d399;background:rgba(52,211,153,.08)}
+.wrap{max-width:880px;margin:0 auto;padding:1rem}
+.sec{display:none}.sec.on{display:block}
+.card{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:1.2rem;margin-bottom:1rem}
+h2{font-size:1.05rem;font-weight:800;margin-bottom:.7rem}
+h3{font-size:.92rem;font-weight:700;color:#a78bfa;margin:1.1rem 0 .4rem}
+.cb{border-right:4px solid #38bdf8;background:rgba(56,189,248,.04);padding:.7rem;border-radius:0 8px 8px 0;margin:.5rem 0;font-size:.84rem}
+.cb.g{border-right-color:#34d399;background:rgba(52,211,153,.04)}
+.cb.o{border-right-color:#fb923c;background:rgba(251,146,60,.04)}
+.cb.y{border-right-color:#fbbf24;background:rgba(251,191,36,.04)}
+.lb{font-weight:700;margin-bottom:.2rem;font-size:.88rem}
+.lb.bl{color:#38bdf8}.lb.gr{color:#34d399}.lb.or{color:#fb923c}.lb.yl{color:#fbbf24}
+.fm{background:rgba(167,139,250,.07);border:1px solid rgba(167,139,250,.2);border-radius:8px;padding:.6rem;margin:.5rem 0;text-align:center;font-weight:700;font-size:.95rem;direction:ltr;color:#c4b5fd}
 .fm small{display:block;font-size:.75rem;color:#94a3b8;font-weight:400;margin-top:.2rem}
-.warn{border-right:4px solid #fb923c;background:rgba(251,146,60,.06);padding:.8rem;border-radius:0 8px 8px 0;margin:.6rem 0;font-size:.85rem}
-.warn .wt{color:#fb923c;font-weight:700;margin-bottom:.3rem}
-.tip{border:1px dashed rgba(251,191,36,.4);background:rgba(251,191,36,.05);border-radius:8px;padding:.6rem;margin:.6rem 0;font-size:.83rem}
+.warn{border-right:4px solid #fb923c;background:rgba(251,146,60,.05);padding:.7rem;border-radius:0 8px 8px 0;margin:.5rem 0;font-size:.82rem}
+.warn .wt{color:#fb923c;font-weight:700;margin-bottom:.2rem}
+.tip{border:1px dashed rgba(251,191,36,.4);background:rgba(251,191,36,.04);border-radius:8px;padding:.5rem;margin:.5rem 0;font-size:.82rem}
 .tip::before{content:'💡 '}
-.ez{background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.2);border-radius:10px;padding:.7rem;margin:.5rem 0;font-size:.85rem;line-height:1.9}
-.ez::before{content:'🎯 بالبلدي كذا:';display:block;color:#34d399;font-weight:800;font-size:.82rem;margin-bottom:.3rem}
-.ez{background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.2);border-radius:10px;padding:.7rem;margin:.5rem 0;font-size:.83rem;position:relative}
-.ez::before{content:'🎯 بالبلدي:';display:block;color:#34d399;font-weight:800;font-size:.8rem;margin-bottom:.3rem}
-.stp{display:flex;gap:.6rem;margin-bottom:.5rem;padding-bottom:.5rem;border-bottom:1px dashed rgba(255,255,255,.05)}
-.stp:last-child{border-bottom:none}
-.sn{width:1.5rem;height:1.5rem;border-radius:50%;background:#38bdf8;color:#0f1729;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0;margin-top:.2rem}
-.sd{font-size:.78rem;color:#94a3b8;margin-top:.15rem}
-.tw{overflow-x:auto;margin:.6rem 0}
-table{width:100%;border-collapse:collapse;font-size:.8rem}
-th{background:rgba(56,189,248,.12);color:#38bdf8;font-weight:700;padding:.45rem;border:1px solid #2d3a5c}
-td{padding:.4rem;border:1px solid #2d3a5c;text-align:center}
-.code{background:#0d1117;border:1px solid #21262d;border-radius:8px;margin:.6rem 0;overflow:hidden}
-.code .ch{display:flex;justify-content:space-between;padding:.4rem .7rem;background:#161b22;border-bottom:1px solid #21262d;font-size:.7rem}
-.code .ch span:first-child{color:#38bdf8;font-weight:700}
-.code .ch span:last-child{color:#34d399}
-.code pre{padding:.7rem;overflow-x:auto;font-family:'Courier New',monospace;font-size:.75rem;line-height:1.6;color:#c9d1d9;direction:ltr;text-align:left;margin:0;white-space:pre-wrap}
-.code .ce{padding:.5rem .7rem;border-top:1px solid #21262d;font-size:.75rem;color:#94a3b8;background:rgba(56,189,248,.03)}
-.ef{display:inline;background:rgba(52,211,153,.12);color:#34d399;padding:.1rem .35rem;border-radius:3px;font-weight:700;font-size:.78rem;direction:ltr;font-family:monospace}
-.hl{color:#38bdf8;font-weight:700}.hl2{color:#a78bfa;font-weight:700}.hl3{color:#34d399;font-weight:700}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.6rem 0}
-.gi{background:rgba(56,189,248,.04);border:1px solid #2d3a5c;border-radius:8px;padding:.6rem;text-align:center;font-size:.82rem}
-.gi h4{font-size:.8rem;font-weight:700;margin-bottom:.2rem}
-/* Quiz */
-.qc{background:#1a2440;border:1px solid #2d3a5c;border-radius:10px;padding:1rem;margin-bottom:.7rem}
-.qc h4{color:#38bdf8;font-weight:700;font-size:.85rem;margin-bottom:.5rem}
-.qo{padding:.5rem .7rem;border:1px solid #2d3a5c;border-radius:8px;margin-bottom:.3rem;font-size:.83rem;cursor:pointer;transition:.2s}
-.qo:hover:not(.d){border-color:#38bdf8;background:rgba(56,189,248,.05)}
-.qo.ok{border-color:#22c55e;background:rgba(34,197,94,.1);color:#34d399}
-.qo.no{border-color:#ef4444;background:rgba(239,68,68,.1);color:#fca5a5}
+.ez{background:rgba(52,211,153,.05);border:1px solid rgba(52,211,153,.18);border-radius:10px;padding:.6rem;margin:.5rem 0;font-size:.82rem;line-height:1.8}
+.ez::before{content:'🎯 تبسيط:';display:block;color:#34d399;font-weight:800;font-size:.8rem;margin-bottom:.2rem}
+.tw{overflow-x:auto;margin:.5rem 0}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+th{background:rgba(52,211,153,.1);color:#34d399;font-weight:700;padding:.4rem;border:1px solid #1f2937}
+td{padding:.35rem .4rem;border:1px solid #1f2937}
+.en{direction:ltr;text-align:left;font-family:'Segoe UI',sans-serif}
+.enb{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:.7rem;margin:.5rem 0;direction:ltr;text-align:left;font-size:.84rem;color:#c9d1d9;line-height:1.9}
+.enb .et{color:#34d399;font-weight:700;font-size:.78rem;margin-bottom:.3rem;display:block}
+.vw{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;margin:.4rem 0;font-size:.8rem}
+.vi{background:rgba(56,189,248,.04);border:1px solid #1f2937;border-radius:6px;padding:.4rem .5rem}
+.vi b{color:#38bdf8}.vi .ar{color:#94a3b8;font-size:.75rem}
+.qc{background:#111827;border:1px solid #1f2937;border-radius:10px;padding:.8rem;margin-bottom:.6rem}
+.qc h4{color:#38bdf8;font-weight:700;font-size:.82rem;margin-bottom:.4rem;direction:ltr;text-align:left}
+.qo{padding:.4rem .6rem;border:1px solid #1f2937;border-radius:8px;margin-bottom:.25rem;font-size:.8rem;cursor:pointer;transition:.2s;direction:ltr;text-align:left}
+.qo:hover:not(.d){border-color:#34d399;background:rgba(52,211,153,.05)}
+.qo.ok{border-color:#22c55e;background:rgba(34,197,94,.08);color:#34d399}
+.qo.no{border-color:#ef4444;background:rgba(239,68,68,.08);color:#fca5a5}
 .qo.d{cursor:default}
-.qe{margin-top:.4rem;padding:.5rem;border-radius:6px;font-size:.78rem;display:none}
+.qe{margin-top:.3rem;padding:.4rem;border-radius:6px;font-size:.76rem;display:none}
 .qe.s{display:block}
-.qe.ok{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);color:#34d399}
-.qe.no{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);color:#fca5a5}
-.sb{background:#1a2440;border:1px solid #2d3a5c;border-radius:10px;padding:.8rem;text-align:center;margin-bottom:.8rem}
-.sb .sn2{font-size:2rem;font-weight:900;background:linear-gradient(135deg,#fbbf24,#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.rb{display:block;margin:.5rem auto;padding:.4rem 1.5rem;background:rgba(239,68,68,.15);color:#ef4444;border:1px solid rgba(239,68,68,.3);border-radius:8px;cursor:pointer;font-weight:700;font-size:.8rem}
-b,.b{font-weight:700}
+.qe.ok{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15);color:#34d399}
+.qe.no{background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.15);color:#fca5a5}
+.sb{background:#111827;border:1px solid #1f2937;border-radius:10px;padding:.7rem;text-align:center;margin-bottom:.7rem}
+.sb .sn2{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,#fbbf24,#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.rb{display:block;margin:.4rem auto;padding:.35rem 1.2rem;background:rgba(239,68,68,.12);color:#ef4444;border:1px solid rgba(239,68,68,.25);border-radius:8px;cursor:pointer;font-weight:700;font-size:.78rem}
+.hl{color:#38bdf8;font-weight:700}.hl2{color:#a78bfa;font-weight:700}.hl3{color:#34d399;font-weight:700}
 </style>
 </head>
 <body>
 <div class="hdr">
-<h1>📊 ملخص STA104 الشامل النهائي</h1>
-<p>156 صفحة → 8 أقسام | 45 سؤال | كل صيغة + كل مثال + كل كود</p>
+<h1>📚 ELG 201 - Applied English - ملخص شامل</h1>
+<p>160 صفحة → 5 وحدات | قواعد بالعربي | مفردات EN-EN + EN-AR | قطع قراءة | اختبار ذاتي</p>
 </div>
 <div class="tabs" id="tabs"></div>
 <div class="wrap" id="content"></div>
 
 <script>
 const tabs=[
-{id:'t1',icon:'📌',label:'النزعة المركزية'},
-{id:'t2',icon:'📐',label:'التشتت + Z'},
-{id:'t3',icon:'📊',label:'الرسوم البيانية'},
-{id:'t4',icon:'📈',label:'الارتباط والانحدار'},
-{id:'t5',icon:'🐍',label:'أكواد بايثون'},
-{id:'t6',icon:'🧮',label:'دوال Excel'},
-{id:'t7',icon:'🔀',label:'دوال IF الشرطية'},
-{id:'quiz',icon:'✅',label:'اختبر نفسك (45)'}
+{id:'m2',icon:'🤖',label:'Module 2: AI + Present Simple'},
+{id:'m3',icon:'💻',label:'Module 3: Technical + Passive'},
+{id:'m4',icon:'📝',label:'Module 4: Descriptions'},
+{id:'m5',icon:'⚖️',label:'Module 5: Comparisons'},
+{id:'m6',icon:'📋',label:'Module 6: Instructions'},
+{id:'rev',icon:'📚',label:'Grammar & Vocab Review'},
+{id:'quiz',icon:'✅',label:'Quiz (50 Q)'}
 ];
-
-let currentTab='t1';
-
-// Build tabs
+let currentTab='m2';
 const tabsEl=document.getElementById('tabs');
-tabs.forEach(t=>{
-const b=document.createElement('button');
-b.className='tab'+(t.id===currentTab?' on':'');
-b.textContent=t.icon+' '+t.label;
-b.onclick=()=>switchTab(t.id);
-b.id='tab-'+t.id;
-tabsEl.appendChild(b);
-});
-
-function switchTab(id){
-currentTab=id;
-document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-document.getElementById('tab-'+id).classList.add('on');
-render();
-window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function render(){
-const c=document.getElementById('content');
-c.innerHTML=sections[currentTab]||'';
-if(currentTab==='quiz')initQuiz();
-}
-
-// ════════════════════════════════════════
-//           ALL CONTENT SECTIONS
-// ════════════════════════════════════════
+tabs.forEach(t=>{const b=document.createElement('button');b.className='tab'+(t.id===currentTab?' on':'');b.textContent=t.icon+' '+t.label;b.onclick=()=>{currentTab=t.id;document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');render();window.scrollTo({top:0,behavior:'smooth'})};b.id='tab-'+t.id;tabsEl.appendChild(b)});
+function render(){document.getElementById('content').innerHTML=sections[currentTab]||'';if(currentTab==='quiz')initQuiz();}
 
 const sections={};
 
-// ═══ الموضوع 1 ═══
-sections.t1=`<div class="card">
-<h2 style="color:#38bdf8">📌 الموضوع 1: مقدمة في الإحصاء + النزعة المركزية</h2>
+// ═══════════════════════════════════
+//     MODULE 2: AI & Present Simple
+// ═══════════════════════════════════
+sections.m2=`<div class="card">
+<h2 style="color:#34d399">🤖 Module 2: Generative AI + Present Simple</h2>
 
-<div class="cb"><div class="lb bl">تعريف الإحصاء</div>علم جمع وتنظيم وتلخيص وعرض وتحليل البيانات والوصول إلى قرارات سليمة. فرع من الرياضيات ويُعتبر الأساس في كل العلوم.</div>
-<div class="ez">تخيل عندك صندوق فيه تفاح بأحجام مختلفة. الإحصاء = إنك تعدّه، ترتبه، تحسب المتوسط، ترسم رسمة، وتقول "أغلبه حجم وسط". يعني: تحوّل أرقام فوضوية إلى معلومة مفيدة تاخذ بها قرار.</div>
-<div class="ez">تخيل عندك كيس فيه 1000 حبة فاصوليا بألوان مختلفة. الإحصاء هو إنك تعدّها، ترتبها حسب اللون، تكتب كم حبة من كل لون، ترسم رسمة توضح النسب، وفي النهاية تقول "أغلب الفاصوليا حمراء!" ← هذا القرار السليم المبني على البيانات.</div>
+<h3>📖 المفردات - Vocabulary</h3>
+<div class="cb y"><div class="lb yl">طريقة حفظ المفردات: اقرأ المعنى بالإنجليزي أولاً (English-English) ثم الترجمة العربية</div>
+لماذا؟ لأن الاختبار بالإنجليزي! إذا حفظت المعنى بالإنجليزي مباشرة ستفهم السؤال أسرع.</div>
 
-<h3>📋 وظائف الإحصاء السبع</h3>
-<div class="cb y"><div class="lb yl">7 وظائف أساسية</div>1. جمع البيانات → 2. تنظيم وترتيب → 3. تلخيص → 4. عرض → 5. تحليل → 6. تفسير النتائج → 7. نشر النتائج<br><br><b>لماذا ضروري لكل العلوم؟</b> كل علم فيه بيانات ويحتاج الإحصاء لمعالجتها وتحليلها وتفسيرها.</div>
-
-<h3>📊 البيانات Data</h3>
-<div class="cb"><b>التعريف:</b> معلومات مرتبة ومنظمة ومدعمة بالأرقام يمكن تحليلها وتفسيرها.<br><b style="color:#fb923c">⚠️ ليست كل المعلومات بيانات!</b><br><br><b>المصادر:</b> مراقبة الظواهر | إجراء التجارب | الأبحاث والمقابلات<br><b>الفوائد:</b> تحليل ومعالجة | تفسير النتائج | الكشف عن الصلاحية | تقييم الأبحاث</div>
-<div class="ez">"أحمد طويل" ← معلومة مو بيانات (ما فيها رقم). "طول أحمد 175 سم" ← بيانات! لأن فيها رقم تقدر تحلله. القاعدة: إذا ما تقدر تحطها في جدول = مو بيانات.</div>
-
-<h3>🏘️ المجتمع والعينة</h3>
 <div class="tw"><table>
-<tr><th></th><th>المجتمع Population</th><th>العينة Sample</th></tr>
-<tr><td>الرمز</td><td>N (غالباً غير معروف)</td><td>n (معروف)</td></tr>
-<tr><td>المتوسط</td><td>μ (تقديري ← مجال الثقة)</td><td>x̄ (حسابي ← يُحسب)</td></tr>
-<tr><td>الحجم</td><td>كل الأفراد</td><td>2-10% من المجتمع</td></tr>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Example</th></tr>
+<tr><td><b>Robot</b></td><td>A machine that can do tasks</td><td>آلة تؤدي مهام</td><td class="en">The robot cleans the floor.</td></tr>
+<tr><td><b>App</b></td><td>A small software program</td><td>تطبيق (برنامج صغير)</td><td class="en">This app helps me study.</td></tr>
+<tr><td><b>Smart device</b></td><td>An electronic device connected to the internet</td><td>جهاز ذكي</td><td class="en">My smart device recognizes my voice.</td></tr>
+<tr><td><b>Chatbot</b></td><td>A computer program that talks to users</td><td>برنامج محادثة آلي</td><td class="en">The chatbot answers questions.</td></tr>
+<tr><td><b>Data</b></td><td>Information in numbers or text</td><td>بيانات (معلومات رقمية)</td><td class="en">The system uses data to learn.</td></tr>
+<tr><td><b>Program</b></td><td>A set of instructions for a computer</td><td>برنامج حاسوبي</td><td class="en">This program runs fast.</td></tr>
+<tr><td><b>System</b></td><td>A group of parts working together</td><td>نظام</td><td class="en">The system processes data.</td></tr>
+<tr><td><b>Tool</b></td><td>Something used to do a job</td><td>أداة</td><td class="en">AI is a useful tool.</td></tr>
+<tr><td><b>Generate</b></td><td>To create something new</td><td>يُنشئ / يُولّد</td><td class="en">The AI generates a summary.</td></tr>
+<tr><td><b>Prompt</b></td><td>A message typed by the user to AI</td><td>أمر / طلب يُكتب للذكاء الاصطناعي</td><td class="en">Write a clear prompt.</td></tr>
+<tr><td><b>Output</b></td><td>What the AI produces as a result</td><td>المخرجات / النتيجة</td><td class="en">The output is a short text.</td></tr>
+<tr><td><b>Recognize</b></td><td>To identify or know something</td><td>يتعرّف على</td><td class="en">The app recognizes my face.</td></tr>
+<tr><td><b>Identify</b></td><td>To find out what something is</td><td>يُحدد / يتعرف</td><td class="en">AI can identify errors.</td></tr>
+<tr><td><b>Digital</b></td><td>Related to electronic technology</td><td>رقمي / إلكتروني</td><td class="en">We live in a digital world.</td></tr>
 </table></div>
-<div class="tip">المجتمع الإحصائي = عدد معروف من الأفراد تميزه صفات زمانية ومكانية ويُستخدم في الأبحاث</div>
-<div class="ez">المجتمع = كل طلاب الجامعة (50,000). مستحيل تسأل كلهم! العينة = 500 طالب فقط (جزء صغير). مثل ملعقة الحساء: تتذوق ملعقة عشان تعرف طعم القدر كله!</div>
+<div class="ez">الـ Prompt مثل لما تكتب طلب في ChatGPT ← هذا هو الـ prompt. والـ Output هو الرد اللي يطلع لك. والـ Generate يعني "ينتج شيء جديد" مثل لما AI يكتب لك نص أو يرسم صورة.</div>
 
-<h3>📋 أنواع العينات الأربع</h3>
+<h3>📗 القواعد - Grammar: Present Simple المضارع البسيط</h3>
+<div class="cb"><div class="lb bl">🎯 متى نستخدمه؟ (بالعربي)</div>
+نستخدم المضارع البسيط لوصف:<br>
+1. <b>حقائق ثابتة:</b> AI generates answers. (الذكاء الاصطناعي يُنشئ إجابات)<br>
+2. <b>عمليات وأنظمة:</b> The system uses data. (النظام يستخدم بيانات)<br>
+3. <b>روتين يومي:</b> Students use apps every day. (الطلاب يستخدمون التطبيقات يومياً)</div>
+
+<div class="warn"><div class="wt">⚠️ القاعدة الذهبية</div>
+<b>مع he / she / it ← نضيف s أو es للفعل</b><br>
+<b>مع I / you / we / they ← الفعل يبقى كما هو</b></div>
+
+<div class="fm">Affirmative (الإثبات): Subject + verb (+s/es)<small>AI generate<b>s</b> answers. ← لاحظ الـ s لأن AI = it</small></div>
+<div class="fm">Negative (النفي): Subject + do/does not + base verb<small>AI does not replace teachers. ← does not لأن AI = it<br>Chatbots do not understand feelings. ← do not لأن Chatbots = they</small></div>
+<div class="fm">Yes/No Questions: Do/Does + subject + base verb?<small>Does AI help students? ← Yes, it does. / No, it doesn't.<br>Do chatbots answer questions? ← Yes, they do. / No, they don't.</small></div>
+<div class="fm">WH-Questions: WH-word + do/does + subject + base verb?<small>What does the model generate? ← ماذا ينتج النموذج؟<br>Why does AI recommend videos? ← لماذا يوصي AI بفيديوهات؟</small></div>
+
+<div class="cb g"><div class="lb gr">✏️ أمثلة شاملة - Present Simple Examples</div>
 <div class="tw"><table>
-<tr><th>النوع</th><th>التعريف</th><th>مثال</th></tr>
-<tr><td>البسيطة</td><td>عشوائية، ≥ 30 فرد</td><td>اختيار 30 طالب عشوائياً</td></tr>
-<tr><td>الطبقية</td><td>من كل طبقة حسب حجمها</td><td>أثرياء، وسط، فقراء</td></tr>
-<tr><td>المنتظمة</td><td>فترات منتظمة</td><td>عينة كل ساعة من المصنع</td></tr>
-<tr><td>العنقودية</td><td>تنظيم هرمي</td><td>محافظة ← مدينة ← منطقة</td></tr>
-<div class="ez" style="margin-top:.5rem"><b>البسيطة:</b> تقفل عينك وتختار 30 شخص عشوائي 🎲<br><b>الطبقية:</b> تاخذ من كل طبقة حسب حجمها 📊<br><b>المنتظمة:</b> عينة كل ساعة بانتظام ⏰<br><b>العنقودية:</b> تختار فرع كامل من الشجرة 🌳</div>
-</table></div>
+<tr><th></th><th>he / she / it</th><th>I / you / we / they</th></tr>
+<tr><td><b>✅ Affirmative</b></td><td class="en">The app <b>recognizes</b> my voice.<br>AI <b>generates</b> text.<br>The system <b>uses</b> data.<br>The chatbot <b>helps</b> students.</td><td class="en">Students <b>use</b> apps daily.<br>We <b>write</b> prompts.<br>They <b>generate</b> reports.<br>Chatbots <b>answer</b> questions.</td></tr>
+<tr><td><b>❌ Negative</b></td><td class="en">AI <b>doesn't replace</b> teachers.<br>The system <b>doesn't understand</b> feelings.<br>It <b>doesn't work</b> offline.</td><td class="en">Students <b>don't use</b> AI for cooking.<br>We <b>don't trust</b> all outputs.<br>They <b>don't generate</b> perfect answers.</td></tr>
+<tr><td><b>❓ Yes/No Q</b></td><td class="en"><b>Does</b> AI <b>help</b> students? Yes, it does.<br><b>Does</b> the app <b>recognize</b> faces? No, it doesn't.</td><td class="en"><b>Do</b> students <b>use</b> ChatGPT? Yes, they do.<br><b>Do</b> chatbots <b>make</b> mistakes? Yes, they do.</td></tr>
+<tr><td><b>🔍 WH- Q</b></td><td class="en"><b>What does</b> AI <b>generate</b>?<br><b>How does</b> the system <b>work</b>?<br><b>Why does</b> AI <b>recommend</b> videos?</td><td class="en"><b>What do</b> students <b>use</b>?<br><b>How do</b> chatbots <b>learn</b>?<br><b>Why do</b> they <b>need</b> AI?</td></tr>
+</table></div></div>
 
-<h3>📊 أنواع المتغيرات</h3>
-<div class="tw"><table>
-<tr><th>التصنيف</th><th>النوع</th><th>أمثلة</th></tr>
-<tr><td rowspan="2">حسب القياس</td><td class="hl">كمية Quantitative</td><td>الطول، الوزن، العمر، الدرجات</td></tr>
-<tr><td class="hl2">نوعية Qualitative</td><td>اللون، الجنس، المهنة، درجة الذكاء</td></tr>
-<tr><td rowspan="2">حسب التحكم</td><td class="hl3">عشوائية Random</td><td>الحرارة، الرطوبة، الرياح</td></tr>
-<tr><td>لاعشوائية Controlled</td><td>كمية السماد، جرعات الدواء</td></tr>
-<div class="ez" style="margin-top:.5rem"><b>كمية:</b> شيء تقيسه بالأرقام (طولك، وزنك) 📏<br><b>نوعية:</b> شيء تصنّفه بدون أرقام (ذكر/أنثى) 🏷️<br><b>عشوائية:</b> ما تتحكم فيها (الحرارة) 🌧️<br><b>لاعشوائية:</b> أنت تتحكم فيها (جرعة الدواء) 🎛️</div>
-</table></div>
+<div class="ez">المضارع البسيط مثل "الشيء اللي يصير دائماً". مثل: "الشمس تطلع كل يوم" ← The sun rises every day. لاحظ rises فيها s لأن the sun = it.<br><br>
+<b>حيلة سهلة:</b><br>
+he/she/it ← أضف <b>s</b> (أو <b>es</b> إذا الفعل ينتهي بـ s, sh, ch, x, o)<br>
+I/you/we/they ← الفعل زي ما هو بدون أي إضافة<br><br>
+<b>النفي:</b> حط does not (أو doesn't) قبل الفعل مع he/she/it، وdo not (أو don't) مع الباقي. <b>والفعل يرجع بدون s!</b><br>
+AI generate<b>s</b> ← ✅ إثبات<br>
+AI <b>does not</b> generate ← ✅ نفي (بدون s!)</div>
 
-<h3>📖 تعريف مقاييس النزعة المركزية (كما في المنهج)</h3>
-<div class="cb"><div class="lb bl">التعريف</div>مقاييس النزعة المركزية (أو مقاييس الموقع أو المتوسطات) هي <b>مقاييس عددية تحدد موقع التوزيع للبيانات</b>. يمكن تعريفها بأنها <b>القيمة النموذجية الممثلة لمجموعة من البيانات</b>، والتي تميل إلى الوقوع في المركز، لذلك تسمى بمقاييس النزعة المركزية.<br><br>
-<b>لماذا مهمة؟</b> مهمة في حالة المقارنة بين التوزيعات المختلفة للبيانات. مثلاً: عند دراسة إنفاق عينة من الأسر في الريف وأخرى في الحضر، يمكننا المقارنة بينهما من خلال هذه المقاييس.<br><br>
-<b>مثال توضيحي:</b> لو أخذنا أطوال 500 شخص في السعودية، نلاحظ أن الأطوال تتراوح حول مجال معين (150-180 سم)، المتوسط = 165 سم، و400 شخص طولهم قريب من 165 سم وعدد قليل طولهم 180 أو 150 سم.</div>
+<h3>📖 قطعة القراءة 1 - Reading Passage 1</h3>
+<div class="enb"><div class="et">📖 Generative AI in Everyday Life</div>
+Generative AI is becoming a normal part of modern life. Many people use tools like ChatGPT or Google Gemini every day. Students can write a simple prompt and the AI generates a short explanation.<br><br>
+Translation apps help learners understand new words. Some apps summarize long texts and create easier versions. Creative apps allow users to generate images, short stories, or designs by typing a few words.<br><br>
+Music and video platforms use AI to recommend songs and clips based on preferences. Generative AI helps students by identifying writing problems, creating study plans, and answering questions. Although AI makes mistakes, it improves over time.</div>
+<div class="ez">القطعة تتكلم عن إن AI صار شيء عادي في حياتنا: الطلاب يكتبون prompt ويحصلون شرح، تطبيقات الترجمة تساعد في فهم كلمات جديدة، تطبيقات إبداعية تنشئ صور وقصص، ومنصات الموسيقى تستخدم AI لتوصية أغاني. AI يساعد الطلاب لكن <b>يخطئ أحياناً</b>.</div>
 
-<h3>1️⃣ المتوسط الحسابي Mean (الوسط الحسابي)</h3>
-<div class="cb"><div class="lb bl">التعريف كما في المنهج</div>هو قيمة تتجمع حولها مجموعة من القيم، ويعتبر من <b>أهم</b> مقاييس النزعة المركزية و<b>الأكثر استخداماً</b> في الإحصاء والحياة العملية، ويستخدم عادة في الكثير من المقارنات بين الظواهر المختلفة.<br><br>
-يُحسب للبيانات غير المبوبة <b>بجمع قيم عناصر المجموعة</b> المراد إيجاد وسطها، <b>ويُقسم المجموع على عدد العناصر</b>.</div>
-<div class="fm">x̄ = Σxi / n<small>
-<b>ترجمة القانون:</b><br>
-x̄ (إكس بار) = المتوسط الحسابي (الناتج الذي نريد حسابه)<br>
-Σ (سيجما) = مجموع (اجمع كل القيم)<br>
-xi = القيمة الفردية (كل قيمة من البيانات)<br>
-n = عدد القيم (كم قيمة عندنا)<br>
-<b>بالعربي:</b> المتوسط = مجموع كل القيم ÷ عددها</small></div>
-<div class="ez">المتوسط = أسهل حساب! اجمع كل الأرقام وقسّم على عددها. مثل: 3 أصدقاء معهم 100 و 200 و 300 ريال. المتوسط = 600÷3 = 200 ريال. يعني "لو وزعنا بالتساوي كل واحد ياخذ 200".</div>
-<div class="cb g"><div class="lb gr">✏️ مثال: أجور 5 موظفين: 250, 280, 320, 450, 370</div>
-<div class="stp"><div class="sn">1</div><div><b>جمع القيم:</b> 250+280+320+450+370 = 1670</div></div>
-<div class="stp"><div class="sn">2</div><div><b>القسمة:</b> 1670 ÷ 5 = <span class="hl" style="font-size:1.1rem">334 دولار</span></div></div>
-</div>
-<div class="fm">المتوسط المبوب: x̄ = Σ(fi × xi) / Σfi<small>fi = التكرار، xi = مركز الفئة = (الحد الأدنى + الأعلى) ÷ 2</small></div>
-
-<div class="cb y"><div class="lb yl">خطوات حساب المتوسط المبوب:</div>
-1. أوجد <b>مركز كل فئة</b> xi = (الحد الأدنى + الحد الأعلى) ÷ 2<br>
-2. اضرب مركز كل فئة في تكرارها: fi × xi<br>
-3. اجمع كل حاصل الضرب: Σ(fi × xi)<br>
-4. اقسم على مجموع التكرارات: x̄ = Σ(fi × xi) ÷ Σfi</div>
-
-<div class="cb g"><div class="lb gr">✏️ مثال من المنهج (ص18): احسب متوسط أعمار الطلاب</div>
-<b>البيانات الأصلية:</b>
-<div class="tw"><table>
-<tr><th>فئات العمر</th><th>5-6</th><th>7-8</th><th>9-10</th><th>11-12</th></tr>
-<tr><th>عدد الطلاب</th><td>4</td><td>6</td><td>5</td><td>9</td></tr>
-</table></div>
-<b>الحل بالجدول:</b>
-<div class="tw"><table>
-<tr><th>فئات العمر</th><th>مركز الفئة xi</th><th>التكرار fi</th><th>fi × xi</th></tr>
-<tr><td>5-6</td><td>(5+6)÷2 = 5.5</td><td>4</td><td>4×5.5 = 22</td></tr>
-<tr><td>7-8</td><td>(7+8)÷2 = 7.5</td><td>6</td><td>6×7.5 = 45</td></tr>
-<tr><td>9-10</td><td>(9+10)÷2 = 9.5</td><td>5</td><td>5×9.5 = 47.5</td></tr>
-<tr><td>11-12</td><td>(11+12)÷2 = 11.5</td><td>9</td><td>9×11.5 = 103.5</td></tr>
-<tr style="background:rgba(56,189,248,.08)"><th colspan="2">المجموع</th><th>Σfi = 24</th><th>Σ(fi×xi) = 218</th></tr>
-</table></div>
-<div class="stp"><div class="sn">1</div><div><b>مركز الفئة:</b> xi = (الحد الأدنى+الأعلى)÷2 → مثلاً (5+6)÷2 = 5.5</div></div>
-<div class="stp"><div class="sn">2</div><div><b>fi×xi لكل فئة:</b> 22 + 45 + 47.5 + 103.5 = <b>218</b></div></div>
-<div class="stp"><div class="sn">3</div><div><b>المتوسط:</b> x̄ = Σ(fi×xi) ÷ Σfi = 218 ÷ 24 = <span class="hl" style="font-size:1.3rem">9.08 سنة</span></div></div>
-<div class="ez" style="margin-top:.5rem">المتوسط المبوب = نفس الفكرة لكن البيانات في فئات. بما إننا ما نعرف العمر الدقيق، ناخذ "نص الفئة" ونعتبره ممثل لكل الطلاب فيها. مثل: "اللي عمرهم 5 إلى 6 نعتبرهم كلهم 5.5".</div>
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Comprehension (الإجابات بالعربي)</div>
+<div class="en" style="margin-bottom:.3rem"><b>1. Generative AI helps students by:</b> A) cooking food B) <span class="hl3">explaining ideas ✅</span> C) driving cars</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: القطعة تقول AI يساعد الطلاب بتوضيح الأفكار وإنشاء خطط دراسية</div>
+<div class="en" style="margin-bottom:.3rem"><b>2. Creative apps can create:</b> A) animals B) <span class="hl3">designs and images ✅</span> C) food recipes only</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Creative apps allow users to generate images, short stories, or designs"</div>
+<div class="en" style="margin-bottom:.3rem"><b>3. Translation apps help students with:</b> A) <span class="hl3">new words and sentences ✅</span> B) weather C) music</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Translation apps help learners understand new words or sentences"</div>
+<div class="en" style="margin-bottom:.3rem"><b>4. AI sometimes makes:</b> A) money B) <span class="hl3">mistakes ✅</span> C) videos</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Although AI makes mistakes" ← AI يخطئ أحياناً</div>
+<div class="en" style="margin-bottom:.3rem"><b>5. Music apps use AI to:</b> A) <span class="hl3">recommend songs ✅</span> B) cook meals C) clean files</div>
+<div style="color:#94a3b8;font-size:.78rem">الشرح: "Music platforms use AI to recommend songs and clips"</div>
 </div>
 
-<div class="warn"><div class="wt">⭐ مميزات المتوسط الحسابي</div>
-1. <b>سهل الحساب</b> ويخضع للعمليات الجبرية بسهولة ← أكثر المقاييس استخداماً<br>
-2. <b>يأخذ في الاعتبار جميع القيم</b> محل الدراسة<br>
-3. يكون <b>محصوراً دائماً بين أكبر وأصغر قيمة</b> في العيّنة<br>
-4. <b>مجموع انحرافات القيم عنه = صفر</b> دائماً ← Σ(xi-x̄) = 0<br><br>
-<span style="color:#ef4444"><b>❌ محددات المتوسط الحسابي:</b></span><br>
-1. <b>يتأثر بالقيم الشاذة (المتطرفة)</b> ← الكبيرة جداً أو الصغيرة جداً تسحبه نحوها<br>
-2. <b>يصعب حسابه</b> في حالة الجداول التكرارية المفتوحة (يتطلب معرفة مركز كل فئة)<br>
-3. <b>لا يمكن حسابه</b> في حالة البيانات الوصفية (مثل الجنس، اللون)</div>
+<h3>📖 قطعة القراءة 2 - Reading Passage 2</h3>
+<div class="enb"><div class="et">📖 Generative AI at School and Work</div>
+Generative AI is an essential tool for students and workers. Students use AI models like ChatGPT to understand difficult ideas, request summaries, or get clear examples. AI writing tools check grammar and suggest better vocabulary.<br><br>
+Teachers use AI platforms to check homework automatically and to identify students who need extra support. In workplaces, AI writes simple emails, translates messages, and creates short reports. Chatbots answer common questions and guide customers.<br><br>
+AI can misunderstand prompts or generate incorrect information. Users must review AI output before using it. When used responsibly, generative AI improves learning and productivity.</div>
 
-<h3>2️⃣ الوسيط Median</h3>
-<div class="cb"><div class="lb bl">التعريف</div>الوسيط هو المقياس الذي يقسم البيانات المرتبة إلى <b>نصفين متساويين</b>: عدد القيم الأكبر منه = عدد القيم الأصغر منه. يختلف حسابه حسب نوع البيانات (مبوبة أو غير مبوبة).</div>
-
-<h3 style="color:#38bdf8;font-size:.9rem">📌 الوسيط للبيانات غير المبوبة (القيم الفردية)</h3>
-
-<div class="cb y"><div class="lb yl">القانون الأساسي</div>
-<b>الخطوة 1:</b> رتّب البيانات ترتيباً تصاعدياً (من الأصغر إلى الأكبر)<br>
-<b>الخطوة 2:</b> احسب رتبة الوسيط بالقانون:<br></div>
-
-<div class="fm">رتبة الوسيط = (n + 1) / 2<small>حيث n = عدد القيم (عدد البيانات)</small></div>
-
-<div class="cb y"><div class="lb yl">⭐ حالتان مهمتان جداً:</div>
-<b>الحالة 1 (n فردي):</b> رتبة الوسيط تكون عدداً صحيحاً ← الوسيط = القيمة التي تقع في ذلك الموقع مباشرة<br><br>
-<b>الحالة 2 (n زوجي):</b> رتبة الوسيط تكون كسراً (مثل 3.5) ← الوسيط = متوسط القيمتين اللتين تقعان في المنتصف<br></div>
-<div class="ez">الوسيط = الولد اللي يقف في نص الصف! رتّب الطلاب من الأقصر للأطول. اللي في النص = الوسيط. عدد فردي (5) ← الثالث. عدد زوجي (6) ← متوسط الثالث والرابع.</div>
-
-<div class="fm">إذا n فردي → الوسيط = القيمة في الموقع (n+1)/2<br>إذا n زوجي → الوسيط = (القيمة في الموقع n/2 + القيمة في الموقع n/2 + 1) ÷ 2</div>
-
-<div class="cb g"><div class="lb gr">✏️ مثال 1 من المنهج (عدد فردي n=5)</div>
-<b>البيانات الأصلية:</b> 15, 102, 68, 44, 52<br><br>
-<div class="stp"><div class="sn">1</div><div><b>الترتيب تصاعدياً:</b> 15, 44, <span class="hl" style="font-size:1.1rem;background:rgba(56,189,248,.15);padding:0 4px;border-radius:3px">52</span>, 68, 102<br><span class="sd">نرتب القيم من الأصغر إلى الأكبر</span></div></div>
-<div class="stp"><div class="sn">2</div><div><b>عدد البيانات:</b> n = 5 (عدد فردي)</div></div>
-<div class="stp"><div class="sn">3</div><div><b>حساب رتبة الوسيط:</b> (n+1)/2 = (5+1)/2 = 6/2 = <b>3</b><br><span class="sd">الرتبة 3 = عدد صحيح ← نأخذ القيمة الثالثة مباشرة</span></div></div>
-<div class="stp"><div class="sn">4</div><div><b>الوسيط = القيمة في الموقع الثالث =</b> <span class="hl" style="font-size:1.3rem">52</span><br><span class="sd">نعد من اليسار: الأولى=15، الثانية=44، الثالثة=52 ✓</span></div></div>
+<div class="cb g"><div class="lb gr">True or False (صح أو خطأ)</div>
+<div class="en"><b>1. Students use AI to understand difficult ideas.</b> → <span class="hl3">True ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">صح: "Students use AI models to understand difficult ideas"</div>
+<div class="en"><b>2. AI cannot check grammar.</b> → <span style="color:#ef4444">False ❌</span></div>
+<div style="color:#94a3b8;font-size:.78rem">خطأ: "AI writing tools check grammar" ← AI يقدر يتحقق من القواعد</div>
+<div class="en"><b>3. Teachers use AI to help identify students who need support.</b> → <span class="hl3">True ✅</span></div>
+<div class="en"><b>4. AI writes emails at work.</b> → <span class="hl3">True ✅</span></div>
+<div class="en"><b>5. AI is always correct.</b> → <span style="color:#ef4444">False ❌</span></div>
+<div style="color:#94a3b8;font-size:.78rem">خطأ: "AI can misunderstand prompts or generate incorrect information" ← AI يخطئ!</div>
 </div>
 
-<div class="cb g"><div class="lb gr">✏️ مثال 2 من المنهج (عدد زوجي n=6)</div>
-<b>البيانات الأصلية:</b> 15, 102, 68, 44, 52, 72<br><br>
-<div class="stp"><div class="sn">1</div><div><b>الترتيب تصاعدياً:</b> 15, 44, <span class="hl" style="background:rgba(56,189,248,.15);padding:0 4px;border-radius:3px">52, 68</span>, 72, 102<br><span class="sd">القيمتان الوسطيتان محددتان باللون</span></div></div>
-<div class="stp"><div class="sn">2</div><div><b>عدد البيانات:</b> n = 6 (عدد زوجي)</div></div>
-<div class="stp"><div class="sn">3</div><div><b>حساب رتبة الوسيط:</b> (n+1)/2 = (6+1)/2 = 7/2 = <b>3.5</b><br><span class="sd">الرتبة 3.5 = كسر ← الوسيط بين القيمة الثالثة والرابعة</span></div></div>
-<div class="stp"><div class="sn">4</div><div><b>القيمة الثالثة = 52، القيمة الرابعة = 68</b></div></div>
-<div class="stp"><div class="sn">5</div><div><b>الوسيط = (52 + 68) ÷ 2 = 120 ÷ 2 =</b> <span class="hl" style="font-size:1.3rem">60</span></div></div>
+<h3>✏️ تمارين القواعد - Grammar Practice</h3>
+<div class="cb g"><div class="lb gr">Exercise 1: Fill in the blanks (من المنهج)</div>
+<div class="en">1. ChatGPT <b>generates</b> explanations. <span style="color:#94a3b8">(he/she/it ← +s)</span></div>
+<div class="en">2. The model <b>uses</b> data. <span style="color:#94a3b8">(it ← +s)</span></div>
+<div class="en">3. AI does not <b>understand</b> everything. <span style="color:#94a3b8">(does not + base verb بدون s)</span></div>
+<div class="en">4. <b>Does</b> AI help students? <span style="color:#94a3b8">(it ← Does)</span></div>
+<div class="en">5. Why <b>does</b> AI recommend videos? <span style="color:#94a3b8">(WH + does)</span></div>
+<div class="en">6. What <b>does</b> the model generate? <span style="color:#94a3b8">(WH + does + base verb)</span></div>
 </div>
 
-<div class="warn"><div class="wt">⭐ مميزات الوسيط</div>
-1. <b>لا يتأثر بالقيم المتطرفة (الشاذة)</b> ← لأنه يعتمد على الموقع وليس القيمة<br>
-2. يمكن إيجاده في حالة <b>البيانات الوصفية</b> التي يمكن ترتيبها<br>
-3. مجموع الانحرافات المطلقة عن الوسيط أقل ما يمكن مقارنة بأي قيمة حقيقية<br><br>
-<span style="color:#ef4444"><b>❌ محددات الوسيط:</b></span><br>
-1. لا يأخذ <b>جميع القيم</b> في الاعتبار عند حسابه<br>
-2. <b>لا يسهل التعامل معه</b> في التحاليل الإحصائية والرياضية</div>
-
-<h3>📐 الوسيط للبيانات المبوبة (الجداول التكرارية)</h3>
-<div class="cb y"><div class="lb yl">خطوات حساب الوسيط المبوب:</div>
-1. نكوّن <b>جدول التكرار المتجمع الصاعد</b> باستخدام الحدود الحقيقية<br>
-2. نحسب <b>رتبة الوسيط = n/2</b><br>
-3. نحدد <b>الفئة الوسيطية</b> = أول فئة تكرارها المتجمع ≥ رتبة الوسيط<br>
-4. نطبق القانون</div>
-
-<div class="fm">الوسيط = A + [(n/2 - F) / f] × L<small>
-<b>ترجمة القانون:</b><br>
-A = الحد الأدنى الحقيقي للفئة الوسيطية (الحد الأدنى - 0.5)<br>
-n = مجموع التكرارات (عدد جميع البيانات)<br>
-n/2 = رتبة الوسيط (نصف مجموع التكرارات)<br>
-F = التكرار المتجمع الصاعد للفئة السابقة للفئة الوسيطية<br>
-f = تكرار الفئة الوسيطية نفسها<br>
-L = طول الفئة الوسيطية (الفرق بين الحدود الحقيقية)<br>
-<b>بالعربي:</b> الوسيط = الحد الأدنى الحقيقي + [(رتبة الوسيط - التكرار المتجمع للسابقة) ÷ تكرار الفئة الوسيطية] × طول الفئة</small></div>
-<div class="cb"><b>شرح كل رمز بالتفصيل:</b><br>
-<b>A</b> = الحد الأدنى <u>الحقيقي</u> للفئة الوسيطية (الحد الأدنى - 0.5)<br>
-<b>n</b> = مجموع التكرارات (عدد جميع البيانات)<br>
-<b>F</b> = التكرار المتجمع الصاعد للفئة <u>السابقة</u> للفئة الوسيطية<br>
-<b>f</b> = تكرار الفئة الوسيطية نفسها<br>
-<b>L</b> = طول الفئة الوسيطية (الحد الأعلى - الحد الأدنى + 1، أو الفرق بين الحدود الحقيقية)</div>
-
-<div class="cb g"><div class="lb gr">✏️ مثال من المنهج (ص23): احسب الوسيط للأعمار التالية</div>
-<b>البيانات الأصلية:</b>
-<div class="tw"><table>
-<tr><th>فئات العمر</th><th>5-6</th><th>7-8</th><th>9-10</th><th>11-12</th></tr>
-<tr><th>عدد الطلاب</th><td>4</td><td>6</td><td>5</td><td>9</td></tr>
-</table></div>
-<b>الحل: نكوّن جدول التكرار المتجمع الصاعد:</b>
-<div class="tw"><table>
-<tr><th>فئات العمر (الحدود الحقيقية)</th><th>التكرار f</th><th>التكرار المتجمع F</th></tr>
-<tr><td>> 4.5</td><td>0</td><td>0</td></tr>
-<tr><td>> 6.5</td><td>4</td><td>4</td></tr>
-<tr style="background:rgba(251,191,36,.1)"><td style="color:#fbbf24"><b>> 8.5 ← الفئة الوسيطية</b></td><td style="color:#fbbf24"><b>6</b></td><td style="color:#fbbf24"><b>10</b></td></tr>
-<tr><td>> 10.5</td><td>5</td><td>15</td></tr>
-<tr><td>> 12.5</td><td>9</td><td>24</td></tr>
-</table></div>
-<div class="stp"><div class="sn">1</div><div><b>رتبة الوسيط:</b> n/2 = 24/2 = <b>12</b></div></div>
-<div class="stp"><div class="sn">2</div><div><b>الفئة الوسيطية:</b> الفئة 9-10 (لأن 12 محصور بين التكرار المتجمع 10 و 15)<br><span class="sd">أول فئة تكرارها المتجمع (15) ≥ رتبة الوسيط (12)</span></div></div>
-<div class="stp"><div class="sn">3</div><div><b>استخراج القيم:</b><br>
-A = 8.5 (الحد الأدنى الحقيقي للفئة الوسيطية)<br>
-F = 10 (التكرار المتجمع للفئة السابقة، أي f₁)<br>
-f = 5 (تكرار الفئة الوسيطية، أي f₂)<br>
-L = 10.5 - 8.5 = 2 (طول الفئة، أو يمكن حسابه 15 - 10 = 5 ← هذا خطأ شائع! الصحيح من الحدود الحقيقية = 3)</div></div>
-<div class="stp"><div class="sn">4</div><div><b>التطبيق:</b><br>
-الوسيط = 8.5 + [(12 - 10) / 5] × 3<br>
-= 8.5 + [2/5] × 3<br>
-= 8.5 + 0.4 × 3<br>
-= 8.5 + 1.2<br>
-= <span class="hl" style="font-size:1.3rem">9.7 سنة</span></div></div>
-<div class="ez" style="margin-top:.5rem">الوسيط المبوب = نفس فكرة "نص الصف" لكن البيانات في فئات. نحسب n/2 عشان نعرف وين يقع، ندوّر على الفئة، ونطبق القانون عشان نحدد القيمة بالضبط.</div>
+<div class="cb g"><div class="lb gr">Exercise 2: Correct the sentences (صحح الجمل)</div>
+<div class="en">1. AI help students. → <span class="hl3">AI help<b>s</b> students. ✅</span> <span style="color:#94a3b8">(it ← +s)</span></div>
+<div class="en">2. The system not use data. → <span class="hl3">The system <b>does not use</b> data. ✅</span></div>
+<div class="en">3. Chatbots understand feelings. → (negative) <span class="hl3">Chatbots <b>do not</b> understand feelings. ✅</span></div>
+<div class="en">4. The app generate summaries. → <span class="hl3">The app generate<b>s</b> summaries. ✅</span></div>
+<div class="en">5. AI not create perfect answers. → <span class="hl3">AI <b>does not create</b> perfect answers. ✅</span></div>
 </div>
 
-<h3>3️⃣ المنوال Mode</h3>
-<div class="cb"><div class="lb bl">التعريف</div>القيمة <b>الأكثر تكراراً</b> في مجموعة البيانات. يكثر استخدامه للبيانات الوصفية لمعرفة النمط الشائع.<br><br>
-<b>وحيد المنوال:</b> قيمة واحدة أكثر تكراراً (مثال: 2,5,5,5,8 → المنوال=5)<br>
-<b>متعدد المنوال:</b> أكثر من قيمة (مثال: 1,2,2,3,4,4 → المنوال=2 و 4)<br>
-<b>عديم المنوال:</b> كل القيم تكررت مرة واحدة (مثال: 1,2,3,4,5 → لا يوجد منوال)<br><br>
-<b>في البيانات المبوبة:</b> الفئة المنوالية = الفئة ذات أعلى تكرار (القيم تذوب داخل الفئات ولا يمكن تحديد قيمة واحدة)</div>
+<div class="cb g"><div class="lb gr">Exercise 3: Make Yes/No Questions (حوّل لسؤال)</div>
+<div class="en">1. AI generates text. → <span class="hl3"><b>Does</b> AI <b>generate</b> text? ✅</span> <span style="color:#94a3b8">(الفعل يرجع بدون s!)</span></div>
+<div class="en">2. The system uses data. → <span class="hl3"><b>Does</b> the system <b>use</b> data? ✅</span></div>
+<div class="en">3. Students use apps. → <span class="hl3"><b>Do</b> students <b>use</b> apps? ✅</span> <span style="color:#94a3b8">(they ← Do)</span></div>
+<div class="en">4. Chatbots help with writing. → <span class="hl3"><b>Do</b> chatbots <b>help</b> with writing? ✅</span></div>
+<div class="en">5. The model gives feedback. → <span class="hl3"><b>Does</b> the model <b>give</b> feedback? ✅</span></div>
+</div>
 
-<div class="warn"><div class="wt">⭐ مميزات المنوال</div>
-1. <b>سهل الحساب</b> ← فقط أوجد القيمة الأكثر تكراراً<br>
-2. <b>لا يتأثر بالقيم الشاذة</b><br>
-3. <b>الوحيد الصالح للبيانات الوصفية</b> (مثل: الجنس، اللون، المهنة)<br>
-4. يمكن إيجاده في التوزيعات التكرارية المفتوحة<br><br>
-<span style="color:#ef4444"><b>❌ محددات المنوال:</b></span><br>
-1. لا يأخذ <b>جميع قيم البيانات</b> في الاعتبار<br>
-2. قد يكون <b>أكثر من منوال</b> ← لا يمكن تحديد قيمة وحيدة<br>
-3. لا يصلح للعمليات الرياضية والتحليلات الإحصائية المتقدمة</div>
-<div class="ez">المنوال = "الموضة"! أكثر شيء منتشر. درجات: 60,70,70,70,80 ← المنوال=70 (الأكثر تكراراً). مثل "أكثر لون سيارات في الشارع أبيض" ← الأبيض هو المنوال. وهو الوحيد اللي يشتغل مع أشياء غير رقمية!</div>
+<h3>📖 قصة خالد - A Day Using Generative AI</h3>
+<div class="enb"><div class="et">📖 A Day Using Generative AI (Khalid's Story)</div>
+My name is Khalid, and I use generative AI many times during the day. In the morning, my smart watch wakes me up and shows me a sleep report. After breakfast, I write a prompt such as "Explain neural networks in easy English."<br><br>
+At college, I use a chatbot to practice vocabulary. It recognizes my mistakes and gives me better sentences. During lunch, I ask ChatGPT to summarize a passage from my programming class.<br><br>
+In the library, I use AI to check my writing and create study notes. When I am confused, I ask for definitions. Before I sleep, my phone creates a study plan for the next day.</div>
+<div class="ez">خالد يستخدم AI طول اليوم: الساعة الذكية توقظه وتعطيه تقرير نوم، يكتب prompt عن الشبكات العصبية، يستخدم chatbot لممارسة المفردات، يطلب من ChatGPT تلخيص درس البرمجة، ويستخدم AI لتدقيق كتابته. قبل النوم جواله يسوي له خطة دراسية!</div>
 
-<h3>⭐ متى نستخدم كل مقياس؟</h3>
-<div class="tw"><table>
-<tr><th>المقياس</th><th>متى نستخدمه</th></tr>
-<tr><td class="hl">المتوسط</td><td>بيانات متجانسة خالية من القيم المتطرفة</td></tr>
-<tr><td class="hl2">الوسيط</td><td>بيانات فيها قيم متطرفة أو توزيع ملتوي</td></tr>
-<tr><td class="hl3">المنوال</td><td>بيانات وصفية أو نريد القيمة الأكثر شيوعاً (الوحيد للوصفية!)</td></tr>
-<div class="ez" style="margin-top:.5rem">🔹 بيانات عادية؟ ← <b>المتوسط</b><br>🔹 فيها رقم غريب كبير/صغير جداً؟ ← <b>الوسيط</b> (ما يتأثر)<br>🔹 مو أرقام أصلاً (ألوان، أنواع)؟ ← <b>المنوال</b></div>
-</table></div>
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Comprehension</div>
+<div class="en"><b>1. What wakes Khalid up?</b> A) His phone B) <span class="hl3">His smart watch ✅</span> C) His mother</div>
+<div style="color:#94a3b8;font-size:.78rem">ساعته الذكية توقظه = smart watch</div>
+<div class="en"><b>2. What does Khalid ask the app in the morning?</b> A) <span class="hl3">Explain neural networks ✅</span> B) Give him homework C) Play music</div>
+<div class="en"><b>3. Where does he practice vocabulary?</b> A) At home B) <span class="hl3">At college ✅</span> C) At the mall</div>
+<div class="en"><b>4. What does Khalid ask ChatGPT at lunch?</b> A) To write an email B) <span class="hl3">To summarize a passage ✅</span> C) To make a video</div>
+<div class="en"><b>5. What does his phone create at night?</b> A) <span class="hl3">A study plan ✅</span> B) A shopping list C) A game</div>
+</div>
+
 </div>`;
 
-// ═══ الموضوع 2 ═══
-sections.t2=`<div class="card">
-<h2 style="color:#a78bfa">📐 الموضوع 2: مقاييس التشتت + القيمة المعيارية Z</h2>
+// ═══════════════════════════════════
+//     MODULE 3: Technical + Passive
+// ═══════════════════════════════════
+sections.m3=`<div class="card">
+<h2 style="color:#38bdf8">💻 Module 3: Technical Reading + Passive Voice</h2>
 
-<h3>📖 تعريف مقاييس التشتت (كما في المنهج)</h3>
-<div class="cb"><div class="lb bl">التعريف</div>مقاييس التشتت هي <b>مقاييس عددية تستخدم لقياس درجة تجانس (تقارب) أو تشتت (تباعد) مفردات البيانات عن بعضها البعض</b>. تُستخدم لوصف مجموعة البيانات ومقارنة مجموعات البيانات المختلفة، حيث أن <b>مقاييس النزعة المركزية وحدها لا تكفي</b> لوصف البيانات بشكل كامل.<br><br>
-<b>التشتت يصف مدى انتشار القيم حول المتوسط.</b> بدون قياس التشتت قد تبدو مجموعتان متساويتين في المتوسط لكن تختلفان جذرياً في الاستقرار.</div>
-
-<div class="cb y"><div class="lb yl">أهمية مقاييس التشتت (4 نقاط)</div>
-1. <b>تقييم مدى تجانس البيانات</b><br>
-2. <b>مقارنة مجموعات بيانات مختلفة</b><br>
-3. <b>تحديد درجة الموثوقية</b> في التنبؤات<br>
-4. <b>اتخاذ قرارات إدارية واستثمارية</b> مدروسة<br><br>
-<b>أمثلة تطبيقية:</b> الجودة الصناعية، تقلبات الأسواق، تفاوت درجات الطلاب</div>
-<div class="ez">فصلين متوسطهم 70:<br>فصل أ: 68,69,70,71,72 ← متقاربين = متجانسين = تشتت قليل ✅<br>فصل ب: 30,50,70,90,110 ← متباعدين = مشتتين = تشتت كبير ❌<br>المتوسط ما يكشف هذا الفرق! لازم نحسب التشتت.</div>
-
-<div class="cb"><div class="lb bl">لماذا لا يكفي المتوسط وحده؟</div>أ: 70,70,70,70,70 → متوسط=70 (متجانسة)<br>ب: 50,60,70,80,90 → متوسط=70 (مشتتة!)<br><b>نفس المتوسط لكن طبيعة مختلفة تماماً!</b></div>
-
-<h3>1️⃣ المدى Range</h3>
-<div class="cb"><div class="lb bl">التعريف</div>أبسط مقاييس التشتت. هو الفرق بين أكبر قيمة وأصغر قيمة في مجموعة البيانات.</div>
-<div class="fm">R = Max - Min<small>المدى = أكبر قيمة - أصغر قيمة</small></div>
-<div class="cb g"><div class="lb gr">✏️ مثال من المنهج: درجات 8 طلاب: 85, 92, 78, 96, 88, 74, 90, 82</div>
-<div class="stp"><div class="sn">1</div><div><b>أكبر قيمة:</b> Max = 96</div></div>
-<div class="stp"><div class="sn">2</div><div><b>أصغر قيمة:</b> Min = 74</div></div>
-<div class="stp"><div class="sn">3</div><div><b>المدى:</b> R = 96 - 74 = <span class="hl" style="font-size:1.1rem">22 درجة</span></div></div>
-<div class="stp"><div class="sn">4</div><div><b>التفسير:</b> درجات الطلاب تتراوح على مدى 22 درجة</div></div>
-</div>
-<div class="warn"><div class="wt">⭐ مميزات المدى</div>
-1. <b>سهل الحساب والفهم</b> ← أبسط مقياس للتشتت<br>
-2. يعطي <b>فكرة سريعة</b> عن انتشار البيانات<br>
-3. مفيد في <b>مراقبة الجودة</b> والأحوال الجوية<br><br>
-<span style="color:#ef4444"><b>❌ عيوب المدى:</b></span><br>
-1. <b>يتأثر بالقيم الشاذة</b> ← قيمة واحدة متطرفة تغير المدى كلياً<br>
-2. <b>لا يأخذ في الاعتبار جميع القيم</b> ← يعتمد فقط على أكبر وأصغر قيمة<br>
-3. <b>مقياس تقريبي وليس دقيقاً</b></div>
-<div class="ez">المدى = أبسط شيء: أكبر رقم ناقص أصغر رقم. بس مشكلته إن رقم واحد شاذ يخرب كل شيء! مثل: أطوال 155,160,165,170,190 ← المدى=35 بسبب الـ190 الشاذ!</div>
-
-<h3>2️⃣ التباين Variance</h3>
-<div class="cb"><div class="lb bl">التعريف</div>التباين هو <b>متوسط مربع انحرافات القيم عن وسطها الحسابي</b>. يقيس مدى تباعد البيانات عن المتوسط. التباين الكبير = بيانات متباعدة. التباين الصغير = بيانات متقاربة.</div>
-<div class="fm">s² = Σ(xi - x̄)² / (n - 1)<small>
-<b>ترجمة القانون:</b><br>
-s² (إس تربيع) = تباين العينة (الناتج)<br>
-Σ (سيجما) = مجموع<br>
-xi = كل قيمة فردية من البيانات<br>
-x̄ (إكس بار) = متوسط العينة<br>
-(xi - x̄) = انحراف كل قيمة عن المتوسط<br>
-(xi - x̄)² = مربع الانحراف (نربّعه لإزالة الإشارات السالبة)<br>
-n = حجم العينة (عدد القيم)<br>
-(n-1) = نقسم على n-1 وليس n (لأنها عينة وليست مجتمع)<br>
-<b>بالعربي:</b> التباين = مجموع مربعات انحرافات القيم عن المتوسط ÷ (عدد القيم - 1)<br>
-⚠️ <b>الوحدة:</b> وحدة القياس مربّعة (متر²، ريال²، درجة²...)</small></div>
-<div class="cb y"><div class="lb yl">خطوات حساب التباين:</div>
-1. احسب المتوسط x̄<br>
-2. احسب انحراف كل قيمة عن المتوسط: (xi - x̄)<br>
-3. ربّع كل انحراف: (xi - x̄)²<br>
-4. اجمع كل المربعات: Σ(xi - x̄)²<br>
-5. اقسم على (n-1): s² = المجموع ÷ (n-1)</div>
-<div class="cb g"><div class="lb gr">✏️ مثال كامل خطوة بخطوة: أعمار 6 موظفين: 25, 30, 28, 35, 32, 26</div>
-<div class="stp"><div class="sn">1</div><div><b>المتوسط:</b> x̄ = (25+30+28+35+32+26)÷6 = 176÷6 = <span class="hl">29.33</span></div></div>
-<div class="stp"><div class="sn">2</div><div><b>جدول الحسابات:</b></div></div>
+<h3>📖 المفردات - Vocabulary</h3>
 <div class="tw"><table>
-<tr><th>القيمة xi</th><th>الانحراف (xi-x̄)</th><th>مربع الانحراف (xi-x̄)²</th></tr>
-<tr><td>25</td><td>25-29.33 = -4.33</td><td>18.75</td></tr>
-<tr><td>30</td><td>30-29.33 = 0.67</td><td>0.45</td></tr>
-<tr><td>28</td><td>28-29.33 = -1.33</td><td>1.77</td></tr>
-<tr><td>35</td><td>35-29.33 = 5.67</td><td>32.15</td></tr>
-<tr><td>32</td><td>32-29.33 = 2.67</td><td>7.13</td></tr>
-<tr><td>26</td><td>26-29.33 = -3.33</td><td>11.09</td></tr>
-<tr><th colspan="2">المجموع</th><th>Σ = 71.34</th></tr>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Example</th></tr>
+<tr><td><b>Device</b></td><td>A piece of electronic equipment</td><td>جهاز</td><td class="en">This device connects via Wi-Fi.</td></tr>
+<tr><td><b>System</b></td><td>A set of connected parts working together</td><td>نظام</td><td class="en">The system manages all devices.</td></tr>
+<tr><td><b>Feature</b></td><td>A special quality or ability</td><td>ميزة / خاصية</td><td class="en">The new feature improves storage.</td></tr>
+<tr><td><b>Storage</b></td><td>The space where data is kept (memory)</td><td>تخزين / مساحة التخزين</td><td class="en">Check your storage space.</td></tr>
+<tr><td><b>Update</b></td><td>A newer version of software</td><td>تحديث</td><td class="en">Install the latest update.</td></tr>
+<tr><td><b>Configure</b></td><td>To set up a device or system</td><td>يُهيئ / يُعدّ (الإعدادات)</td><td class="en">Configure your device before use.</td></tr>
+<tr><td><b>Interface</b></td><td>The screen/controls users interact with</td><td>واجهة المستخدم</td><td class="en">The interface is user-friendly.</td></tr>
+<tr><td><b>Function</b></td><td>What something does; its purpose</td><td>وظيفة</td><td class="en">The main function is data analysis.</td></tr>
+<tr><td><b>Version</b></td><td>A particular form of software (v1, v2...)</td><td>إصدار / نسخة</td><td class="en">Check the version after the update.</td></tr>
+<tr><td><b>Performance</b></td><td>How well something works</td><td>أداء</td><td class="en">The update improves performance.</td></tr>
 </table></div>
-<div class="stp"><div class="sn">3</div><div><b>التباين:</b> s² = 71.34 ÷ (6-1) = 71.34 ÷ 5 = <span class="hl" style="font-size:1.1rem">14.27 سنة²</span></div></div>
-</div>
-<div class="warn"><div class="wt">⭐ مميزات التباين</div>
-1. <b>أساس رياضي قوي</b> يُستخدم في تحليل التباين ANOVA والانحدار<br>
-2. مناسب <b>للتجميع والجبر</b> (خاصية الإضافية)<br>
-3. مفيد في <b>تحسين النماذج</b> التي تقلل متوسط مربع الخطأ<br><br>
-<span style="color:#ef4444"><b>❌ عيوب التباين:</b></span><br>
-1. <b>وحدته مربعة</b> ← صعب التفسير مباشرة (سنة² مثلاً ليس لها معنى واضح)<br>
-2. <b>يزيد تأثير القيم الشاذة</b> بشكل أكبر بسبب التربيع</div>
+<div class="ez">Configure = تظبط الإعدادات (مثل لما تشتري جوال جديد وتضبط اللغة والواي فاي). Interface = الشاشة اللي تتعامل معها (مثل شاشة الجوال). Version = النسخة (مثل iOS 17 ← هذا version). Performance = الأداء (سرعة الجهاز وقوته).</div>
 
-<h3>3️⃣ الانحراف المعياري Standard Deviation</h3>
-<div class="cb"><div class="lb bl">التعريف</div>الانحراف المعياري هو <b>الجذر التربيعي للتباين</b>، ويعتبر <b>أهم</b> مقاييس التشتت وأكثرها استخداماً. وحدته = وحدة البيانات الأصلية (وهذا يميزه عن التباين).</div>
-<div class="fm">s = √s² = √[Σ(xi-x̄)²/(n-1)]<small>
-<b>ترجمة القانون:</b><br>
-s = الانحراف المعياري للعينة (الناتج)<br>
-√ = الجذر التربيعي<br>
-s² = التباين (الذي حسبناه سابقاً)<br>
-<b>بالعربي:</b> الانحراف المعياري = الجذر التربيعي للتباين<br>
-⚠️ <b>الوحدة:</b> نفس وحدة البيانات الأصلية (متر، ريال، درجة...) وهذا ما يميزه عن التباين<br>
-<b>التفسير:</b> الزيادة في قيمته تدل على درجة كبيرة من التشتت وتباعد البيانات، والعكس إذا انخفضت قيمته</small></div>
-<div class="cb g"><div class="lb gr">✏️ تكملة المثال السابق</div>
-<div class="stp"><div class="sn">1</div><div><b>التباين:</b> s² = 14.27</div></div>
-<div class="stp"><div class="sn">2</div><div><b>الانحراف المعياري:</b> s = √14.27 = <span class="hl" style="font-size:1.1rem">3.78 سنة</span></div></div>
-<div class="stp"><div class="sn">3</div><div><b>التفسير:</b> الأعمار تنحرف عن المتوسط (29.33) بمقدار 3.78 سنة في المتوسط</div></div>
-</div>
-<div class="warn"><div class="wt">⭐ مميزات الانحراف المعياري</div>
-1. <b>قابلية تفسير عالية</b> ← لأنه بنفس وحدة البيانات (سنة، ريال، درجة...)<br>
-2. <b>أساسي في المقارنة</b> بين مجموعات مختلفة<br>
-3. يُستخدم في حساب <b>القيمة المعيارية Z-Score</b><br>
-4. يوصف <b>التشتت المعتاد</b> حول المتوسط<br><br>
-<span style="color:#ef4444"><b>❌ عيوب الانحراف المعياري:</b></span><br>
-1. ما يزال <b>حساساً للقيم الشاذة</b><br>
-2. أقل ملاءمة لبعض <b>الاشتقاقات النظرية</b> التي تفضل التباين</div>
+<h3>📗 القواعد - Grammar: Passive Voice المبني للمجهول</h3>
+<div class="cb"><div class="lb bl">🎯 متى نستخدمه؟ (بالعربي)</div>
+نستخدم المبني للمجهول عندما <b>الفاعل غير مهم أو غير معروف</b>، والمهم هو <b>الفعل نفسه أو المفعول به</b>.<br><br>
+<b>مثال:</b> "التحديثات تُثبّت تلقائياً" ← ما يهمنا مَن ثبّتها، المهم إنها تُثبّت.</div>
 
-<div class="warn"><div class="wt">⚠️ قواعد ذهبية للاختبار</div>
-تباين كبير ← تشتت كبير ← بيانات متباعدة ← <b>غير متجانسة</b><br>
-تباين صغير ← تشتت قليل ← بيانات متقاربة ← <b>متجانسة</b><br>
-وحدة التباين <b>مربعة</b> (سنة²) | وحدة الانحراف المعياري = <b>وحدة البيانات</b> (سنة)<br>
-للمقارنة بين مجموعتين: <b>الأقل انحرافاً معيارياً = الأكثر تجانساً واستقراراً</b></div>
+<div class="fm">Passive Voice: Object + is/are + past participle (التصريف الثالث)<small>
+Updates <b>are installed</b> automatically. ← التحديثات تُثبّت تلقائياً<br>
+Data <b>is stored</b> in the cloud. ← البيانات تُخزّن في السحابة<br>
+Errors <b>are detected</b> by the system. ← الأخطاء تُكتشف بواسطة النظام</small></div>
 
-<h3>📊 مثال 3: مقارنة مبيعات فرعين (من المحاضرة)</h3>
-<div class="cb g"><div class="lb gr">✏️ مبيعات فرعين لشركة خلال 10 أيام - المطلوب: حساب المدى والتباين والانحراف المعياري والمقارنة</div>
+<div class="warn"><div class="wt">⚠️ القاعدة: كيف نحوّل من Active إلى Passive؟</div>
+<b>Active:</b> The system processes the data. ← النظام يعالج البيانات (فاعل + فعل + مفعول)<br>
+<b>Passive:</b> The data <b>is processed</b> (by the system). ← البيانات تُعالَج<br><br>
+<b>الخطوات:</b><br>
+1. المفعول به يصير في البداية (The data)<br>
+2. نضيف is/are حسب المفرد أو الجمع<br>
+3. نحول الفعل للتصريف الثالث (process → processed)<br>
+4. الفاعل نحطه بعد by (اختياري)</div>
+
+<div class="ez">المبني للمجهول = "الشيء انسوى لوحده!" بدل ما تقول "أحمد كسر الكأس" ← تقول "الكأس انكسر" (ما يهمك مين كسره).<br>
+<b>is + التصريف الثالث</b> ← للمفرد (Data <b>is stored</b>)<br>
+<b>are + التصريف الثالث</b> ← للجمع (Updates <b>are installed</b>)</div>
+
+<div class="cb g"><div class="lb gr">✏️ أمثلة إضافية - More Passive Examples</div>
 <div class="tw"><table>
-<tr><th>اليوم</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>
-<tr><td><b>الفرع A</b></td><td>50</td><td>55</td><td>48</td><td>52</td><td>47</td><td>53</td><td>51</td><td>49</td><td>54</td><td>46</td></tr>
-<tr><td><b>الفرع B</b></td><td>45</td><td>60</td><td>40</td><td>65</td><td>35</td><td>70</td><td>42</td><td>58</td><td>38</td><td>62</td></tr>
-</table></div>
-<div class="tw"><table>
-<tr><th></th><th>المتوسط</th><th>المدى</th><th>التباين</th><th>الانحراف المعياري</th></tr>
-<tr><td><b>الفرع A</b></td><td>50.5</td><td>55-46=9</td><td>9.17</td><td>3.03</td></tr>
-<tr><td><b>الفرع B</b></td><td>51.5</td><td>70-35=35</td><td>158.06</td><td>12.57</td></tr>
-</table></div>
-<div style="background:rgba(251,191,36,.08);border-radius:6px;padding:.6rem;margin-top:.5rem;font-size:.85rem">
-<b style="color:#fbbf24">النتيجة:</b> الفرع A أكثر تجانساً واستقراراً (انحراف 3.03 مقابل 12.57)<br>
-رغم أن المتوسطين متقاربين، إلا أن الفرع B متذبذب جداً في مبيعاته.
-<div class="ez">فرع A مثل موظف منتظم: كل يوم ينجز تقريباً نفس الشغل. فرع B مثل موظف متقلب: يوم يشتغل كثير ويوم لا. الانحراف المعياري يكشف مين فيهم أكثر استقراراً!</div>
-</div>
+<tr><th>Singular (مفرد) → is + V3</th><th>Plural (جمع) → are + V3</th></tr>
+<tr><td class="en">Data <b>is stored</b> in the cloud.</td><td class="en">Files <b>are stored</b> in the cloud.</td></tr>
+<tr><td class="en">The update <b>is installed</b> automatically.</td><td class="en">Updates <b>are installed</b> automatically.</td></tr>
+<tr><td class="en">The error <b>is detected</b> by the system.</td><td class="en">Errors <b>are detected</b> by the system.</td></tr>
+<tr><td class="en">The issue <b>is fixed</b> by the technician.</td><td class="en">Problems <b>are fixed</b> quickly.</td></tr>
+<tr><td class="en">The device <b>is connected</b> to Wi-Fi.</td><td class="en">Devices <b>are connected</b> to the hub.</td></tr>
+<tr><td class="en">The app <b>is downloaded</b> from the store.</td><td class="en">Apps <b>are downloaded</b> from the store.</td></tr>
+<tr><td class="en">The password <b>is encrypted</b>.</td><td class="en">Passwords <b>are encrypted</b> for security.</td></tr>
+</table></div></div>
+
+<div class="cb g"><div class="lb gr">✏️ تمارين محلولة - حوّل من Active إلى Passive</div>
+<div class="en"><b>1.</b> The system processes the data. → <span class="hl3">The data is processed by the system.</span></div>
+<div style="color:#94a3b8;font-size:.78rem">data مفرد ← is + processed (التصريف الثالث لـ process)</div>
+<div class="en"><b>2.</b> The OS manages network settings. → <span class="hl3">Network settings are managed by the OS.</span></div>
+<div style="color:#94a3b8;font-size:.78rem">settings جمع ← are + managed</div>
+<div class="en"><b>3.</b> The app stores files in the cloud. → <span class="hl3">Files are stored in the cloud by the app.</span></div>
+<div class="en"><b>4.</b> The technician fixes the issue. → <span class="hl3">The issue is fixed by the technician.</span></div>
 </div>
 
-<h3>📝 تمارين محلولة من المحاضرة</h3>
-<div class="cb g"><div class="lb gr">✏️ تمرين 1: أوزان 8 أطفال: 15, 18, 12, 20, 16, 14, 19, 17</div>
-<div class="stp"><div class="sn">1</div><div><b>المتوسط:</b> x̄ = (15+18+12+20+16+14+19+17)/8 = 131/8 = <b>16.375</b></div></div>
-<div class="stp"><div class="sn">2</div><div><b>المدى:</b> R = 20-12 = <b>8</b> كجم</div></div>
-<div class="stp"><div class="sn">3</div><div><b>التباين:</b> s² = <b>7.13</b> كجم²</div></div>
-<div class="stp"><div class="sn">4</div><div><b>الانحراف المعياري:</b> s = √7.13 = <b>2.67</b> كجم</div></div>
-</div>
-<div class="cb g"><div class="lb gr">✏️ تمرين 2: مقارنة فصلين - أيهما أكثر تجانساً؟</div>
-الفصل A: 85, 88, 90, 82, 87, 91, 86, 89 → المتوسط=87.25, الانحراف=<b>2.96</b><br>
-الفصل B: 70, 95, 75, 100, 65, 98, 72, 90 → المتوسط=83.13, الانحراف=<b>13.69</b><br>
-<b style="color:#fbbf24">النتيجة: الفصل A أكثر تجانساً (2.96 < 13.69)</b>
+<h3>📖 قطعة القراءة - Smart Home Systems</h3>
+<div class="enb"><div class="et">📖 How Modern Smart Home Systems Operate</div>
+A smart home system integrates multiple devices to create a connected environment. The hub acts as the "brain" of the home. When a sensor detects motion, it sends a signal to the hub. The hub processes that information and sends commands to devices.<br><br>
+Smart thermostats track when family members are home and adjust temperatures. Smart plugs and meters record electricity usage. Remote access allows users to control their home from anywhere. All data is encrypted and stored securely in cloud servers.</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Comprehension</div>
+<div class="en"><b>1. The "brain" of the smart home is:</b> A) sensor B) <span class="hl3">central hub ✅</span> C) camera</div>
+<div style="color:#94a3b8;font-size:.78rem">"دماغ" البيت الذكي = الـ hub (المحور المركزي) اللي يتحكم بكل الأجهزة</div>
+<div class="en"><b>2. Smart thermostats help with:</b> A) entertainment B) <span class="hl3">temperature control ✅</span> C) door locking</div>
+<div style="color:#94a3b8;font-size:.78rem">الثيرموستات الذكي يتحكم بدرجة الحرارة</div>
+<div class="en"><b>3. Why are updates important?</b> A) Entertainment B) <span class="hl3">Fix security issues ✅</span> C) Change colors</div>
+<div style="color:#94a3b8;font-size:.78rem">التحديثات مهمة لأنها تصلح مشاكل الأمان وتحسّن الأداء</div>
 </div>
 
-<h3>4️⃣ القيمة المعيارية Z-Score ⭐</h3>
-<div class="fm">Z = (X - x̄) / s<small>
-<b>ترجمة القانون:</b><br>
-Z = القيمة المعيارية (الدرجة المعيارية) = الناتج<br>
-X = القيمة الأصلية المراد تحويلها<br>
-x̄ (إكس بار) = متوسط العينة أو المجتمع<br>
-s = الانحراف المعياري<br>
-<b>بالعربي:</b> القيمة المعيارية = (القيمة الأصلية - المتوسط) ÷ الانحراف المعياري<br>
-<b>الفائدة:</b> تحويل أي قيمة إلى مقياس موحد لمقارنة قيم من مجموعات مختلفة</small></div>
-<div class="ez">Z-score = "ترجمة"! طالب جاب 86 محاسبة و96 اقتصاد. أيهم أحسن؟ Z تحول كل درجة إلى "كم أنت بعيد عن زملائك". Z=0 ← متوسط بالضبط. Z=1 ← أعلى بخطوة. |Z|>2 ← متطرف! |Z|>3 ← شاذ جداً!</div>
-<div class="tw"><table>
-<tr><th>قيمة Z</th><th>التفسير</th></tr>
-<tr><td>Z = 0</td><td>القيمة = المتوسط تماماً</td></tr>
-<tr><td>Z > 0</td><td>أكبر من المتوسط</td></tr>
-<tr><td>Z < 0</td><td>أصغر من المتوسط</td></tr>
-<tr><td style="color:#fb923c">|Z| > 2</td><td style="color:#fb923c">⚠️ متطرفة محتملة</td></tr>
-<tr><td style="color:#ef4444">|Z| > 3</td><td style="color:#ef4444">🚨 شاذة بقوة</td></tr>
-</table></div>
-<div class="cb g"><div class="lb gr">✏️ مقارنة أداء في مادتين</div>محاسبة: درجة 86, متوسط 77, انحراف 11 → Z=(86-77)/11=<b class="hl">0.82</b><br>اقتصاد: درجة 96, متوسط 84, انحراف 17 → Z=(96-84)/17=<b class="hl">0.71</b><br><b style="color:#fbbf24">النتيجة: أداء المحاسبة أفضل نسبياً (0.82>0.71) رغم أن درجة الاقتصاد أعلى!</b></div>
-<div class="cb g"><div class="lb gr">✏️ اكتشاف القيم الشاذة</div>أوزان: 65,70,68,72,67,<b style="color:#ef4444">95</b>,69,71,66,73<br>المتوسط=71.6, الانحراف=8.62<br>Z للوزن 95 = (95-71.6)/8.62 = <b style="color:#ef4444">2.71 → متطرفة! (|Z|>2)</b></div>
+<h3>📖 قطعة القراءة 2 - Mobile Operating System</h3>
+<div class="enb"><div class="et">📖 Inside a Mobile Operating System</div>
+A mobile operating system (OS) is the core software that manages every function of a smartphone. One major task is resource management: when an app opens, the OS allocates memory and determines how much processing power it receives. It prioritizes apps based on importance - navigation apps receive higher priority than games.<br><br>
+Another function is storage management. The OS organizes files, clears cache, and deletes temporary files. When storage becomes low, the OS warns the user.<br><br>
+Connectivity is controlled by the OS - it manages Wi-Fi, mobile data, and Bluetooth, and switches networks automatically when a signal becomes weak. Security is one of the OS's strongest responsibilities: it scans for suspicious files, isolates threats, and prevents malicious apps from accessing sensitive information.<br><br>
+Modern phones use permission systems allowing users to control app access to camera, microphone, location, and contacts. System updates introduce new features, improve speed, and fix bugs.</div>
+<div class="ez">نظام التشغيل (مثل Android أو iOS) هو "المدير" اللي يتحكم بكل شيء في جوالك: يوزع الذاكرة على التطبيقات، يدير التخزين، يتحكم بالواي فاي والبلوتوث، ويحمي جهازك من الفيروسات. التحديثات مهمة جداً لأنها تصلح مشاكل الأمان!</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Reading 2 MCQs</div>
+<div class="en"><b>1. What does the OS allocate when an app runs?</b> A) Colors B) <span class="hl3">Memory ✅</span> C) Battery</div>
+<div style="color:#94a3b8;font-size:.78rem">لما تفتح تطبيق، النظام يخصص له ذاكرة (memory)</div>
+<div class="en"><b>2. What happens when storage is nearly full?</b> A) <span class="hl3">OS warns user ✅</span> B) Device shuts down C) OS deletes everything</div>
+<div style="color:#94a3b8;font-size:.78rem">لما التخزين يمتلئ، النظام ينبّه المستخدم (warns)</div>
+<div class="en"><b>3. Why does the OS switch networks automatically?</b> A) Fun B) <span class="hl3">Weak signal ✅</span> C) Update apps</div>
+<div style="color:#94a3b8;font-size:.78rem">يبدل الشبكات تلقائياً عشان الإشارة ضعيفة</div>
+<div class="en"><b>4. What is the function of app permissions?</b></div>
+<div style="color:#94a3b8;font-size:.78rem">← الصلاحيات تسمح للمستخدم يتحكم أي تطبيق يقدر يوصل للكاميرا والموقع وجهات الاتصال = حماية الخصوصية</div>
+<div class="en"><b>5. Why are updates important for security?</b></div>
+<div style="color:#94a3b8;font-size:.78rem">← التحديثات تصلح الثغرات الأمنية وتكتشف تهديدات جديدة: "Updates fix bugs, improve security, and enhance performance"</div>
+</div>
+
 </div>`;
 
-// ═══ الموضوع 3 ═══
-sections.t3=`<div class="card">
-<h2 style="color:#34d399">📊 الموضوع 3: التصوير البياني</h2>
+// ═══════════════════════════════════
+//     MODULE 4: Descriptions
+// ═══════════════════════════════════
+sections.m4=`<div class="card">
+<h2 style="color:#fb923c">📝 Module 4: Technical Descriptions + Adjectives</h2>
 
-<h3>📖 تعريف التمثيل البياني (كما في المنهج)</h3>
-<div class="cb"><div class="lb bl">التعريف</div>التمثيل البياني هو <b>طريقة لعرض وتلخيص وتمثيل البيانات من خلال الأشكال البصرية</b>، مما يساعد في:<br>
-1. <b>فهم البيانات بسرعة</b><br>
-2. <b>اكتشاف الأنماط والاتجاهات</b><br>
-3. <b>المقارنة بين المجموعات المختلفة</b><br>
-4. <b>توصيل المعلومات بشكل فعال</b></div>
+<h3>📖 المفردات - Vocabulary</h3>
+<h3 style="color:#38bdf8;font-size:.85rem">Descriptive Nouns (أسماء وصفية)</h3>
+<div class="vw">
+<div class="vi"><b>Model</b> = a specific version of a product<div class="ar">طراز / موديل</div></div>
+<div class="vi"><b>Type</b> = a category or kind<div class="ar">نوع / صنف</div></div>
+<div class="vi"><b>Size</b> = how big or small something is<div class="ar">حجم</div></div>
+<div class="vi"><b>Weight</b> = how heavy something is<div class="ar">وزن</div></div>
+<div class="vi"><b>Material</b> = what something is made of<div class="ar">مادة (الخامة)</div></div>
+</div>
 
-<div class="cb y"><div class="lb yl">أهمية التمثيل البياني (4 نقاط)</div>
-<b>الوضوح:</b> يجعل البيانات المعقدة سهلة<br>
-<b>السرعة:</b> يوفر فهماً سريعاً للمعلومات<br>
-<b>المقارنة:</b> يسهّل المقارنة بين القيم المختلفة<br>
-<b>اكتشاف الأنماط:</b> يساعد في تحديد الاتجاهات والعلاقات</div>
-<div class="ez">بدل ما تقرأ جدول فيه 1000 رقم وتتعب، ترسم رسمة وفي ثانية تفهم كل شيء! الرسم البياني يحوّل الأرقام المملة إلى صورة واضحة.</div>
+<h3 style="color:#38bdf8;font-size:.85rem">Functional Verbs (أفعال وظيفية)</h3>
+<div class="vw">
+<div class="vi"><b>Include</b> = to contain as part<div class="ar">يتضمن / يشمل</div></div>
+<div class="vi"><b>Allow</b> = to let someone do something<div class="ar">يسمح</div></div>
+<div class="vi"><b>Support</b> = to help or work with<div class="ar">يدعم</div></div>
+<div class="vi"><b>Provide</b> = to give or offer<div class="ar">يوفّر / يقدّم</div></div>
+<div class="vi"><b>Operate</b> = to work or function<div class="ar">يعمل / يُشغّل</div></div>
+</div>
 
-<div class="tip"><b>الاختيار الصحيح للمخطط يعتمد على نوع البيانات والهدف:</b><br>بيانات كمية متصلة (أعمار، أطوال) ← مدرج تكراري<br>بيانات نوعية/فئوية (فروع، منتجات) ← مخطط شريطي<br>العلاقة بين متغيرين كميين ← مخطط تشتت</div>
-
-<h3>📊 المدرج التكراري Histogram</h3>
-<div class="cb"><div class="lb bl">التعريف كما في المنهج</div>المدرج التكراري هو <b>طريقة لعرض البيانات الكمية المبوبة في فئات</b>، حيث:<br>
-- المحور <b>الأفقي</b> يمثل الفئات أو المجالات<br>
-- المحور <b>العمودي</b> يمثل التكرارات<br>
-- <b>عرض</b> كل عمود يمثل طول الفئة<br>
-- <b>ارتفاع</b> كل عمود يمثل تكرار الفئة</div>
-<div class="cb o"><div class="lb or">خصائص المدرج التكراري (4 خصائص)</div>
-1. الأعمدة <b style="color:#ef4444">متلاصقة</b> (لا توجد مسافات بينها) ← لأن البيانات متصلة<br>
-2. يُستخدم <b>للبيانات الكمية المستمرة</b><br>
-3. <b>يوضح شكل التوزيع</b><br>
-4. يساعد في <b>تحديد القيم المتطرفة</b></div>
-<div class="ez">أعمدة ملزوقة ببعض (بدون فراغ!) لأن البيانات متصلة مثل العمر (ما في فراغ بين 18 و19). العمود الأطول = الفئة الأكثر.</div>
-<div class="cb g"><div class="lb gr">✏️ مثال: أعمار 50 طالب - بناء المدرج التكراري</div>
-<div class="stp"><div class="sn">1</div><div>المدى = Max-Min = 23-17 = 6</div></div>
-<div class="stp"><div class="sn">2</div><div>عدد الفئات=4 → طول الفئة = 6÷4 ≈ 2</div></div>
-<div class="stp"><div class="sn">3</div><div>الجدول التكراري:</div></div>
+<h3 style="color:#38bdf8;font-size:.85rem">Descriptive Phrases (عبارات وصفية) ⭐</h3>
 <div class="tw"><table>
-<tr><th>الفئة العمرية</th><th>التكرار</th><th>التكرار النسبي</th></tr>
-<tr><td>17-18</td><td>14</td><td>28%</td></tr>
-<tr><td style="color:#fbbf24"><b>19-20</b></td><td style="color:#fbbf24"><b>24</b></td><td style="color:#fbbf24"><b>48%</b></td></tr>
-<tr><td>21-22</td><td>11</td><td>22%</td></tr>
-<tr><td>23-24</td><td>1</td><td>2%</td></tr>
-<tr><th>المجموع</th><th>50</th><th>100%</th></tr>
+<tr><th>Phrase</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Example</th></tr>
+<tr><td><b>designed for</b></td><td>created for a specific purpose</td><td>مصمم لـ</td><td class="en">designed for professional use</td></tr>
+<tr><td><b>suitable for</b></td><td>appropriate or good for</td><td>مناسب لـ</td><td class="en">suitable for daily tasks</td></tr>
+<tr><td><b>equipped with</b></td><td>has or contains</td><td>مجهّز بـ</td><td class="en">equipped with advanced features</td></tr>
+<tr><td><b>available in</b></td><td>can be found in (sizes, colors)</td><td>متوفر بـ</td><td class="en">available in different sizes</td></tr>
+<tr><td><b>compatible with</b></td><td>able to work with other devices</td><td>متوافق مع</td><td class="en">compatible with most smartphones</td></tr>
 </table></div>
-<div class="stp"><div class="sn">4</div><div><b>التكرار النسبي</b> = (تكرار÷مجموع)×100% → 14÷50×100% = 28%</div></div>
-</div>
-<!-- SVG: مدرج تكراري -->
-<div style="text-align:center;margin:.8rem 0">
-<svg viewBox="0 0 400 220" style="max-width:400px;width:100%" xmlns="http://www.w3.org/2000/svg">
-<text x="200" y="15" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">المدرج التكراري - أعمار الطلاب (أعمدة متلاصقة!)</text>
-<line x1="60" y1="190" x2="370" y2="190" stroke="#475569" stroke-width="1"/>
-<line x1="60" y1="30" x2="60" y2="190" stroke="#475569" stroke-width="1"/>
-<!-- bars متلاصقة -->
-<rect x="70" y="78" width="70" height="112" fill="#38bdf8" opacity="0.7"/>
-<rect x="140" y="30" width="70" height="160" fill="#38bdf8" opacity="0.85"/>
-<rect x="210" y="102" width="70" height="88" fill="#38bdf8" opacity="0.7"/>
-<rect x="280" y="183" width="70" height="7" fill="#38bdf8" opacity="0.7"/>
-<!-- labels -->
-<text x="105" y="73" text-anchor="middle" fill="#e2e8f0" font-size="10">14</text>
-<text x="175" y="25" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="bold">24</text>
-<text x="245" y="97" text-anchor="middle" fill="#e2e8f0" font-size="10">11</text>
-<text x="315" y="178" text-anchor="middle" fill="#e2e8f0" font-size="10">1</text>
-<text x="105" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">17-18</text>
-<text x="175" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">19-20</text>
-<text x="245" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">21-22</text>
-<text x="315" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">23-24</text>
-<text x="30" y="195" text-anchor="middle" fill="#94a3b8" font-size="8">0</text>
-<text x="30" y="105" text-anchor="middle" fill="#94a3b8" font-size="8">12</text>
-<text x="30" y="35" text-anchor="middle" fill="#94a3b8" font-size="8">24</text>
-<text x="15" y="110" text-anchor="middle" fill="#94a3b8" font-size="8" transform="rotate(-90,15,110)">التكرار</text>
-</svg>
-</div>
 
-<h3>📊 المخطط الشريطي Bar Chart</h3>
-<div class="cb"><div class="lb bl">التعريف كما في المنهج</div>المخطط الشريطي <b>يستخدم لعرض البيانات الفئوية أو النوعية</b>، حيث:<br>
-- كل شريط يمثل <b>فئة منفصلة</b><br>
-- طول الشريط <b>يتناسب مع القيمة</b><br>
-- توجد <b>مسافات بين الأشرطة</b> (لأن الفئات منفصلة)<br>
-- يمكن أن يكون <b>أفقياً أو عمودياً</b><br>
-تسهّل هذه الطريقة قراءة البيانات وعقد المقارنات واتخاذ القرارات.</div>
-<div class="cb o"><div class="lb or">أنواع المخططات الشريطية (3 أنواع)</div>
-1. <b>الشريطي البسيط:</b> متغير واحد (مبيعات كل فرع)<br>
-2. <b>الشريطي المجمّع:</b> متغيرات متعددة جنباً إلى جنب (ذكور وإناث لكل سنة)<br>
-3. <b>الشريطي المكدّس:</b> أجزاء من الكل مكدسة فوق بعض (زيارات حسب الجهاز: موبايل+تابلت+سطح مكتب)</div>
-<div class="ez">أعمدة بينها فراغات لأن الفئات منفصلة (الرياض، جدة، الدمام = أماكن مختلفة). العمود الأطول = الفئة الأكبر.</div>
-<!-- SVG: مخطط شريطي -->
-<div style="text-align:center;margin:.8rem 0">
-<svg viewBox="0 0 400 220" style="max-width:400px;width:100%" xmlns="http://www.w3.org/2000/svg">
-<text x="200" y="15" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">المخطط الشريطي - مبيعات الفروع (أعمدة منفصلة!)</text>
-<line x1="60" y1="190" x2="370" y2="190" stroke="#475569" stroke-width="1"/>
-<line x1="60" y1="30" x2="60" y2="190" stroke="#475569" stroke-width="1"/>
-<!-- bars منفصلة -->
-<rect x="80" y="50" width="55" height="140" fill="#34d399" opacity="0.7" rx="3"/>
-<rect x="165" y="82" width="55" height="108" fill="#fb923c" opacity="0.7" rx="3"/>
-<rect x="250" y="110" width="55" height="80" fill="#a78bfa" opacity="0.7" rx="3"/>
-<!-- labels -->
-<text x="107" y="45" text-anchor="middle" fill="#e2e8f0" font-size="10">150</text>
-<text x="192" y="77" text-anchor="middle" fill="#e2e8f0" font-size="10">120</text>
-<text x="277" y="105" text-anchor="middle" fill="#e2e8f0" font-size="10">90</text>
-<text x="107" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">الرياض</text>
-<text x="192" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">جدة</text>
-<text x="277" y="205" text-anchor="middle" fill="#94a3b8" font-size="9">الدمام</text>
-</svg>
+<h3 style="color:#38bdf8;font-size:.85rem">Technical Adjectives (صفات تقنية)</h3>
+<div class="vw">
+<div class="vi"><b>Compact</b> = small and easy to carry<div class="ar">صغير الحجم</div></div>
+<div class="vi"><b>Durable</b> = strong and long-lasting<div class="ar">متين / يتحمل</div></div>
+<div class="vi"><b>Efficient</b> = works well without waste<div class="ar">فعّال / كفؤ</div></div>
+<div class="vi"><b>Portable</b> = easy to carry around<div class="ar">محمول / سهل النقل</div></div>
+<div class="vi"><b>Reliable</b> = can be trusted; works well<div class="ar">موثوق / يُعتمد عليه</div></div>
 </div>
+<div class="ez">Compact = صغير تقدر تحطه في جيبك. Durable = ما ينكسر بسهولة (متين). Efficient = يسوي الشغل بأقل جهد. Portable = تقدر تاخذه معك وين ما رحت. Reliable = تقدر تعتمد عليه 100%.</div>
 
-<h3>📊 مخطط التشتت Scatter Plot</h3>
-<div class="cb"><div class="lb bl">التعريف كما في المنهج</div>مخطط التشتت <b>يوضح العلاقة بين متغيرين كميين</b>، حيث:<br>
-- كل <b>نقطة تمثل مشاهدة واحدة</b> (شخص أو حالة)<br>
-- المحور <b>الأفقي</b> يمثل المتغير المستقل (X)<br>
-- المحور <b>العمودي</b> يمثل المتغير التابع (Y)<br>
-- يساعد في <b>تحديد نوع وقوة العلاقة</b></div>
-<div class="cb o"><div class="lb or">أنماط العلاقات في مخطط التشتت (3 أنماط)</div>
-1. <b>علاقة طردية (إيجابية) ↗️:</b> النقاط تتجه من أسفل اليسار إلى أعلى اليمين ← كلما زاد X زاد Y (مثال: ساعات الدراسة والدرجات)<br>
-2. <b>علاقة عكسية (سلبية) ↘️:</b> النقاط تتجه من أعلى اليسار إلى أسفل اليمين ← كلما زاد X قلّ Y (مثال: السعر والطلب)<br>
-3. <b>لا توجد علاقة ⚬:</b> النقاط موزعة عشوائياً بدون نمط واضح</div>
-<div class="ez">نقاط مبعثرة. كل نقطة = شخص واحد. إذا ترتفع من يسار ليمين ↗️ = علاقة إيجابية. تنزل ↘️ = سلبية. مبعثرة بدون نمط = لا علاقة.</div>
-<!-- SVG: مخطط التشتت -->
-<div style="text-align:center;margin:.8rem 0">
-<svg viewBox="0 0 400 240" style="max-width:400px;width:100%" xmlns="http://www.w3.org/2000/svg">
-<text x="200" y="15" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">مخطط التشتت - ساعات الدراسة والدرجات</text>
-<line x1="60" y1="210" x2="370" y2="210" stroke="#475569" stroke-width="1"/>
-<line x1="60" y1="25" x2="60" y2="210" stroke="#475569" stroke-width="1"/>
-<!-- نقاط البيانات -->
-<circle cx="100" cy="182" r="6" fill="#38bdf8" opacity="0.8"/>
-<circle cx="160" cy="152" r="6" fill="#38bdf8" opacity="0.8"/>
-<circle cx="220" cy="122" r="6" fill="#38bdf8" opacity="0.8"/>
-<circle cx="280" cy="107" r="6" fill="#38bdf8" opacity="0.8"/>
-<circle cx="340" cy="92" r="6" fill="#38bdf8" opacity="0.8"/>
-<!-- خط الاتجاه -->
-<line x1="80" y1="192" x2="355" y2="82" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,3" opacity="0.7"/>
-<!-- تسميات -->
-<text x="100" y="200" text-anchor="middle" fill="#94a3b8" font-size="8">65</text>
-<text x="160" y="168" text-anchor="middle" fill="#94a3b8" font-size="8">75</text>
-<text x="220" y="138" text-anchor="middle" fill="#94a3b8" font-size="8">85</text>
-<text x="280" y="123" text-anchor="middle" fill="#94a3b8" font-size="8">90</text>
-<text x="340" y="108" text-anchor="middle" fill="#94a3b8" font-size="8">95</text>
-<text x="100" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">2</text>
-<text x="160" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">4</text>
-<text x="220" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">6</text>
-<text x="280" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">8</text>
-<text x="340" y="225" text-anchor="middle" fill="#94a3b8" font-size="8">10</text>
-<text x="215" y="238" text-anchor="middle" fill="#94a3b8" font-size="8">ساعات الدراسة</text>
-<text x="35" y="120" text-anchor="middle" fill="#94a3b8" font-size="8" transform="rotate(-90,35,120)">الدرجات</text>
-<text x="300" y="55" fill="#ef4444" font-size="8">خط الاتجاه (r=0.985)</text>
-</svg>
-</div>
+<h3>📗 القواعد - Adjectives before Nouns الصفة قبل الاسم</h3>
+<div class="fm">In English: adjective comes BEFORE the noun<small>
+a <b>compact</b> model ✅ ← صح (الصفة قبل الاسم)<br>
+a model <b>compact</b> ❌ ← خطأ! (في العربي الصفة بعد الاسم، لكن في الإنجليزي العكس!)</small></div>
+<div class="ez">في العربي نقول "جهاز صغير" (الاسم أولاً ثم الصفة). لكن في الإنجليزي العكس: "small device" (الصفة أولاً ثم الاسم). <b>دائماً الصفة قبل الاسم في الإنجليزي!</b></div>
 
-<h3>📋 المقارنة الشاملة</h3>
+<div class="cb g"><div class="lb gr">✏️ أمثلة - Adjectives Before Nouns</div>
 <div class="tw"><table>
-<tr><th>المخطط</th><th>البيانات</th><th>الأعمدة</th><th>الاستخدام</th><th>العيوب</th></tr>
-<tr><td>المدرج التكراري</td><td>كمية مستمرة</td><td>متلاصقة</td><td>شكل التوزيع</td><td>قد يخفي تفاصيل</td></tr>
-<tr><td>الشريطي</td><td>نوعية/فئوية</td><td>منفصلة</td><td>مقارنة فئات</td><td>لا يوضح العلاقات</td></tr>
-<tr><td>التشتت</td><td>كمية (متغيرين)</td><td>نقاط</td><td>العلاقة</td><td>قد يكون معقد</td></tr>
+<tr><th>✅ Correct (adjective + noun)</th><th>❌ Wrong</th></tr>
+<tr><td class="en">a <b>compact</b> model</td><td class="en">a model compact ❌</td></tr>
+<tr><td class="en">a <b>durable</b> material</td><td class="en">a material durable ❌</td></tr>
+<tr><td class="en">a <b>portable</b> device</td><td class="en">a device portable ❌</td></tr>
+<tr><td class="en">an <b>efficient</b> system</td><td class="en">a system efficient ❌</td></tr>
+<tr><td class="en">a <b>reliable</b> platform</td><td class="en">a platform reliable ❌</td></tr>
+<tr><td class="en">a <b>lightweight</b> wearable</td><td class="en">a wearable lightweight ❌</td></tr>
 </table></div>
-<div class="warn"><div class="wt">⚠️ لا تفترض السببية من الارتباط!</div>مثال: ارتباط بين مبيعات المثلجات وحوادث الغرق، لكن المثلجات لا تسبب الغرق! (السبب المشترك: الحرارة)</div>
-<div class="tip">اختيار المخطط: نوعية←شريطي | توزيع←مدرج | علاقات←تشتت</div>
+<b>Descriptive Phrases (بعد الاسم):</b><br>
+<div class="en">• a device <b>designed for</b> daily use<br>
+• a system <b>equipped with</b> sensors<br>
+• a model <b>compatible with</b> smartphones<br>
+• a platform <b>suitable for</b> students<br>
+• a product <b>available in</b> different sizes</div>
+</div>
+
+<div class="cb g"><div class="lb gr">✏️ تمارين محلولة</div>
+<div class="en"><b>1.</b> Choose: A) model compact B) <span class="hl3">compact model ✅</span> C) compactly model</div>
+<div style="color:#94a3b8;font-size:.78rem">الصفة compact تجي قبل الاسم model</div>
+<div class="en"><b>2.</b> The device is designed _____ daily use. → <span class="hl3">for ✅</span> (designed for = مصمم لـ)</div>
+<div class="en"><b>3.</b> Choose: A) <span class="hl3">It is a portable and reliable system. ✅</span> B) portable and reliability system</div>
+<div style="color:#94a3b8;font-size:.78rem">portable و reliable كلهم صفات (adjectives). لكن reliability اسم (noun) فما تصلح هنا.</div>
+</div>
+
+<h3>📖 قطعة القراءة 1 - Smart Wearable Device</h3>
+<div class="enb"><div class="et">📖 Smart Wearable Device</div>
+This smart wearable device is a compact and portable model designed for daily personal use. It is lightweight and made of durable materials that allow it to withstand regular movement and outdoor conditions. The device is available in different sizes to fit various users comfortably.<br><br>
+The wearable includes multiple built-in sensors that monitor physical activity and basic health data. It supports step tracking, heart rate monitoring, and sleep analysis. The device operates automatically once it is connected to a mobile application. It allows users to view their data in real time and review daily summaries.<br><br>
+This model is designed for users who want simple and reliable performance. It is compatible with most modern smartphones and operates efficiently throughout the day with minimal charging.</div>
+<div class="ez">جهاز ذكي قابل للارتداء (مثل ساعة ذكية): صغير وخفيف ومتين، يتتبع خطواتك ونبضات قلبك ونومك. يتصل بتطبيق جوالك ويعرض بياناتك لحظياً. متوافق مع أغلب الجوالات الحديثة وبطاريته تكفي طول اليوم.</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Reading 1 MCQs</div>
+<div class="en"><b>1. What is the main purpose?</b> A) Entertainment B) <span class="hl3">Monitoring daily activity ✅</span> C) Software development</div>
+<div style="color:#94a3b8;font-size:.78rem">الغرض الرئيسي = مراقبة النشاط اليومي (خطوات + نبض + نوم)</div>
+<div class="en"><b>2. Which adjective best describes the design?</b> A) Heavy B) Complex C) <span class="hl3">Portable ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">portable = محمول وسهل الحمل (compact and portable)</div>
+<div class="en"><b>3. What allows users to view their data?</b> A) External software B) Desktop C) <span class="hl3">A connected mobile application ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">"operates automatically once connected to a mobile application"</div>
+<div class="en"><b>4. What does "compatible" mean here?</b> A) Decorative B) <span class="hl3">Able to work with other devices ✅</span> C) Expensive</div>
+<div style="color:#94a3b8;font-size:.78rem">compatible = متوافق = يشتغل مع أجهزة ثانية</div>
+</div>
+
+<h3>📖 قطعة القراءة 2 - Online Support System</h3>
+<div class="enb"><div class="et">📖 Online Support System</div>
+This online support system is designed to help users manage technical issues efficiently. It is suitable for individuals and organizations that require fast access to assistance. The system is available through a web interface and operates on standard internet browsers.<br><br>
+The platform provides several support tools, including a ticket submission feature and a knowledge base. Users can describe their issues, upload screenshots, and track the status of their requests. The system supports automatic responses for common problems, which reduces response time.<br><br>
+The interface is clear and reliable, allowing users to navigate easily between different sections. The system is equipped with security features to protect user data.</div>
+<div class="ez">نظام دعم فني أونلاين: يساعد المستخدمين يحلون مشاكلهم التقنية. يقدر المستخدم يرسل طلب (ticket)، يرفع صور للمشكلة، ويتابع حالة طلبه. النظام يرد تلقائياً على المشاكل الشائعة عشان يوفر الوقت.</div>
+
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Reading 2 MCQs</div>
+<div class="en"><b>1. What is the main function?</b> A) Device manufacturing B) <span class="hl3">Technical problem management ✅</span> C) Data storage</div>
+<div style="color:#94a3b8;font-size:.78rem">الوظيفة الرئيسية = إدارة المشاكل التقنية</div>
+<div class="en"><b>2. Which feature reduces response time?</b> A) Manual review B) <span class="hl3">Automatic responses ✅</span> C) User meetings</div>
+<div style="color:#94a3b8;font-size:.78rem">الردود التلقائية تقلل وقت الاستجابة</div>
+<div class="en"><b>3. What can users upload?</b> A) Audio files B) <span class="hl3">Screenshots ✅</span> C) Software updates</div>
+<div style="color:#94a3b8;font-size:.78rem">"upload screenshots" = يرفعون صور شاشة</div>
+<div class="en"><b>4. Why is the interface "clear"?</b> A) Many colors B) <span class="hl3">Allows easy navigation ✅</span> C) Requires training</div>
+<div style="color:#94a3b8;font-size:.78rem">"clear and reliable, allowing users to navigate easily" = واضحة وسهلة التنقل</div>
+</div>
+
 </div>`;
 
-// ═══ الموضوع 4 ═══
-sections.t4=`<div class="card">
-<h2 style="color:#fb923c">📈 الموضوع 4: الارتباط + الانحدار + التنبؤ</h2>
+// ═══════════════════════════════════
+//     MODULE 5: Comparisons
+// ═══════════════════════════════════
+sections.m5=`<div class="card">
+<h2 style="color:#a78bfa">⚖️ Module 5: Comparisons + Data</h2>
 
-<h3>🔗 أنواع الارتباط</h3>
-<div class="g2">
-<div class="gi" style="border-color:#34d399"><h4 style="color:#34d399">إيجابي ↗️</h4>X↑ → Y↑<br><span class="sd">الحرارة↔المياه</span></div>
-<div class="gi" style="border-color:#ef4444"><h4 style="color:#ef4444">سلبي ↘️</h4>X↑ → Y↓<br><span class="sd">السعر↔الطلب</span></div>
+<h3>📖 المفردات - Vocabulary</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th></tr>
+<tr><td><b>Similar</b></td><td>Almost the same</td><td>متشابه</td></tr>
+<tr><td><b>Different</b></td><td>Not the same</td><td>مختلف</td></tr>
+<tr><td><b>Higher / Lower</b></td><td>More / Less (in level)</td><td>أعلى / أقل</td></tr>
+<tr><td><b>Faster / Slower</b></td><td>More / Less speed</td><td>أسرع / أبطأ</td></tr>
+<tr><td><b>Increase</b></td><td>To go up; become more</td><td>يزداد / يرتفع</td></tr>
+<tr><td><b>Decrease</b></td><td>To go down; become less</td><td>ينخفض / يقل</td></tr>
+<tr><td><b>Average</b></td><td>The middle or typical value</td><td>متوسط</td></tr>
+<tr><td><b>Percentage</b></td><td>Part of a whole (out of 100)</td><td>نسبة مئوية</td></tr>
+<tr><td><b>Advantage</b></td><td>A good point; a benefit</td><td>ميزة / فائدة</td></tr>
+<tr><td><b>Disadvantage</b></td><td>A bad point; a weakness</td><td>عيب / نقطة ضعف</td></tr>
+<tr><td><b>Benefit</b></td><td>Something good you get</td><td>فائدة</td></tr>
+<tr><td><b>Limitation</b></td><td>A restriction or weakness</td><td>قيد / محدودية</td></tr>
+</table></div>
+
+<h3>📗 القواعد - Comparatives & Superlatives المقارنة والتفضيل</h3>
+
+<div class="cb"><div class="lb bl">🎯 Comparatives المقارنة (بين شيئين)</div>
+<b>صفة قصيرة (1-2 مقطع):</b> نضيف <b>-er</b> + <b>than</b><br>
+<span class="en">fast → fast<b>er than</b> | light → light<b>er than</b> | cheap → cheap<b>er than</b></span><br><br>
+<b>صفة طويلة (3 مقاطع+):</b> نضيف <b>more</b> + <b>than</b><br>
+<span class="en">expensive → <b>more</b> expensive <b>than</b> | powerful → <b>more</b> powerful <b>than</b></span></div>
+
+<div class="cb o"><div class="lb or">🎯 Superlatives التفضيل (بين ثلاثة أو أكثر)</div>
+<b>صفة قصيرة:</b> نضيف <b>the -est</b><br>
+<span class="en">fast → <b>the</b> fast<b>est</b> | light → <b>the</b> light<b>est</b></span><br><br>
+<b>صفة طويلة:</b> نضيف <b>the most</b><br>
+<span class="en">expensive → <b>the most</b> expensive | powerful → <b>the most</b> powerful</span></div>
+
+<div class="ez">المقارنة = تقارن بين شيئين فقط: "هذا الجوال <b>أسرع من</b> ذاك" ← faster <b>than</b><br>
+التفضيل = تقارن بين 3 أو أكثر وتختار الأفضل: "هذا <b>الأسرع</b> بين الثلاثة" ← <b>the</b> fastest<br><br>
+<b>حيلة سهلة:</b> صفة قصيرة (fast, big, cheap) ← أضف er/est. صفة طويلة (expensive, beautiful) ← أضف more/most.</div>
+
+<div class="cb g"><div class="lb gr">✏️ تمارين محلولة</div>
+<div class="en"><b>1.</b> App A is ______ App B. → <span class="hl3">faster than ✅</span> (مقارنة بين اثنين)</div>
+<div class="en"><b>2.</b> Laptop X is ______ Laptop Y. → <span class="hl3">more expensive than ✅</span> (expensive طويلة)</div>
+<div class="en"><b>3.</b> This tablet is ______ that tablet. → <span class="hl3">lighter than ✅</span></div>
+<div class="en"><b>4.</b> Device B has ______ battery life. → <span class="hl3">the longest ✅</span> (تفضيل)</div>
 </div>
 
-<h3>📐 معامل ارتباط بيرسون r</h3>
-<div class="fm">r = Σ[(xi-x̄)(yi-ȳ)] / √[Σ(xi-x̄)² × Σ(yi-ȳ)²]<small>
-<b>ترجمة القانون:</b><br>
-r = معامل ارتباط بيرسون (الناتج، قيمته بين -1 و +1)<br>
-xi = قيم المتغير الأول (مثل ساعات الدراسة)<br>
-yi = قيم المتغير الثاني (مثل الدرجات)<br>
-x̄ = متوسط المتغير الأول | ȳ = متوسط المتغير الثاني<br>
-(xi-x̄)(yi-ȳ) = حاصل ضرب انحرافي القيمتين<br>
-<b>بالعربي:</b> r = مجموع حاصل ضرب الانحرافات ÷ الجذر التربيعي لـ(مجموع مربعات انحرافات X × مجموع مربعات انحرافات Y)</small></div>
-<div class="tw"><table>
-<tr><th>|r|</th><th>القوة</th></tr>
-<tr><td>0.0-0.2</td><td>ضعيف جداً</td></tr><tr><td>0.2-0.4</td><td>ضعيف</td></tr>
-<tr><td>0.4-0.6</td><td>متوسط</td></tr><tr><td>0.6-0.8</td><td>قوي</td></tr>
-<tr><td>0.8-1.0</td><td>⭐ قوي جداً</td></tr>
-<div class="ez" style="margin-top:.5rem">r مثل "مقياس الصداقة" بين متغيرين!<br>r=+1 ← أعز أصدقاء | r=-1 ← أعداء | r=0 ← ما يعرفون بعض<br>r=0.9 ← صداقة قوية! | r=0.3 ← معارف بس</div>
-</table></div>
+<h3>📖 قطعة القراءة - Comparing Two Devices</h3>
+<div class="enb"><div class="et">📖 Comparing Two Devices</div>
+Device A is lighter and faster, suitable for mobile use. Device B is larger and heavier but provides stronger performance for long study sessions.<br><br>
+Battery life: Device A operates for 8 hours, Device B for 12 hours. Device A charges more quickly. Device A is cheaper, Device B is more expensive due to higher performance.<br><br>
+Overall: Device A is suitable for basic tasks. Device B is better for advanced academic use.</div>
 
-<div class="cb g"><div class="lb gr">✏️ مثال محلول كامل: ساعات الدراسة والدرجات</div>
-<div class="tw"><table><tr><th>الطالب</th><th>X</th><th>Y</th></tr><tr><td>1</td><td>2</td><td>65</td></tr><tr><td>2</td><td>4</td><td>75</td></tr><tr><td>3</td><td>6</td><td>85</td></tr><tr><td>4</td><td>8</td><td>90</td></tr><tr><td>5</td><td>10</td><td>95</td></tr></table></div>
-<div class="stp"><div class="sn">1</div><div>المتوسطات: x̄=6, ȳ=82</div></div>
-<div class="stp"><div class="sn">2</div><div>Σ(xi-x̄)(yi-ȳ) = 68+14+0+16+52 = <b>150</b></div></div>
-<div class="stp"><div class="sn">3</div><div>Σ(xi-x̄)² = 16+4+0+4+16 = <b>40</b></div></div>
-<div class="stp"><div class="sn">4</div><div>Σ(yi-ȳ)² = 289+49+9+64+169 = <b>580</b></div></div>
-<div class="stp"><div class="sn">5</div><div>r = 150/√(40×580) = 150/152.315 = <b class="hl">0.985</b></div></div>
-<div class="stp"><div class="sn">6</div><div>التفسير: ارتباط <b>إيجابي قوي جداً</b> (>0.8)</div></div>
+<div class="cb g"><div class="lb gr">أسئلة الفهم</div>
+<div class="en"><b>1. One advantage of Device A?</b> → <span class="hl3">B) Faster charging ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">ميزة جهاز A = يشحن أسرع (charges more quickly)</div>
+<div class="en"><b>2. Which device is better for advanced use?</b> → <span class="hl3">B) Device B ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">جهاز B أفضل للاستخدام المتقدم لأن أداؤه أقوى</div>
 </div>
 
-<h3>📊 معامل التحديد R²</h3>
-<div class="fm">R² = r²<small>نسبة التباين المفسَّر. r=0.985 → R²=0.970 → 97% من التغير مفسَّر</small></div>
-<div class="ez">R² = كم النموذج يفسّر من الواقع. R²=0.97 يعني 97% من التغير في الدرجات سببه ساعات الدراسة. الـ3% الباقية = حظ وعوامل ثانية.</div>
+<h3>📖 قطعة القراءة 2 - Describing Simple Data</h3>
+<div class="enb"><div class="et">📖 Describing Simple Data</div>
+A learning platform collected usage data from students over one month. The average daily usage was three hours. During exam weeks, the number increased to five hours per day, showing a clear increase in study time.<br><br>
+The data also showed differences between weekdays and weekends. On weekdays, usage was higher, while on weekends it was lower. Approximately sixty percent of students used the platform daily, while forty percent used it occasionally.<br><br>
+These numbers help instructors understand study habits and improve course planning.</div>
+<div class="ez">منصة تعليمية جمعت بيانات استخدام الطلاب لمدة شهر: المتوسط اليومي 3 ساعات، لكن في أسابيع الاختبارات زاد إلى 5 ساعات! الاستخدام أعلى في أيام الدوام وأقل في نهاية الأسبوع. 60% من الطلاب يستخدمونها يومياً و 40% أحياناً.</div>
 
-<h3>📈 معادلة الانحدار الخطي</h3>
-<div class="fm">Y = a + bX<small>
-<b>ترجمة القانون:</b><br>
-Y = القيمة المتوقعة (المتغير التابع، مثل الدرجة)<br>
-a = نقطة التقاطع مع المحور الرأسي (قيمة Y عندما X=0)<br>
-b = ميل الخط (مقدار التغير في Y لكل وحدة زيادة في X)<br>
-X = المتغير المستقل (مثل ساعات الدراسة)<br>
-<b>حساب b:</b> b = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)²<br>
-<b>حساب a:</b> a = ȳ - b × x̄<br>
-<b>بالعربي:</b> القيمة المتوقعة = الثابت + (الميل × قيمة المتغير المستقل)</small></div>
-<div class="ez">Y = a + bX مثل "وصفة"!<br><b>a</b> = لو ما درست أبداً (X=0) كم تجيب؟ = 59.5<br><b>b</b> = كل ساعة دراسة تزيد درجتك = 3.75<br>يعني: 0 ساعات=59.5 | 1 ساعة=63.25 | 7 ساعات=85.75</div>
-<div class="cb g"><div class="lb gr">✏️ تكملة المثال</div>
-<div class="stp"><div class="sn">1</div><div>b = 150/40 = <b>3.75</b> (لكل ساعة تزيد الدرجة 3.75)</div></div>
-<div class="stp"><div class="sn">2</div><div>a = 82 - 3.75×6 = <b>59.5</b></div></div>
-<div class="stp"><div class="sn">3</div><div>المعادلة: <b style="color:#fbbf24;font-size:1.1rem">Y = 59.5 + 3.75X</b></div></div>
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Reading 2 MCQs</div>
+<div class="en"><b>1. What happened to usage during exam weeks?</b> A) It decreased B) It stayed the same C) <span class="hl3">It increased ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">أسابيع الاختبارات: الاستخدام زاد من 3 إلى 5 ساعات (increased)</div>
+<div class="en"><b>2. When was platform usage higher?</b> A) On weekends B) <span class="hl3">On weekdays ✅</span> C) During holidays</div>
+<div style="color:#94a3b8;font-size:.78rem">أيام الدوام (weekdays) = استخدام أعلى</div>
+<div class="en"><b>3. What percentage used the platform daily?</b> A) 40% B) 50% C) <span class="hl3">60% ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">"sixty percent of students used the platform daily" = 60%</div>
 </div>
 
-<h3>🔮 التنبؤ</h3>
-<div class="cb g"><div class="lb gr">✏️ درجة طالب يدرس 7 ساعات</div>Y = 59.5 + 3.75×7 = 59.5 + 26.25 = <b style="color:#fbbf24">85.75</b></div>
-<div class="warn"><div class="wt">⚠️ حدود التنبؤ</div>لا تتنبأ خارج نطاق البيانات الأصلية! | راجع النموذج دورياً | استخدم متغيرات ذات علاقة قوية<br>أنواع: قصير المدى (أيام/أسابيع) | متوسط (شهور) | طويل (سنوات)</div>
-<div class="ez">التنبؤ مثل "توقع الطقس": تقدر تتوقع بكرة بدقة، لكن بعد سنة مستحيل! إذا بياناتك عن 2-10 ساعات، لا تتنبأ لـ50 ساعة!</div>
 </div>`;
 
-// ═══ الموضوع 5: بايثون ═══
-sections.t5=`<div class="card">
-<h2 style="color:#fbbf24">🐍 جميع أكواد بايثون مع الشرح</h2>
+// ═══════════════════════════════════
+//     MODULE 6: Instructions
+// ═══════════════════════════════════
+sections.m6=`<div class="card">
+<h2 style="color:#fbbf24">📋 Module 6: Instructions & Processes</h2>
 
-<div class="code"><div class="ch"><span>استيراد المكتبات</span><span>Python</span></div>
-<pre>import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from scipy import stats
-from sklearn.linear_model import LinearRegression</pre>
-<div class="ce">numpy: حسابات | pandas: جداول | matplotlib: رسوم | scipy: إحصاء | sklearn: تعلم آلي</div></div>
+<h3>📖 المفردات - Vocabulary</h3>
+<h3 style="color:#fbbf24;font-size:.85rem">Sequencing Language (كلمات الترتيب) ⭐</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Meaning</th><th>المعنى بالعربي</th><th>Usage</th></tr>
+<tr><td><b>First</b></td><td>At the beginning</td><td>أولاً</td><td class="en">First, download the app.</td></tr>
+<tr><td><b>Next</b></td><td>After that; the following step</td><td>بعد ذلك / ثانياً</td><td class="en">Next, open the file.</td></tr>
+<tr><td><b>Then</b></td><td>After the previous step</td><td>ثم</td><td class="en">Then, enter your password.</td></tr>
+<tr><td><b>After that</b></td><td>Following the previous action</td><td>بعد ذلك</td><td class="en">After that, click submit.</td></tr>
+<tr><td><b>Finally</b></td><td>The last step</td><td>أخيراً</td><td class="en">Finally, restart the system.</td></tr>
+</table></div>
 
-<div class="code"><div class="ch"><span>1. النزعة المركزية</span><span>Python</span></div>
-<pre>data = [250, 280, 320, 450, 370]
-print(np.mean(data))      # المتوسط: 334.0
-print(np.median(data))    # الوسيط: 320.0
-print(stats.mode(data).mode)  # المنوال</pre>
-<div class="ce">np.mean()=المتوسط | np.median()=الوسيط | stats.mode()=المنوال</div></div>
+<h3 style="color:#fbbf24;font-size:.85rem">Process & Action Vocabulary</h3>
+<div class="vw">
+<div class="vi"><b>Process</b> = a series of actions<div class="ar">عملية (سلسلة خطوات)</div></div>
+<div class="vi"><b>Step</b> = one action in a process<div class="ar">خطوة</div></div>
+<div class="vi"><b>Instruction</b> = tells you what to do<div class="ar">تعليمة / إرشاد</div></div>
+<div class="vi"><b>Procedure</b> = a set of steps to follow<div class="ar">إجراء</div></div>
+<div class="vi"><b>Method</b> = a way of doing something<div class="ar">طريقة / أسلوب</div></div>
+<div class="vi"><b>Install</b> = to put software on a device<div class="ar">يُثبّت (برنامج)</div></div>
+<div class="vi"><b>Activate</b> = to make something start working<div class="ar">يُفعّل</div></div>
+<div class="vi"><b>Connect</b> = to join/link to something<div class="ar">يربط / يوصّل</div></div>
+<div class="vi"><b>Submit</b> = to send for review<div class="ar">يُرسل / يُسلّم</div></div>
+<div class="vi"><b>Complete</b> = to finish<div class="ar">يُكمل / يُنهي</div></div>
+</div>
 
-<div class="code"><div class="ch"><span>2. التشتت</span><span>Python</span></div>
-<pre>ages = [25, 30, 28, 35, 32, 26]
-r = max(ages) - min(ages)        # المدى = 10
-v = np.var(ages, ddof=1)         # التباين = 14.27
-s = np.std(ages, ddof=1)         # الانحراف = 3.78</pre>
-<div class="ce">⚠️ ddof=1 مهم! بدونه يقسم على n (مجتمع). مع ddof=1 يقسم على n-1 (عينة)</div></div>
+<h3>📗 القواعد - Imperatives صيغة الأمر</h3>
+<div class="fm">Imperative = Base verb (start with the verb directly!)<small>
+Download the file. ← حمّل الملف (ابدأ بالفعل مباشرة!)<br>
+Open the application. ← افتح التطبيق<br>
+Follow the instructions. ← اتبع التعليمات</small></div>
+<div class="ez">صيغة الأمر = ابدأ بالفعل مباشرة بدون فاعل! بدل ما تقول "You should download" ← قل فقط "Download!" وهذا اللي نستخدمه في التعليمات والخطوات: "First, <b>open</b> the app. Next, <b>click</b> login. Then, <b>enter</b> your password."</div>
 
-<div class="code"><div class="ch"><span>3. Z-Score واكتشاف القيم الشاذة</span><span>Python</span></div>
-<pre>weights = [65,70,68,72,67,95,69,71,66,73]
-m, s = np.mean(weights), np.std(weights, ddof=1)
-z_scores = [(x - m) / s for x in weights]
-for w, z in zip(weights, z_scores):
-    status = "⚠️ شاذة" if abs(z) > 2 else "طبيعية"
-    print(f"{w}: Z={z:.2f} → {status}")
-# 95: Z=2.71 → ⚠️ شاذة</pre></div>
+<div class="cb g"><div class="lb gr">✏️ أمثلة شاملة - Imperative Examples</div>
+<div class="en"><b>Simple Imperatives (أوامر بسيطة):</b><br>
+• <b>Download</b> the file from the website.<br>
+• <b>Open</b> the application.<br>
+• <b>Click</b> the login button.<br>
+• <b>Enter</b> your username and password.<br>
+• <b>Connect</b> your device to Wi-Fi.<br>
+• <b>Install</b> the latest update.<br>
+• <b>Restart</b> the system after installation.<br>
+• <b>Upload</b> your assignment before the deadline.<br><br>
+<b>With Sequencing Words (مع كلمات الترتيب):</b><br>
+• <b>First</b>, open the official website.<br>
+• <b>Next</b>, download the installation file.<br>
+• <b>Then</b>, follow the on-screen instructions.<br>
+• <b>After that</b>, activate the software.<br>
+• <b>Finally</b>, restart the device.</div>
+<div class="en" style="margin-top:.4rem"><b>Passive Voice for Processes (المبني للمجهول في العمليات):</b><br>
+• The file <b>is uploaded</b> to the server.<br>
+• The system <b>is activated</b> automatically.<br>
+• The task <b>is completed</b> successfully.<br>
+• The assignment <b>is submitted</b> online.</div>
+</div>
 
-<div class="code"><div class="ch"><span>4. المدرج التكراري Histogram</span><span>Python</span></div>
-<pre>plt.figure(figsize=(10, 6))
-plt.hist(ages, bins=4, edgecolor='black', alpha=0.7, color='skyblue')
-plt.xlabel('العمر'); plt.ylabel('التكرار')
-plt.title('توزيع الأعمار'); plt.show()</pre>
-<div class="ce">plt.hist: أعمدة متلاصقة | bins=عدد الفئات | alpha=شفافية</div></div>
+<h3>📖 قطعة القراءة - Installing Software</h3>
+<div class="enb"><div class="et">📖 Following Instructions</div>
+Installing a software application usually involves several clear steps. <b>First</b>, users download the application from an official website. <b>Next</b>, they open the installation file and follow the on-screen instructions. <b>After</b> the installation is complete, users activate the software using an account or license key. <b>Finally</b>, the system checks the configuration to make sure the application works correctly.</div>
 
-<div class="code"><div class="ch"><span>5. المخطط الشريطي (رأسي + أفقي)</span><span>Python</span></div>
-<pre>plt.bar(categories, values, color='coral')    # رأسي
-plt.barh(categories, values, color='coral')   # أفقي</pre>
-<div class="ce">plt.bar=رأسي | plt.barh=أفقي (مفيد لأسماء طويلة)</div></div>
+<div class="cb g"><div class="lb gr">أسئلة الفهم</div>
+<div class="en"><b>1. What is the first step?</b> → <span class="hl3">B) Downloading the application ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">أول خطوة = تحميل التطبيق من الموقع الرسمي</div>
+<div class="en"><b>2. Why are clear instructions important?</b> → <span class="hl3">B) They reduce errors ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">التعليمات الواضحة تقلل الأخطاء وتوفر الوقت</div>
+<div class="en"><b>3. What happens after installation?</b> → <span class="hl3">B) The software is activated ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">بعد التثبيت = تفعيل البرنامج بحساب أو مفتاح ترخيص</div>
+</div>
 
-<div class="code"><div class="ch"><span>6. التشتت + خط الاتجاه + R²</span><span>Python</span></div>
-<pre>X = [2,4,6,8,10]; Y = [65,75,85,90,95]
-slope, intercept, r_value, p, se = stats.linregress(X, Y)
-print(f"y = {intercept:.1f} + {slope:.2f}x")
-print(f"r={r_value:.3f}, R²={r_value**2:.3f}")
-plt.scatter(X, Y); plt.plot(X, slope*np.array(X)+intercept, 'r--')
-plt.show()</pre>
-<div class="ce">stats.linregress: تعطي slope, intercept, r_value دفعة واحدة</div></div>
+<h3>📖 قطعة القراءة 2 - Submitting an Assignment</h3>
+<div class="enb"><div class="et">📖 Describing a Process</div>
+Submitting an online assignment requires following a simple procedure. <b>First</b>, students log into the learning platform using their username and password. <b>Next</b>, they select the correct course and open the assignment page.<br><br>
+<b>After that</b>, students upload the required file and check that it is complete. <b>Finally</b>, they submit the assignment and wait for confirmation. If any step is skipped, the submission may fail.<br><br>
+Understanding the process helps students avoid mistakes and submit work successfully.</div>
+<div class="ez">خطوات تسليم واجب أونلاين: أولاً سجّل دخول بالاسم والرقم السري، ثم اختر المقرر الصحيح وافتح صفحة الواجب، بعدها ارفع الملف المطلوب وتأكد إنه كامل، وأخيراً اضغط تسليم وانتظر رسالة التأكيد. إذا نسيت خطوة ← التسليم ممكن يفشل!</div>
 
-<div class="code"><div class="ch"><span>7. الانحدار + التنبؤ (sklearn)</span><span>Python</span></div>
-<pre>X = df['ساعات'].values.reshape(-1, 1)
-y = df['درجات'].values
-model = LinearRegression()
-model.fit(X, y)
-a = model.intercept_    # الثابت (59.5)
-b = model.coef_[0]      # الميل (3.75)
-pred = model.predict([[7]])[0]  # التنبؤ: 85.75</pre>
-<div class="ce">reshape(-1,1): مطلوب | fit: تدريب | intercept_=a | coef_[0]=b | predict: تنبؤ</div></div>
+<div class="cb g"><div class="lb gr">أسئلة الفهم - Reading 2 MCQs</div>
+<div class="en"><b>1. What must students do first?</b> A) Upload the file B) <span class="hl3">Log into the platform ✅</span> C) Submit the assignment</div>
+<div style="color:#94a3b8;font-size:.78rem">أول خطوة = تسجيل الدخول للمنصة (log into)</div>
+<div class="en"><b>2. What happens if a step is skipped?</b> A) The grade improves B) <span class="hl3">The submission may fail ✅</span> C) The file is saved automatically</div>
+<div style="color:#94a3b8;font-size:.78rem">إذا تخطيت خطوة = التسليم ممكن يفشل!</div>
+<div class="en"><b>3. What is the final step?</b> A) Uploading the file B) Selecting the course C) <span class="hl3">Submitting the assignment ✅</span></div>
+<div style="color:#94a3b8;font-size:.78rem">آخر خطوة = تسليم الواجب (submit) وانتظار التأكيد</div>
+</div>
 
-<div class="code"><div class="ch"><span>8. معامل الارتباط (pandas)</span><span>Python</span></div>
-<pre>df = pd.DataFrame({'ساعات':[2,4,6,8,10], 'درجات':[65,75,85,90,95]})
-r = df['ساعات'].corr(df['درجات'])  # 0.985</pre>
-<div class="ce">.corr() تحسب معامل بيرسون بين عمودين</div></div>
 </div>`;
 
-// ═══ دوال Excel ═══
-sections.t6=`<div class="card">
-<h2 style="color:#34d399">🧮 جميع دوال Excel المطلوبة</h2>
+// ═══════════════════════════════════
+//     COMPREHENSIVE REVIEW
+// ═══════════════════════════════════
+sections.rev=`<div class="card">
+<h2 style="color:#fbbf24">📚 Comprehensive Grammar & Vocabulary Review</h2>
+<h2 style="color:#94a3b8;font-size:.85rem">مراجعة شاملة للقواعد والمفردات</h2>
 
-<h3>📊 النزعة المركزية</h3>
+<h3 style="color:#38bdf8">━━━ PART 1: GRAMMAR REVIEW ━━━</h3>
+
+<h3>1️⃣ Present Simple Tense</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>USE:</b> To describe facts, routines, and processes that are always true.<br><br>
+<b>AFFIRMATIVE (إثبات):</b><br>
+• I / You / We / They + <b>base verb</b> → They <b>use</b> AI every day.<br>
+• He / She / It + <b>verb + s/es</b> → The system <b>generates</b> answers.<br><br>
+<b>NEGATIVE (نفي):</b><br>
+• I / You / We / They + <b>do not (don't)</b> + base verb → They <b>don't understand</b> feelings.<br>
+• He / She / It + <b>does not (doesn't)</b> + base verb → AI <b>doesn't replace</b> teachers.<br><br>
+<b>YES/NO QUESTIONS (أسئلة نعم/لا):</b><br>
+• <b>Do</b> + I/you/we/they + base verb? → <b>Do</b> students <b>use</b> apps?<br>
+• <b>Does</b> + he/she/it + base verb? → <b>Does</b> AI <b>help</b> students?<br><br>
+<b>WH- QUESTIONS (أسئلة استفهامية):</b><br>
+• WH-word + do/does + subject + base verb?<br>
+• What <b>does</b> the model <b>generate</b>?<br>
+• Why <b>do</b> students <b>use</b> AI tools?
+</div></div>
+<div class="ez">المضارع البسيط = الشيء اللي يصير دائماً أو كحقيقة ثابتة.<br>
+مع he/she/it ← أضف <b>s</b> للفعل (generates, uses, helps)<br>
+في النفي والسؤال ← الفعل يرجع <b>بدون s</b> (doesn't generate, Does AI help)<br>
+<b>أكثر خطأ شائع:</b> Does AI help<b>s</b>? ❌ ← الصح: Does AI help? ✅</div>
+
 <div class="tw"><table>
-<tr><th>الدالة</th><th>الوظيفة</th><th>مثال</th></tr>
-<tr><td><span class="ef">AVERAGE</span></td><td>المتوسط</td><td>=AVERAGE(A1:A10)</td></tr>
-<tr><td><span class="ef">AVERAGEIF</span></td><td>متوسط بشرط</td><td>=AVERAGEIF(B:B,"A",C:C)</td></tr>
-<tr><td><span class="ef">AVERAGEIFS</span></td><td>متوسط بعدة شروط</td><td>=AVERAGEIFS(C:C,B:B,"B",C:C,">=90")</td></tr>
-<tr><td><span class="ef">MEDIAN</span></td><td>الوسيط</td><td>=MEDIAN(A1:A10)</td></tr>
-<tr><td><span class="ef">MODE.SNGL</span></td><td>منوال وحيد</td><td>=MODE.SNGL(A1:A10)</td></tr>
-<tr><td><span class="ef">MODE.MULT</span></td><td>منوال متعدد</td><td>=MODE.MULT(A1:A10)</td></tr>
+<tr><th>Type</th><th>he/she/it</th><th>I/you/we/they</th></tr>
+<tr><td>Affirmative</td><td class="en">AI <b>generates</b> text</td><td class="en">Students <b>use</b> apps</td></tr>
+<tr><td>Negative</td><td class="en">AI <b>doesn't generate</b></td><td class="en">Students <b>don't use</b></td></tr>
+<tr><td>Question</td><td class="en"><b>Does</b> AI <b>generate</b>?</td><td class="en"><b>Do</b> students <b>use</b>?</td></tr>
+<tr><td>WH-Question</td><td class="en">What <b>does</b> AI <b>generate</b>?</td><td class="en">Why <b>do</b> students <b>use</b>?</td></tr>
 </table></div>
 
-<h3>📐 التشتت</h3>
-<div class="tw"><table>
-<tr><th>الدالة</th><th>الوظيفة</th></tr>
-<tr><td><span class="ef">MAX()-MIN()</span></td><td>المدى</td></tr>
-<tr><td><span class="ef">VAR.S</span></td><td>تباين العينة (÷n-1) ← الأكثر استخداماً</td></tr>
-<tr><td><span class="ef">VAR.P</span></td><td>تباين المجتمع (÷n)</td></tr>
-<tr><td><span class="ef">STDEV.S</span></td><td>انحراف العينة (÷n-1)</td></tr>
-<tr><td><span class="ef">STDEV.P</span></td><td>انحراف المجتمع (÷n)</td></tr>
-<tr><td><span class="ef">(A1-B1)/C1</span></td><td>القيمة المعيارية Z</td></tr>
-</table></div>
-<div class="warn"><div class="wt">⚠️ S = Sample (عينة ÷n-1) | P = Population (مجتمع ÷n)</div></div>
+<div class="cb g"><div class="lb gr">✏️ More Sentence Examples</div>
+<div class="en">
+1. The chatbot <b>answers</b> questions quickly. (it → +s)<br>
+2. AI <b>doesn't make</b> perfect decisions. (negative: doesn't + base)<br>
+3. <b>Does</b> the app <b>recognize</b> voices? Yes, it does. (question: Does + base)<br>
+4. Students <b>write</b> prompts every day. (they → no s)<br>
+5. We <b>don't use</b> AI for cooking. (negative: don't + base)<br>
+6. <b>Do</b> teachers <b>use</b> AI platforms? Yes, they do.<br>
+7. <b>What does</b> the system <b>produce</b>? It produces reports.<br>
+8. <b>How do</b> students <b>learn</b> with AI? They use chatbots.
+</div></div>
 
-<h3>📈 الارتباط والانحدار</h3>
+<h3>2️⃣ Passive Voice</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>USE:</b> When the doer is not important. Focus is on the action or the object.<br><br>
+<b>FORM:</b> Subject + <b>is/are</b> + <b>past participle</b> (V3)<br><br>
+<b>is</b> → singular subjects (data, the update, the issue)<br>
+<b>are</b> → plural subjects (updates, files, errors)<br><br>
+<b>EXAMPLES:</b><br>
+• Data <b>is stored</b> in the cloud.<br>
+• Updates <b>are installed</b> automatically.<br>
+• The issue <b>is fixed</b> by the technician.<br>
+• Errors <b>are detected</b> by the system.
+</div></div>
+<div class="ez">المبني للمجهول = الشيء "انسوى" بدون ما نذكر مين سواه.<br>
+مفرد ← <b>is</b> + التصريف الثالث (Data <b>is stored</b>)<br>
+جمع ← <b>are</b> + التصريف الثالث (Updates <b>are installed</b>)</div>
+
+<div class="cb g"><div class="lb gr">Active → Passive Conversion (تحويل سريع)</div>
 <div class="tw"><table>
-<tr><th>الدالة</th><th>الوظيفة</th></tr>
-<tr><td><span class="ef">CORREL</span></td><td>معامل ارتباط بيرسون r</td></tr>
-<tr><td><span class="ef">SLOPE</span></td><td>ميل خط الانحدار b</td></tr>
-<tr><td><span class="ef">INTERCEPT</span></td><td>نقطة التقاطع a</td></tr>
-<tr><td><span class="ef">FORECAST</span></td><td>التنبؤ بقيمة Y</td></tr>
+<tr><th>Active</th><th>Passive</th></tr>
+<tr><td class="en">The system <b>processes</b> data.</td><td class="en">Data <b>is processed</b>.</td></tr>
+<tr><td class="en">The OS <b>manages</b> settings.</td><td class="en">Settings <b>are managed</b>.</td></tr>
+<tr><td class="en">The app <b>stores</b> files.</td><td class="en">Files <b>are stored</b>.</td></tr>
+<tr><td class="en">The technician <b>fixes</b> the issue.</td><td class="en">The issue <b>is fixed</b>.</td></tr>
+<tr><td class="en">The system <b>detects</b> errors.</td><td class="en">Errors <b>are detected</b>.</td></tr>
+<tr><td class="en">The OS <b>installs</b> updates.</td><td class="en">Updates <b>are installed</b>.</td></tr>
+</table></div></div>
+
+<h3>3️⃣ Adjectives & Descriptive Phrases</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>RULE 1:</b> Adjectives come <b>BEFORE</b> nouns in English.<br>
+• a <b>compact</b> model ✅ (NOT: a model compact ❌)<br>
+• a <b>durable</b> material ✅<br>
+• a <b>portable</b> device ✅<br><br>
+<b>RULE 2:</b> Descriptive phrases come <b>AFTER</b> the noun.<br>
+• a device <b>designed for</b> daily use ✅<br>
+• a system <b>equipped with</b> sensors ✅<br>
+• a model <b>compatible with</b> smartphones ✅<br><br>
+<b>RULE 3:</b> Use adjectives (NOT nouns) before nouns.<br>
+• a portable and <b>reliable</b> system ✅ (reliable = adjective)<br>
+• a portable and <b>reliability</b> system ❌ (reliability = noun!)
+</div></div>
+<div class="ez">في الإنجليزي: الصفة <b>قبل</b> الاسم (compact model). في العربي العكس (موديل صغير).<br>
+لكن العبارات الوصفية (designed for, equipped with) تجي <b>بعد</b> الاسم.</div>
+
+<div class="cb g"><div class="lb gr">✏️ Full Sentence Examples</div>
+<div class="en">
+1. This is a <b>compact</b> and <b>portable</b> model. ✅ (adjectives before noun)<br>
+2. The device is made of <b>durable</b> materials. ✅<br>
+3. It is an <b>efficient</b> and <b>reliable</b> system. ✅<br>
+4. The system is <b>designed for</b> professional use. ✅ (phrase after noun)<br>
+5. The device is <b>equipped with</b> advanced sensors. ✅<br>
+6. This model is <b>compatible with</b> most smartphones. ✅<br>
+7. The platform is <b>suitable for</b> students and teachers. ✅<br>
+8. The product is <b>available in</b> three different sizes. ✅
+</div></div>
+
+<h3>4️⃣ Comparatives & Superlatives</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>COMPARATIVES</b> (comparing TWO things):<br>
+• Short adjective + <b>-er than</b>: fast → fast<b>er than</b> | cheap → cheap<b>er than</b><br>
+• Long adjective: <b>more</b> + adj + <b>than</b>: expensive → <b>more</b> expensive <b>than</b><br><br>
+<b>SUPERLATIVES</b> (comparing THREE or more):<br>
+• Short adjective: <b>the</b> + adj + <b>-est</b>: fast → <b>the</b> fast<b>est</b><br>
+• Long adjective: <b>the most</b> + adj: expensive → <b>the most</b> expensive
+</div></div>
+<div class="ez">مقارنة بين 2 ← -er than (أو more...than للصفات الطويلة)<br>
+تفضيل بين 3+ ← the -est (أو the most للصفات الطويلة)</div>
+
+<div class="cb g"><div class="lb gr">✏️ أمثلة شاملة - Comparative & Superlative Examples</div>
+<div class="en"><b>Comparatives (بين شيئين):</b><br>
+• Device A is <b>faster than</b> Device B.<br>
+• Device B is <b>heavier than</b> Device A.<br>
+• Laptop X is <b>more expensive than</b> Laptop Y.<br>
+• This app is <b>more powerful than</b> that one.<br>
+• Device A charges <b>more quickly than</b> Device B.<br>
+• Battery life is <b>longer than</b> expected.<br><br>
+<b>Superlatives (بين 3 أو أكثر):</b><br>
+• Device C has <b>the longest</b> battery life.<br>
+• This is <b>the fastest</b> model available.<br>
+• It is <b>the cheapest</b> option for students.<br>
+• This is <b>the most expensive</b> device in the store.<br>
+• It has <b>the most powerful</b> processor.</div>
+</div>
+
+<div class="tw"><table>
+<tr><th>Adjective</th><th>Comparative (2 things)</th><th>Superlative (3+ things)</th></tr>
+<tr><td class="en">fast</td><td class="en">fast<b>er than</b></td><td class="en"><b>the</b> fast<b>est</b></td></tr>
+<tr><td class="en">light</td><td class="en">light<b>er than</b></td><td class="en"><b>the</b> light<b>est</b></td></tr>
+<tr><td class="en">cheap</td><td class="en">cheap<b>er than</b></td><td class="en"><b>the</b> cheap<b>est</b></td></tr>
+<tr><td class="en">long</td><td class="en">long<b>er than</b></td><td class="en"><b>the</b> long<b>est</b></td></tr>
+<tr><td class="en">expensive</td><td class="en"><b>more</b> expensive <b>than</b></td><td class="en"><b>the most</b> expensive</td></tr>
+<tr><td class="en">powerful</td><td class="en"><b>more</b> powerful <b>than</b></td><td class="en"><b>the most</b> powerful</td></tr>
 </table></div>
 
-<h3>🔢 العد والجمع الشرطي</h3>
+<h3>5️⃣ Imperatives (Commands & Instructions)</h3>
+<div class="cb"><div class="lb bl">Rules (القواعد)</div>
+<div class="en">
+<b>USE:</b> To give instructions, orders, or directions.<br><br>
+<b>FORM:</b> Start directly with the <b>base verb</b>. No subject needed!<br><br>
+• <b>Download</b> the file. ✅ (NOT: You download the file.)<br>
+• <b>Open</b> the application. ✅<br>
+• <b>Follow</b> the instructions. ✅<br>
+• <b>Connect</b> to Wi-Fi. ✅<br><br>
+<b>WITH SEQUENCING WORDS:</b><br>
+• <b>First</b>, download the app.<br>
+• <b>Next</b>, open the file.<br>
+• <b>Then</b>, enter your password.<br>
+• <b>After that</b>, click submit.<br>
+• <b>Finally</b>, restart the system.
+</div></div>
+<div class="ez">صيغة الأمر = ابدأ بالفعل مباشرة! بدون فاعل. "حمّل الملف" = Download the file.<br>
+واستخدم كلمات الترتيب (First, Next, Then, After that, Finally) عشان توضح الخطوات.</div>
+
+<div class="cb g"><div class="lb gr">✏️ Complete Process Example</div>
+<div class="en">
+<b>How to submit an online assignment:</b><br>
+1. <b>First</b>, <b>log into</b> the learning platform.<br>
+2. <b>Next</b>, <b>select</b> the correct course.<br>
+3. <b>Then</b>, <b>open</b> the assignment page.<br>
+4. <b>After that</b>, <b>upload</b> the required file.<br>
+5. <b>Finally</b>, <b>click</b> the submit button and <b>wait</b> for confirmation.<br><br>
+<b>Passive version of the same process:</b><br>
+1. The platform <b>is accessed</b> using a username and password.<br>
+2. The correct course <b>is selected</b>.<br>
+3. The file <b>is uploaded</b> to the assignment page.<br>
+4. The assignment <b>is submitted</b> online.<br>
+5. A confirmation message <b>is displayed</b> on the screen.
+</div></div>
+
+<h3 style="color:#34d399">━━━ PART 2: ALL VOCABULARY (English Only) ━━━</h3>
+
+<h3>Module 2: AI & Technology</h3>
 <div class="tw"><table>
-<tr><th>الدالة</th><th>الوظيفة</th><th>مثال</th></tr>
-<tr><td><span class="ef">COUNTIF</span></td><td>عد بشرط</td><td>=COUNTIF(B:B,">=60")</td></tr>
-<tr><td><span class="ef">SUMIF</span></td><td>جمع بشرط</td><td>=SUMIF(A:A,"الشرقي",B:B)</td></tr>
+<tr><th>Word</th><th>English Definition</th></tr>
+<tr><td class="en"><b>Robot</b></td><td class="en">A machine that can do tasks automatically</td></tr>
+<tr><td class="en"><b>App</b></td><td class="en">A small software program on a phone or computer</td></tr>
+<tr><td class="en"><b>Smart device</b></td><td class="en">An electronic device connected to the internet</td></tr>
+<tr><td class="en"><b>Chatbot</b></td><td class="en">A computer program that talks to users</td></tr>
+<tr><td class="en"><b>Data</b></td><td class="en">Information in numbers or text that can be analyzed</td></tr>
+<tr><td class="en"><b>Program</b></td><td class="en">A set of instructions for a computer</td></tr>
+<tr><td class="en"><b>System</b></td><td class="en">A group of parts working together</td></tr>
+<tr><td class="en"><b>Tool</b></td><td class="en">Something used to do a job</td></tr>
+<tr><td class="en"><b>Generate</b></td><td class="en">To create something new</td></tr>
+<tr><td class="en"><b>Prompt</b></td><td class="en">A message typed by the user to get a response from AI</td></tr>
+<tr><td class="en"><b>Output</b></td><td class="en">What the AI produces as a result</td></tr>
+<tr><td class="en"><b>Recognize</b></td><td class="en">To identify or know something</td></tr>
+<tr><td class="en"><b>Identify</b></td><td class="en">To find out what something is</td></tr>
+<tr><td class="en"><b>Digital</b></td><td class="en">Related to electronic technology</td></tr>
 </table></div>
+
+<h3>Module 3: Technical Terms</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Definition</th></tr>
+<tr><td class="en"><b>Device</b></td><td class="en">A piece of electronic equipment</td></tr>
+<tr><td class="en"><b>Feature</b></td><td class="en">A special quality or function of something</td></tr>
+<tr><td class="en"><b>Storage</b></td><td class="en">The space where data is kept (memory)</td></tr>
+<tr><td class="en"><b>Update</b></td><td class="en">A newer version of software that fixes problems</td></tr>
+<tr><td class="en"><b>Configure</b></td><td class="en">To set up a device or system</td></tr>
+<tr><td class="en"><b>Interface</b></td><td class="en">The screen or controls that users interact with</td></tr>
+<tr><td class="en"><b>Function</b></td><td class="en">What something does; its purpose</td></tr>
+<tr><td class="en"><b>Version</b></td><td class="en">A particular form or release of software</td></tr>
+<tr><td class="en"><b>Performance</b></td><td class="en">How well something works</td></tr>
+</table></div>
+
+<h3>Module 4: Descriptions</h3>
+<div class="tw"><table>
+<tr><th>Word / Phrase</th><th>English Definition</th></tr>
+<tr><td class="en"><b>Model</b></td><td class="en">A specific version of a product</td></tr>
+<tr><td class="en"><b>Type</b></td><td class="en">A category or kind</td></tr>
+<tr><td class="en"><b>Size</b></td><td class="en">How big or small something is</td></tr>
+<tr><td class="en"><b>Weight</b></td><td class="en">How heavy something is</td></tr>
+<tr><td class="en"><b>Material</b></td><td class="en">What something is made of</td></tr>
+<tr><td class="en"><b>Include</b></td><td class="en">To contain as a part</td></tr>
+<tr><td class="en"><b>Allow</b></td><td class="en">To let someone do something</td></tr>
+<tr><td class="en"><b>Support</b></td><td class="en">To help or work with something</td></tr>
+<tr><td class="en"><b>Provide</b></td><td class="en">To give or offer</td></tr>
+<tr><td class="en"><b>Operate</b></td><td class="en">To work or function</td></tr>
+<tr><td class="en"><b>Compact</b></td><td class="en">Small and easy to carry</td></tr>
+<tr><td class="en"><b>Durable</b></td><td class="en">Strong and long-lasting</td></tr>
+<tr><td class="en"><b>Efficient</b></td><td class="en">Works well without wasting time or energy</td></tr>
+<tr><td class="en"><b>Portable</b></td><td class="en">Easy to carry around</td></tr>
+<tr><td class="en"><b>Reliable</b></td><td class="en">Can be trusted to work well</td></tr>
+<tr><td class="en"><b>Designed for</b></td><td class="en">Created for a specific purpose</td></tr>
+<tr><td class="en"><b>Suitable for</b></td><td class="en">Appropriate or good for</td></tr>
+<tr><td class="en"><b>Equipped with</b></td><td class="en">Has or contains a feature</td></tr>
+<tr><td class="en"><b>Available in</b></td><td class="en">Can be found in different options</td></tr>
+<tr><td class="en"><b>Compatible with</b></td><td class="en">Able to work with other devices</td></tr>
+</table></div>
+
+<h3>Module 5: Comparisons & Data</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Definition</th></tr>
+<tr><td class="en"><b>Similar</b></td><td class="en">Almost the same</td></tr>
+<tr><td class="en"><b>Different</b></td><td class="en">Not the same</td></tr>
+<tr><td class="en"><b>Higher / Lower</b></td><td class="en">More / Less in level or amount</td></tr>
+<tr><td class="en"><b>Faster / Slower</b></td><td class="en">More / Less in speed</td></tr>
+<tr><td class="en"><b>Increase</b></td><td class="en">To go up; become more</td></tr>
+<tr><td class="en"><b>Decrease</b></td><td class="en">To go down; become less</td></tr>
+<tr><td class="en"><b>Average</b></td><td class="en">The middle or typical value</td></tr>
+<tr><td class="en"><b>Percentage</b></td><td class="en">A part of a whole, shown out of 100</td></tr>
+<tr><td class="en"><b>Number</b></td><td class="en">A figure used for counting or measuring</td></tr>
+<tr><td class="en"><b>Advantage</b></td><td class="en">A good point; a benefit</td></tr>
+<tr><td class="en"><b>Disadvantage</b></td><td class="en">A bad point; a weakness</td></tr>
+<tr><td class="en"><b>Benefit</b></td><td class="en">Something good that you receive</td></tr>
+<tr><td class="en"><b>Limitation</b></td><td class="en">A restriction or weakness</td></tr>
+<tr><td class="en"><b>Difference</b></td><td class="en">A way in which things are not the same</td></tr>
+</table></div>
+
+<h3>Module 6: Instructions & Processes</h3>
+<div class="tw"><table>
+<tr><th>Word</th><th>English Definition</th></tr>
+<tr><td class="en"><b>First</b></td><td class="en">At the beginning; the initial step</td></tr>
+<tr><td class="en"><b>Next</b></td><td class="en">After that; the following step</td></tr>
+<tr><td class="en"><b>Then</b></td><td class="en">After the previous step</td></tr>
+<tr><td class="en"><b>After that</b></td><td class="en">Following the previous action</td></tr>
+<tr><td class="en"><b>Finally</b></td><td class="en">The last step</td></tr>
+<tr><td class="en"><b>Process</b></td><td class="en">A series of actions to achieve a result</td></tr>
+<tr><td class="en"><b>Step</b></td><td class="en">One action in a process</td></tr>
+<tr><td class="en"><b>Instruction</b></td><td class="en">Something that tells you what to do</td></tr>
+<tr><td class="en"><b>Procedure</b></td><td class="en">A set of steps to follow in order</td></tr>
+<tr><td class="en"><b>Method</b></td><td class="en">A way of doing something</td></tr>
+<tr><td class="en"><b>Install</b></td><td class="en">To put software on a device</td></tr>
+<tr><td class="en"><b>Activate</b></td><td class="en">To make something start working</td></tr>
+<tr><td class="en"><b>Connect</b></td><td class="en">To join or link to something</td></tr>
+<tr><td class="en"><b>Submit</b></td><td class="en">To send something for review</td></tr>
+<tr><td class="en"><b>Complete</b></td><td class="en">To finish something</td></tr>
+</table></div>
+
+<h3 style="color:#fb923c">━━━ PART 3: QUICK RULES SUMMARY ━━━</h3>
+<div class="warn"><div class="wt">⚠️ أهم القواعد للاختبار - Quick Rules with Examples</div>
+<div class="en">
+<b>1. Present Simple + s:</b> He/She/It + verb<b>s</b><br>
+→ AI generate<b>s</b> answers. | The system use<b>s</b> data. | The app recognize<b>s</b> faces.<br><br>
+<b>2. Negative:</b> doesn't/don't + base verb (NO s!)<br>
+→ AI <b>doesn't generate</b> perfect text. | Students <b>don't use</b> AI for cooking.<br><br>
+<b>3. Question:</b> Does/Do + base verb (NO s!)<br>
+→ <b>Does</b> AI <b>help</b>? | <b>Do</b> students <b>use</b> apps? | What <b>does</b> it <b>produce</b>?<br><br>
+<b>4. Passive:</b> is/are + past participle<br>
+→ Data <b>is stored</b>. | Files <b>are uploaded</b>. | Updates <b>are installed</b>. | The issue <b>is fixed</b>.<br><br>
+<b>5. Adjective BEFORE noun:</b><br>
+→ a <b>compact</b> model ✅ | a <b>durable</b> material ✅ | a model compact ❌<br><br>
+<b>6. Descriptive phrase AFTER noun:</b><br>
+→ a device <b>designed for</b> daily use | a system <b>equipped with</b> sensors<br><br>
+<b>7. Comparative:</b> -er than / more...than (2 things)<br>
+→ Device A is <b>faster than</b> B. | Laptop X is <b>more expensive than</b> Y.<br><br>
+<b>8. Superlative:</b> the -est / the most (3+ things)<br>
+→ This is <b>the fastest</b> model. | It is <b>the most powerful</b> processor.<br><br>
+<b>9. Imperative:</b> Start with base verb<br>
+→ <b>Download</b> the file. | <b>Open</b> the app. | <b>Connect</b> to Wi-Fi.<br><br>
+<b>10. Sequencing:</b> First → Next → Then → After that → Finally<br>
+→ <b>First</b>, download the app. <b>Next</b>, open it. <b>Then</b>, log in. <b>Finally</b>, restart.
+</b></div></div>
 </div>`;
 
-// ═══ دوال IF ═══
-sections.t7=`<div class="card">
-<h2 style="color:#fb923c">🔀 الموضوع 6: تحليل البيانات بـ IF والدوال الشرطية</h2>
-
-<h3>🔀 IF الأساسية</h3>
-<div class="fm">=IF(الشرط, القيمة_إذا_صح, القيمة_إذا_خطأ)</div>
-<div class="cb g"><div class="lb gr">✏️ مثال: =IF(A2>=60,"ناجح","راسب")</div>A2=75 → 75≥60 صحيح → <b>ناجح</b><br>A2=45 → 45≥60 خطأ → <b>راسب</b></div>
-<div class="ez">IF مثل "الإشارة المرورية" 🚦: إذا الشرط أخضر (صح) ← روح اليمين. إذا أحمر (خطأ) ← روح اليسار. IF(درجتك>=60, "ناجح", "راسب") ← 60 فأكثر=ناجح، أقل=راسب.</div>
-
-<h3>🔀 IF المتداخلة</h3>
-<div class="fm">=IF(A2>=90,"A", IF(A2>=80,"B", IF(A2>=70,"C", IF(A2>=60,"D","F"))))</div>
-<div class="warn"><div class="wt">⚠️ قاعدة حاسمة: الترتيب من الأكبر للأصغر!</div>❌ IF(A2>=60,"D", IF(A2>=90,"A",...)) ← كل الدرجات العالية ستحصل على D!<br>✅ IF(A2>=90,"A", IF(A2>=60,"D",...)) ← نبدأ من الأكبر</div>
-<div class="ez">IF المتداخلة = عدة مخارج! ابدأ بالسؤال الأكبر: "مليونير؟" قبل "معك 100 ريال؟" لأن لو بدأت بالصغير كل الناس تنطبق عليهم!</div>
-
-<h3>🔀 حساب العمولة</h3>
-<div class="cb g"><div class="lb gr">أقل من 5000=5% | 5000-10000=7% | أكثر=10%</div><span class="ef">=IF(B2&lt;5000, B2*0.05, IF(B2&lt;10000, B2*0.07, B2*0.1))</span><br><br>4500→225ر | 7800→546ر | 12000→1200ر</div>
-
-<h3>🔗 IF + AND (كل الشروط معاً)</h3>
-<div class="fm">=IF(AND(شرط1, شرط2), صح, خطأ)</div>
-<div class="cb g"><div class="lb gr">✏️ قبول: معدل≥3 و إنجليزي≥500</div><span class="ef">=IF(AND(B2>=3, C2>=500), "مقبول", "غير مقبول")</span><br><br>3.5+550→مقبول ✅ | 2.8+600→غير مقبول ❌ (المعدل<3)</div>
-<div class="ez"><b>AND = "و":</b> لازم كل الشروط معاً. مثل: عمرك ≥18 <b>و</b> معك بطاقة ← كلهم لازم!<br><b>OR = "أو":</b> شرط واحد يكفي. عميل مميز <b>أو</b> مشتريات كثيرة ← واحد منهم بس!</div>
-
-<h3>🔗 IF + OR (شرط واحد يكفي)</h3>
-<div class="fm">=IF(OR(شرط1, شرط2), صح, خطأ)</div>
-<div class="cb g"><div class="lb gr">✏️ خصم 15% إذا عميل مميز أو مشتريات≥5000</div><span class="ef">=IF(OR(C2="نعم", B2>=5000), B2*0.15, 0)</span></div>
-
-<h3>🔗 دمج AND و OR معاً</h3>
-<div class="cb g"><div class="lb gr">✏️ منحة: (معدل≥3.5 و دخل<3000) أو (معدل≥3.8)</div><span class="ef">=IF(OR(AND(B2>=3.5, C2&lt;3000), B2>=3.8), "يستحق", "لا")</span><br><br>سلمان: 3.6+2500→يستحق ✅ | هند: 3.9→يستحق ✅ | بدر: 3.4+2000→لا ❌</div>
-
-<h3>📋 عوامل المقارنة</h3>
-<div class="tw"><table>
-<tr><th>العامل</th><th>المعنى</th></tr>
-<tr><td>=</td><td>يساوي</td></tr><tr><td>></td><td>أكبر من</td></tr><tr><td><</td><td>أصغر من</td></tr>
-<tr><td>>=</td><td>أكبر أو يساوي</td></tr><tr><td><=</td><td>أصغر أو يساوي</td></tr><tr><td><></td><td>لا يساوي</td></tr>
-</table></div>
-
-<div class="warn"><div class="wt">⚠️ أخطاء شائعة تجنبها!</div>❌ نسيان علامات التنصيص: IF(A1>50,ناجح) → ✅ IF(A1>50,"ناجح")<br>❌ ترتيب خاطئ في IF المتداخلة (ابدأ من الأكبر!)<br>❌ نسيان إغلاق الأقواس (كل ( يجب أن يُغلق ))<br>❌ نسيان الفاصلة بين أجزاء الدالة</div>
-</div>`;
-
-// ═══════════════════════════════════════
-//              QUIZ (45 سؤال)
-// ═══════════════════════════════════════
+// ═══════════════════════════════════
+//     QUIZ - 50 Questions
+// ═══════════════════════════════════
 const Q=[
-{q:"كم عدد وظائف علم الإحصاء الأساسية؟",o:["3","5","7","10"],c:2,e:"7 وظائف: جمع، تنظيم، تلخيص، عرض، تحليل، تفسير، نشر"},
-{q:"هل كل المعلومات بيانات؟",o:["نعم","لا، ليست كل المعلومات بيانات","فقط الأرقام","أحياناً"],c:1,e:"البيانات = معلومات مرتبة مدعمة بالأرقام يمكن تحليلها"},
-{q:"العينة العشوائية البسيطة لا تقل عن:",o:["10","20","30","50"],c:2,e:"≥ 30 فرد"},
-{q:"حجم العينة يجب أن يكون من المجتمع:",o:["1-2%","2-10%","50%","100%"],c:1,e:"العينة = 2% إلى 10% من المجتمع"},
-{q:"الجنس (ذكر/أنثى) متغير:",o:["كمي","نوعي","عشوائي","متصل"],c:1,e:"تصنيف وليس رقم = نوعي Qualitative"},
-{q:"درجة الحرارة متغير:",o:["نوعي","لا عشوائي","عشوائي","وصفي"],c:2,e:"لا يمكن التحكم بها = عشوائي Random"},
-{q:"المتوسط لـ: 10,20,30,40,50 يساوي:",o:["25","30","35","150"],c:1,e:"150/5 = 30"},
-{q:"مجموع الانحرافات عن المتوسط يساوي:",o:["1","المتوسط","صفر","n"],c:2,e:"Σ(xi-x̄) = 0 دائماً"},
-{q:"الوسيط لـ: 3,5,7,9,11 يساوي:",o:["5","7","9","35"],c:1,e:"n=5 فردي، الموقع 3 → 7"},
-{q:"الوسيط لـ: 15,44,52,68,72,102 يساوي:",o:["52","60","68","44"],c:1,e:"(52+68)/2=60"},
-{q:"أي مقياس لا يتأثر بالقيم الشاذة؟",o:["المتوسط","الوسيط","المدى","التباين"],c:1,e:"الوسيط يعتمد على الموقع"},
-{q:"المنوال هو الوحيد الصالح لـ:",o:["الكمية","الوصفية","المبوبة","المتصلة"],c:1,e:"المنوال = الوحيد للبيانات الوصفية"},
-{q:"الفئة المنوالية في الجدول التكراري:",o:["الأولى","ذات أعلى تكرار","ذات أقل تكرار","الوسطى"],c:1,e:"الفئة المنوالية = أعلى تكرار"},
-{q:"متى نفضل الوسيط على المتوسط؟",o:["دائماً","عند وجود قيم متطرفة","للوصفية","أبداً"],c:1,e:"الوسيط أفضل عند القيم المتطرفة"},
-{q:"المدى لـ: 15,22,18,30,12 يساوي:",o:["12","15","18","30"],c:2,e:"30-12=18"},
-{q:"تباين العينة يُقسم على:",o:["n","n+1","n-1","2n"],c:2,e:"s²=Σ(xi-x̄)²/(n-1)"},
-{q:"إذا التباين=25 فالانحراف المعياري:",o:["12.5","625","5","50"],c:2,e:"√25=5"},
-{q:"وحدة التباين:",o:["نفس البيانات","مربعة","ليس لها","نسبة"],c:1,e:"مربعة (سنة² أو متر²)"},
-{q:"Z-score تُحسب:",o:["(X+x̄)/s","(X-x̄)/s","X×s","x̄/s"],c:1,e:"Z=(X-x̄)/s"},
-{q:"إذا Z=0 فالقيمة:",o:["أكبر","أصغر","تساوي المتوسط","شاذة"],c:2,e:"Z=0 → X=x̄"},
-{q:"إذا |Z|>2 فالقيمة:",o:["طبيعية","=المتوسط","متطرفة محتملة","صفر"],c:2,e:"|Z|>2 = متطرفة"},
-{q:"ddof=1 في numpy يعني:",o:["تباين المجتمع","تباين العينة","المتوسط","المنوال"],c:1,e:"ddof=1 → ÷(n-1) = عينة"},
-{q:"الفرق بين Histogram و Bar Chart:",o:["لا فرق","Histogram متلاصق وBar منفصل","العكس","الحجم"],c:1,e:"متلاصق=كمية متصلة، منفصل=نوعية"},
-{q:"التكرار النسبي يُحسب:",o:["تكرار×مجموع","(تكرار÷مجموع)×100%","مجموع÷تكرار","تكرار-مجموع"],c:1,e:"(تكرار الفئة÷المجموع)×100%"},
-{q:"plt.scatter تُستخدم لرسم:",o:["Histogram","Bar","مخطط تشتت","خط"],c:2,e:"scatter=نقاط=مخطط تشتت"},
-{q:"plt.barh ترسم:",o:["شريطي رأسي","شريطي أفقي","مدرج","تشتت"],c:1,e:"barh=bar horizontal=أفقي"},
-{q:"r=0.92 يعني:",o:["لا ارتباط","ضعيف","متوسط","إيجابي قوي جداً"],c:3,e:"0.92>0.8=قوي جداً، موجب=طردي"},
-{q:"r=-0.85 يدل على:",o:["لا ارتباط","إيجابي قوي","سلبي قوي جداً","ضعيف"],c:2,e:"|0.85|>0.8=قوي جداً، سالب=عكسي"},
-{q:"R²=0.81 يعني:",o:["ارتباط 81%","81% من التغير مفسَّر","خطأ 81%","81 قيمة"],c:1,e:"R²=نسبة التباين المفسَّر"},
-{q:"في Y=a+bX، b يمثل:",o:["نقطة التقاطع","ميل الخط","معامل r","المتوسط"],c:1,e:"b=الميل"},
-{q:"Y=59.5+3.75X عند X=7:",o:["86.25","85.75","82","63.25"],c:1,e:"59.5+26.25=85.75"},
-{q:"الارتباط القوي يعني:",o:["سببية مؤكدة","علاقة خطية فقط","تساوي","لا شيء"],c:1,e:"الارتباط ≠ السببية"},
-{q:"عند استخدام معادلة الانحدار للتنبؤ، ما الذي يجب تجنبه؟",o:["التنبؤ بقيم قريبة من البيانات","التنبؤ خارج نطاق البيانات الأصلية","التنبؤ بالمتوسط","التنبؤ بالوسيط"],c:1,e:"لا تتنبأ خارج نطاق البيانات الأصلية لأن النتيجة غير موثوقة. مثلاً لو بياناتك من 2-10 ساعات لا تتنبأ لـ50 ساعة"},
-{q:"model.intercept_ يُعطي:",o:["الميل","الثابت a","معامل r","التباين"],c:1,e:"intercept_=a"},
-{q:"=IF(A1>=60,\"ناجح\",\"راسب\") إذا A1=45:",o:["ناجح","راسب","خطأ","0"],c:1,e:"45<60=خاطئ→راسب"},
-{q:"IF المتداخلة نبدأ بالشرط:",o:["الأصغر","الأكبر","أي ترتيب","عشوائي"],c:1,e:"من الأكبر للأصغر"},
-{q:"AND تعني:",o:["أو","و (كل الشروط)","ليس","أكبر"],c:1,e:"AND=كل الشروط معاً"},
-{q:"OR تعني:",o:["كل الشروط","شرط واحد يكفي","ليس","يساوي"],c:1,e:"OR=شرط واحد كافي"},
-{q:"COUNTIF تُستخدم لـ:",o:["الجمع","العد الشرطي","المتوسط","التنبؤ"],c:1,e:"COUNTIF=عد بشرط"},
-{q:"SUMIF تختلف عن COUNTIF بأنها:",o:["تعد","تجمع القيم","تحسب المتوسط","ترسم"],c:1,e:"SUMIF تجمع، COUNTIF تعد"},
-{q:"STDEV.S تحسب:",o:["انحراف المجتمع","انحراف العينة","التباين","المتوسط"],c:1,e:"S=Sample=عينة ÷(n-1)"},
-{q:"FORECAST تُستخدم لـ:",o:["التباين","التنبؤ بقيمة Y","المنوال","الرسم"],c:1,e:"FORECAST=تنبؤ من معادلة الانحدار"},
-{q:"stats.linregress تُعطي:",o:["المتوسط","slope,intercept,r دفعة واحدة","الرسم","التباين"],c:1,e:"slope,intercept,r_value,p_value,std_err"},
-{q:"الوسيط المبوب: الفئة الوسيطية هي:",o:["الأولى","تكرارها المتجمع ≥ n/2","الأخيرة","أكبر تكرار"],c:1,e:"أول فئة تكرارها المتجمع ≥ n/2"},
-{q:"النص في IF يجب وضعه بين:",o:["أقواس","علامات تنصيص","نجمات","لا شيء"],c:1,e:'❌ IF(A1>50,ناجح) ✅ IF(A1>50,"ناجح")'},
+// Module 2 - Vocabulary
+{q:"A 'prompt' is:",o:["A type of robot","A message typed by the user","An output file","A system error"],c:1,e:"الـ prompt = رسالة/أمر يكتبه المستخدم للذكاء الاصطناعي"},
+{q:"'Generate' means:",o:["Delete","Copy","Create something new","Save"],c:2,e:"Generate = يُنشئ / يُولّد شيء جديد"},
+{q:"'Output' refers to:",o:["User input","System error","What AI produces as a result","A password"],c:2,e:"Output = المخرجات / النتيجة التي ينتجها AI"},
+{q:"A 'chatbot' is:",o:["A type of hardware","A program that talks to users","A storage device","An update"],c:1,e:"Chatbot = برنامج محادثة آلي يتحدث مع المستخدمين"},
+{q:"'Digital' means:",o:["Old-fashioned","Related to electronic technology","Manual","Physical"],c:1,e:"Digital = رقمي / إلكتروني"},
+// Module 2 - Grammar
+{q:"Choose: 'AI _____ answers.'",o:["generate","generates","generating","generated"],c:1,e:"AI = it ← نضيف s للفعل: generates"},
+{q:"Choose: 'Chatbots _____ not understand feelings.'",o:["does","do","is","are"],c:1,e:"Chatbots = they ← نستخدم do not"},
+{q:"Make a question: 'AI helps students.'",o:["Is AI helps students?","Does AI help students?","Do AI helps students?","AI does help students?"],c:1,e:"AI = it ← Does + AI + base verb (help بدون s)"},
+{q:"'The system _____ data.' (negative)",o:["don't use","doesn't uses","doesn't use","not use"],c:2,e:"system = it ← doesn't + base verb (use بدون s)"},
+// Module 2 - Reading
+{q:"AI helps students by:",o:["Cooking food","Explaining ideas","Driving cars","Building houses"],c:1,e:"AI يساعد الطلاب بتوضيح الأفكار وإنشاء خطط دراسية"},
+{q:"AI is always correct. True or False?",o:["True","False"],c:1,e:"خطأ! AI يخطئ أحياناً: 'AI can misunderstand prompts'"},
+{q:"Translation apps help with:",o:["Weather reports","New words and sentences","Music playlists","Cooking recipes"],c:1,e:"تطبيقات الترجمة تساعد في فهم كلمات وجمل جديدة"},
+// Module 3 - Vocabulary
+{q:"'Storage' refers to:",o:["Electricity","Memory / space for data","Speed","Color"],c:1,e:"Storage = مساحة التخزين / الذاكرة"},
+{q:"'Configure' means:",o:["Delete","Set up","Break","Ignore"],c:1,e:"Configure = يُهيئ / يضبط الإعدادات"},
+{q:"'Interface' means:",o:["Hardware inside","User control screen","A virus","Storage"],c:1,e:"Interface = واجهة المستخدم (الشاشة اللي تتعامل معها)"},
+{q:"'Version' means:",o:["A software release","A sensor","Voltage","A bug"],c:0,e:"Version = إصدار / نسخة من البرنامج (مثل v1.0, v2.0)"},
+// Module 3 - Grammar (Passive)
+{q:"Change to passive: 'The system processes data.'",o:["Data is processed.","Data are processed.","Data processed.","Data is process."],c:0,e:"data مفرد ← is + processed (التصريف الثالث)"},
+{q:"'Updates _____ automatically.'",o:["is installed","are installed","installed","installing"],c:1,e:"Updates جمع ← are + installed"},
+{q:"'Data _____ in the cloud.'",o:["are stored","is stored","stored","storing"],c:1,e:"Data مفرد ← is + stored"},
+{q:"The passive form of 'The technician fixes the issue' is:",o:["The issue is fixed.","The issue are fixed.","The issue fixed.","The issue is fix."],c:0,e:"issue مفرد ← is + fixed"},
+// Module 3 - Reading
+{q:"The 'brain' of the smart home is:",o:["The sensor","The central hub","The camera","The light"],c:1,e:"الـ hub المركزي = دماغ البيت الذكي"},
+{q:"Smart thermostats help with:",o:["Entertainment","Temperature control","Gaming","Cooking"],c:1,e:"الثيرموستات = يتحكم بدرجة الحرارة"},
+// Module 4 - Vocabulary
+{q:"'Compact' means:",o:["Very large","Small and easy to carry","Expensive","Slow"],c:1,e:"Compact = صغير الحجم وسهل الحمل"},
+{q:"'Durable' means:",o:["Weak","Strong and long-lasting","Cheap","Fast"],c:1,e:"Durable = متين ويتحمل"},
+{q:"'Compatible with' means:",o:["Cannot work with","Able to work with other devices","Designed for","Made of"],c:1,e:"Compatible with = متوافق مع (يشتغل مع أجهزة ثانية)"},
+{q:"'Equipped with' means:",o:["Missing","Has or contains","Broken","Old"],c:1,e:"Equipped with = مجهّز بـ"},
+{q:"'Reliable' means:",o:["Unreliable","Can be trusted","Temporary","Broken"],c:1,e:"Reliable = موثوق / يعتمد عليه"},
+// Module 4 - Grammar
+{q:"Choose: 'a _____ model'",o:["model compact","compact model","compactly model","model compactly"],c:1,e:"الصفة تجي قبل الاسم في الإنجليزي: compact model"},
+{q:"'The device _____ several sensors.'",o:["include","includes","including","included"],c:1,e:"device = it ← includes (Present Simple + s)"},
+{q:"Which is correct?",o:["The device is designed for daily use.","The device designed for daily use.","The device is design daily use.","The device is designed daily."],c:0,e:"is designed for = مصمم لـ (passive + for)"},
+// Module 5 - Vocabulary
+{q:"'Advantage' means:",o:["A problem","A benefit","A mistake","A limitation"],c:1,e:"Advantage = ميزة / فائدة"},
+{q:"The opposite of 'increase' is:",o:["Average","Percentage","Decrease","Difference"],c:2,e:"عكس increase (يزداد) = decrease (ينخفض)"},
+{q:"'Limitation' means:",o:["An advantage","A benefit","A restriction or weakness","A feature"],c:2,e:"Limitation = قيد / محدودية / نقطة ضعف"},
+{q:"'Average' means:",o:["The highest value","The lowest value","The middle or typical value","The final result"],c:2,e:"Average = المتوسط / القيمة النموذجية"},
+// Module 5 - Grammar (Comparatives)
+{q:"'Device A is _____ Device B.'",o:["faster","faster than","fastest","more fast"],c:1,e:"مقارنة بين اثنين ← faster than"},
+{q:"'Laptop X is _____ Laptop Y.'",o:["more expensive than","most expensive","expensive","expensiver than"],c:0,e:"expensive صفة طويلة ← more expensive than"},
+{q:"'Device B has _____ battery life.'",o:["the longer","the longest","longer than","more long"],c:1,e:"تفضيل (أطول بين الكل) ← the longest"},
+{q:"'This tablet is _____ that tablet.'",o:["lighter than","lightest","more light","light"],c:0,e:"مقارنة ← lighter than"},
+// Module 5 - Reading
+{q:"Device A charges:",o:["Slowly","More quickly than B","The same as B","Never"],c:1,e:"جهاز A يشحن أسرع من B"},
+{q:"Which is better for advanced use?",o:["Device A","Device B","Both","Neither"],c:1,e:"جهاز B أفضل للاستخدام المتقدم"},
+{q:"During exam weeks, platform usage:",o:["Decreased","Stayed the same","Increased","Stopped"],c:2,e:"أسابيع الاختبارات: الاستخدام يزداد (increased)"},
+// Module 6 - Vocabulary
+{q:"'First' means:",o:["At the end","At the beginning","In the middle","Never"],c:1,e:"First = أولاً / في البداية"},
+{q:"'Procedure' means:",o:["One action","A set of steps to follow","A mistake","A machine"],c:1,e:"Procedure = إجراء (مجموعة خطوات)"},
+{q:"'Activate' means:",o:["Stop something","Make something start working","Delete something","Hide something"],c:1,e:"Activate = يُفعّل (يخلي الشيء يشتغل)"},
+{q:"'Submit' means:",o:["Delete","Download","Send for review","Restart"],c:2,e:"Submit = يُرسل / يُسلّم (مثل تسليم واجب)"},
+{q:"'Install' means:",o:["Remove software","Put software on a device","Break a device","Update"],c:1,e:"Install = يُثبّت برنامج على الجهاز"},
+// Module 6 - Grammar (Imperatives)
+{q:"Choose the correct instruction:",o:["You download the file.","Download the file.","Downloading the file.","The file downloads."],c:1,e:"صيغة الأمر = ابدأ بالفعل مباشرة: Download!"},
+{q:"Choose the correct passive:",o:["The user uploads the file.","The file is uploaded.","The file upload.","Upload the file."],c:1,e:"Passive = The file is uploaded (المبني للمجهول)"},
+{q:"Choose the correct sentence:",o:["First, the system activate.","First, activate the system.","First, system is activate.","First, activating the system."],c:1,e:"First + imperative = First, activate the system."},
+// Module 6 - Reading
+{q:"What is the first step in installing software?",o:["Activating the software","Downloading the application","Checking configuration","Contacting support"],c:1,e:"أول خطوة = تحميل التطبيق من الموقع الرسمي"},
+{q:"Why are clear instructions important?",o:["They increase cost","They reduce errors","They remove steps","They slow the process"],c:1,e:"التعليمات الواضحة تقلل الأخطاء وتوفر الوقت"},
 ];
 
-sections.quiz='<div class="sb"><div class="sn2" id="scoreDisp">0 / '+Q.length+'</div><button class="rb" onclick="resetQuiz()">🔄 إعادة</button></div><div id="qContainer"></div>';
-
+sections.quiz='<div class="sb"><div class="sn2" id="scoreDisp">0 / '+Q.length+'</div><button class="rb" onclick="resetQuiz()">🔄 Reset</button></div><div id="qContainer"></div>';
 let answers={};
-function initQuiz(){
-answers={};
-const c=document.getElementById('qContainer');
-if(!c)return;
-c.innerHTML='';
-Q.forEach((q,i)=>{
-const d=document.createElement('div');d.className='qc';
-d.innerHTML='<h4>س'+(i+1)+': '+q.q+'</h4><div id="opts'+i+'">'+
-q.o.map((o,j)=>'<div class="qo" onclick="checkA('+i+','+j+')" id="o'+i+'_'+j+'">'+o+'</div>').join('')+
-'</div><div class="qe" id="exp'+i+'">'+q.e+'</div>';
-c.appendChild(d);
-});
-updateScore();
-}
-
-window.checkA=function(qi,oi){
-if(answers[qi]!==undefined)return;
-answers[qi]=oi;
-const correct=Q[qi].c;
-const exp=document.getElementById('exp'+qi);
-document.querySelectorAll('#opts'+qi+' .qo').forEach(o=>o.classList.add('d'));
-if(oi===correct){
-document.getElementById('o'+qi+'_'+oi).classList.add('ok');
-exp.className='qe s ok';exp.innerHTML='✅ '+Q[qi].e;
-}else{
-document.getElementById('o'+qi+'_'+oi).classList.add('no');
-document.getElementById('o'+qi+'_'+correct).classList.add('ok');
-exp.className='qe s no';exp.innerHTML='❌ '+Q[qi].e;
-}
-updateScore();
-};
-
-function updateScore(){
-const s=Object.entries(answers).filter(([k,v])=>v===Q[k].c).length;
-const el=document.getElementById('scoreDisp');
-if(el)el.textContent=s+' / '+Q.length;
-}
-
+function initQuiz(){answers={};const c=document.getElementById('qContainer');if(!c)return;c.innerHTML='';Q.forEach((q,i)=>{const d=document.createElement('div');d.className='qc';d.innerHTML='<h4>Q'+(i+1)+': '+q.q+'</h4><div id="opts'+i+'">'+q.o.map((o,j)=>'<div class="qo" onclick="checkA('+i+','+j+')" id="o'+i+'_'+j+'">'+String.fromCharCode(65+j)+') '+o+'</div>').join('')+'</div><div class="qe" id="exp'+i+'">'+q.e+'</div>';c.appendChild(d)});updateScore();}
+window.checkA=function(qi,oi){if(answers[qi]!==undefined)return;answers[qi]=oi;const correct=Q[qi].c;const exp=document.getElementById('exp'+qi);document.querySelectorAll('#opts'+qi+' .qo').forEach(o=>o.classList.add('d'));if(oi===correct){document.getElementById('o'+qi+'_'+oi).classList.add('ok');exp.className='qe s ok';exp.innerHTML='✅ '+Q[qi].e;}else{document.getElementById('o'+qi+'_'+oi).classList.add('no');document.getElementById('o'+qi+'_'+correct).classList.add('ok');exp.className='qe s no';exp.innerHTML='❌ '+Q[qi].e;}updateScore();};
+function updateScore(){const s=Object.entries(answers).filter(([k,v])=>v===Q[k].c).length;const el=document.getElementById('scoreDisp');if(el)el.textContent=s+' / '+Q.length;}
 window.resetQuiz=function(){answers={};initQuiz();window.scrollTo({top:0,behavior:'smooth'});};
 
-// Initial render
 render();
 </script>
 </body>
